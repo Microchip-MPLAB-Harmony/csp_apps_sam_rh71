@@ -47,5 +47,5 @@ Refer to the following table for clock output pin and LED name for different boa
 
 | Board      | Clock output pin | LED Name |
 | ---------- | ---------------- |--------- |
-| SAM RH71 Evaluation Kit | PB15 (Pin 10 of the EXT2 header)  | LED0 |
+| SAM RH71 Evaluation Kit | Pin #5 on the J24 header | LED0 |
 |||
