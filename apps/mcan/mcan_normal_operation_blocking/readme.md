@@ -6,7 +6,7 @@ This example shows how to use the MCAN module to transmit and receive CAN messag
 
 ## Description
 
-This application transmits and receives CAN messages on the CAN bus. To run this application, two evaluation boards of same type are required. These boards acts as different nodes on the CAN bus. Same application is programmed onto both the boards. Boards are connected to PC via UART. While running the application, user can send and receive CAN FD messages between the boards using UART console applications running on the PC.
+This application transmits and receives CAN messages on the CAN bus. To run this application, two evaluation boards of same type are required. These boards acts as different nodes on the CAN bus. Same application is programmed onto both the boards. Boards are connected to PC via UART. While running the application, user can send and receive CAN messages between the boards using UART console applications running on the PC.
 
 ## Downloading and building the application
 
@@ -44,6 +44,7 @@ The following table shows the target hardware for the application projects.
 |||
 
 - Connect the debugger probe to J33 for each board
+- Connect the Debug USB port on the board to the computer using a mini USB cable
 
 ## Running the Application
 
