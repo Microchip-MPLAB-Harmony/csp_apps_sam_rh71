@@ -38,6 +38,7 @@ The following table shows the target hardware for the application projects.
 - TC0 is configured in capture mode with the input signal connected to pin PA04
 - Use a jumper wire to connect "Pin 9 of J24" to "Pin 8 of J24"
 - Connect the debugger probe to J33
+- Connect the Debug USB port on the board to the computer using a mini USB cable
 
 ## Running the Application
 
@@ -50,6 +51,6 @@ The following table shows the target hardware for the application projects.
     - Flow Control : None
 3. Build and Program the application using its IDE
 4. Console displays the frequency and duty cycle of the input signal
-5. Frequency is constant (800 Hz) and duty cycle changes by 1%
+5. Frequency is constant (2500 Hz) and duty cycle changes by 1%
 
   ![output](images/output_tc_capture_mode.png)

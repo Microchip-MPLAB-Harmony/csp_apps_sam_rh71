@@ -139,8 +139,10 @@ TC_CAPTURE_STATUS TC0_CH1_CaptureStatusGet(void);
  
 
 
+#ifdef __cplusplus // Provide C++ Compatibility
+}
+#endif
+
 #endif //PLIB_TC0_H
 
-/**
- End of File
-*/
+/* End of File */
