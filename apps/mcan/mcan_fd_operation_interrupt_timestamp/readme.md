@@ -44,6 +44,7 @@ The following table shows the target hardware for the application projects.
 |||
 
 - Connect the debugger probe to J33 for each board
+- Connect the Debug USB port on the board to the computer using a mini USB cable
 
 ## Running the Application
 
