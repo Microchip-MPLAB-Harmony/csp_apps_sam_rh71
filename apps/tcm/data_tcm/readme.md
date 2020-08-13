@@ -39,7 +39,7 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up SAM RH71 Evaluation Kit
 
-- Connect the Debug USB port on the board to the computer using a micro USB cable
+- Connect the Debug USB port on the board to the computer using a mini USB cable
 
 ## Running the Application
 
