@@ -42,7 +42,7 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up SAM RH71 Evaluation Kit
 
-- Connect the Debug USB port on the board to the computer using a micro USB cable
+- Connect the Debug USB port on the board to the computer using a mini USB cable
 
 ## Running the Application
 
@@ -53,7 +53,7 @@ SAM RH71 Evaluation Kit
 
 | Timer Channel   | Pin      | Observable characteristic of the waveform
 | ----------------| ---------| -----------------------------------------|
-| TC0_TIOA0 | PA00(Pin 7 of EXT1) | Toggle output with 50Hz frequency |
-| TC3_TIOA11 | PD21(Pin 16 of EXT1)  | Active low output with 100 Hz frequency |
-| TC3_TIOB12 | PD22 (Pin 18 of EXT1) | Active high output with 100 Hz frequency |
+| TC0_TIOA0 | Pin 9 of J24 | Toggle output with 50Hz frequency |
+| TC3_TIOA11 | Pin 8 of J24  | Active low output with 100 Hz frequency |
+| TC3_TIOB12 | Pin 6 of J24 | Active high output with 100 Hz frequency |
 ||||
