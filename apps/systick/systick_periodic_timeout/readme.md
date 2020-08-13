@@ -45,5 +45,5 @@ Following table provides the LED name:
 
 | Board      | LED Name |
 | ---------- | ---------------- |--------- |
-| SAM RH71 Evaluation Kit |SW0 |
+| SAM RH71 Evaluation Kit |LED0 |
 |||
