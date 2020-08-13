@@ -43,5 +43,5 @@ The following table shows the target hardware for the application projects.
 
 | Board      | Switch Name | LED Name Name
 | ----------------- | ---------- | ---------- |
-| SAM RH71 Evaluation Kit | SW0 | LED0 |
+| SAM RH71 Evaluation Kit | PB0 | LED0 |
 |||
