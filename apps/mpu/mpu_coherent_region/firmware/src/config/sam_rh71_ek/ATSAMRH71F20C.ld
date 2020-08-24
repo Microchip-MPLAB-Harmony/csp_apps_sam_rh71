@@ -69,7 +69,6 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
 #elif (ROM_LENGTH > 0x20000)
 #  error ROM_LENGTH is greater than the max size of 0x20000
 #endif
-
 #ifndef RAM_ORIGIN
 #  define RAM_ORIGIN 0x21000000
 #endif
@@ -132,7 +131,7 @@ MEMORY
  * CODE_REGION defaults to 'rom', if rom is present (non-zero length),
  * and 'ram' otherwise.
  * DATA_REGION defaults to 'ram', which must be present.
- * VECTOR_REGION defaults to CODE_REGION.
+ * VECTOR_REGION defaults to CODE_REGION, unless 'boot_rom' is present.
  */
 #ifndef CODE_REGION
 # if ROM_LENGTH > 0
