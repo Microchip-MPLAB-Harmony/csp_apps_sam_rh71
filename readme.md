@@ -1,6 +1,12 @@
-﻿[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
+﻿---
+title: Harmony 3 peripheral library application examples for SAM RH71 family
+nav_order: 1
+has_children: true
+has_toc: false
+---
+[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# Harmony 3 peripheral library application examples for SAMRH71 family
+# Harmony 3 peripheral library application examples for SAM RH71 family
 
 MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller and microprocessor devices.  Refer to the following links for more information.
 
@@ -10,28 +16,27 @@ MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded
 - [Microchip MPLAB® Harmony](https://www.microchip.com/mplab/mplab-harmony)
 - [Microchip MPLAB® Harmony Pages](https://microchip-mplab-harmony.github.io/)
 
-This repository contains the MPLAB® Harmony 3 peripheral library application examples for SAM E70/S70/V70/V71 family
+This repository contains the MPLAB® Harmony 3 peripheral library application examples for SAM RH71 family
 
 - [Release Notes](release_notes.md)
 - [MPLAB® Harmony License](mplab_harmony_license.md)
 
-To download or clone these application from Github, go to the [top level of the repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_rh71) page and click:
-
-![clone](./docs/images/clone.png)
+To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_rh71) and then click **Clone** button to clone this repository or download as zip file.
+This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
 
 ## Contents Summary
 
 | Folder     | Description                             |
 | ---        | ---                                     |
-| apps       | Peripheral library example applications |
-| docs       | Applications help documentation         |
+| apps       | Contains peripheral library example applications |
+| docs       | Contains documentation in html format for offline viewing (to be used only after cloning this repository onto a local machine). Use [github pages](https://microchip-mplab-harmony.github.io/csp_apps_sam_rh71/) of this repository for viewing it online. |
 
 ## Code Examples
 
 The following applications are provided to demonstrate the typical or interesting usage models of one or more peripheral libraries.
 
-| Name | Description|
-|:---------|:-----------|
+| Name | Description |
+| ---- | ----------- |
 | [Cache maintenance](apps/cache/cache_maintenance/readme.md) | This example shows cache maintenance operation by cleaning and invalidating the cache for the DMA buffers located in the cacheable SRAM region |
 | [Clock configuration](apps/clock/clock_config/readme.md) | This example application shows how to configure the clock system to run the device at maximum frequency. It also outputs a prescaled clock signal on a GPIO pin for measurement and verification |
 | [FLEXCOM SPI EEPROM read write](apps/flexcom/flexcom_spi_eeprom/readme.md) | This example application shows how to use the flexcom module in SPI mode |
@@ -57,7 +62,7 @@ The following applications are provided to demonstrate the typical or interestin
 | [TCM cache coherency](apps/tcm/data_tcm/readme.md) | This example shows how to  maintain cache coherency by allocating the DMA buffers in the Tightly Coupled Memory (TCM), which are not cacheable |
 | [TRNG random number](apps/trng/random_number/readme.md) | This example shows how to use the TRNG Peripheral library to generate and read a random number |
 | [XDMAC memory transfer](apps/xdmac/xdmac_memory_transfer/readme.md) | This example shows how to use the XDMAC peripheral to do a memory to memory transfer and illustrates the usage of burst size to reduce the transfer time |
-|||
+
 ____
 
 [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_rh71/blob/master/mplab_harmony_license.md)
