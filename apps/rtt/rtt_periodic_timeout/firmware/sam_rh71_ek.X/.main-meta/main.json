@@ -1,0 +1,77 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_rh71_rtt_periodic_timeout",
+		"version": "3.0.1",
+		"displayName": "RTT periodic interrupt Example for SAM RH71 Family",
+		"projectName": "rtt_periodic_timeout_sam_rh71_ek",
+		"shortDescription": "This example shows how to use the RTT to generate periodic interrupts.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMRH71_DFP",
+			"semverRange": "^2.1.98"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMRH71F20C",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM RH71 Evaluation Kit"
+			],
+			[
+				"Harmony", "Peripherals", "RTT"
+			],
+			[
+				"Peripherals", "RTT"
+			]
+		],
+		"peripherals": [
+			"RTT"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMRH71F20C",
+			"SAM RH71 Family",
+			"RTC",
+			"RTT",
+			"RTCC",
+			"Timer",
+			"Real Time Timer"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

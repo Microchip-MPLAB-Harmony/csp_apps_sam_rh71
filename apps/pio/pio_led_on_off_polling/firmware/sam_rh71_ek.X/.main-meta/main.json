@@ -1,0 +1,77 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_rh71_pio_led_on_off_polling",
+		"version": "3.0.1",
+		"displayName": "PIO polling Example for SAM RH71 Family",
+		"projectName": "pio_led_on_off_polling_sam_rh71_ek",
+		"shortDescription": "This example shows how to poll the switch input, and indicate the switch status using the LED.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMRH71_DFP",
+			"semverRange": "^2.1.98"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMRH71F20C",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM RH71 Evaluation Kit"
+			],
+			[
+				"Harmony", "Peripherals", "PIO"
+			],
+			[
+				"Peripherals", "PIO"
+			]
+		],
+		"peripherals": [
+			"PIO"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMRH71F20C",
+			"SAM RH71 Family",
+			"GPIO",
+			"PORT",
+			"PIO",
+			"I/O",
+			"Pin"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
