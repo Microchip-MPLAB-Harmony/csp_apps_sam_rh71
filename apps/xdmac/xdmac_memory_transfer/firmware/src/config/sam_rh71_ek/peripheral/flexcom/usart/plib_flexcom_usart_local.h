@@ -125,6 +125,13 @@ typedef enum
 
 } FLEXCOM_USART_STOP;
 
+typedef enum
+{
+    FLEXCOM_IRDA_DIR_TRANSMIT = 0,
+    FLEXCOM_IRDA_DIR_RECEIVE,
+
+} FLEXCOM_IRDA_DIR;
+
 /* FLEXCOM USART Serial Setup */
 typedef struct
 {
@@ -143,17 +150,18 @@ typedef struct
 {
     uint8_t *               txBuffer;
     size_t                  txSize;
-    size_t                  txProcessedSize;
+    volatile size_t         txProcessedSize;
     FLEXCOM_USART_CALLBACK  txCallback;
     uintptr_t               txContext;
     bool                    txBusyStatus;
 
     uint8_t *               rxBuffer;
     size_t                  rxSize;
-    size_t                  rxProcessedSize;
+    volatile size_t         rxProcessedSize;
     FLEXCOM_USART_CALLBACK  rxCallback;
     uintptr_t               rxContext;
-    bool                    rxBusyStatus;
+    volatile bool           rxBusyStatus;
+    volatile FLEXCOM_USART_ERROR errorStatus;
 
 } FLEXCOM_USART_OBJECT ;
 
@@ -206,33 +214,41 @@ typedef void (*FLEXCOM_USART_RING_BUFFER_CALLBACK)(FLEXCOM_USART_EVENT event, ui
 
 typedef struct
 {
-    FLEXCOM_USART_RING_BUFFER_CALLBACK                   	wrCallback;
+    FLEXCOM_USART_RING_BUFFER_CALLBACK                      wrCallback;
 
-    uintptr_t                               				wrContext;
+    uintptr_t                                               wrContext;
 
-    volatile uint32_t                       				wrInIndex;
+    volatile uint32_t                                       wrInIndex;
 
-    volatile uint32_t                       				wrOutIndex;
+    volatile uint32_t                                       wrOutIndex;
 
-    bool                                    				isWrNotificationEnabled;
+    bool                                                    isWrNotificationEnabled;
 
-    uint32_t                                				wrThreshold;
+    uint32_t                                                wrThreshold;
 
-    bool                                    				isWrNotifyPersistently;
+    bool                                                    isWrNotifyPersistently;
 
-    FLEXCOM_USART_RING_BUFFER_CALLBACK                   	rdCallback;
+    uint32_t                                                wrBufferSize;
 
-    uintptr_t                               				rdContext;
+    FLEXCOM_USART_RING_BUFFER_CALLBACK                      rdCallback;
 
-    volatile uint32_t                       				rdInIndex;
+    uintptr_t                                               rdContext;
 
-    volatile uint32_t                       				rdOutIndex;
+    volatile uint32_t                                       rdInIndex;
 
-    bool                                    				isRdNotificationEnabled;
+    volatile uint32_t                                       rdOutIndex;
 
-    uint32_t                                				rdThreshold;
+    bool                                                    isRdNotificationEnabled;
 
-    bool                                    				isRdNotifyPersistently;
+    uint32_t                                                rdThreshold;
+
+    bool                                                    isRdNotifyPersistently;
+
+    uint32_t                                                rdBufferSize;
+
+    bool                                                    isInterruptActive;
+
+    volatile FLEXCOM_USART_ERROR                            errorStatus;
 
 } FLEXCOM_USART_RING_BUFFER_OBJECT;
 
