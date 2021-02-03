@@ -93,6 +93,7 @@ void FLEXCOM1_USART_WriteCallbackRegister( FLEXCOM_USART_CALLBACK callback, uint
 
 void FLEXCOM1_USART_ReadCallbackRegister( FLEXCOM_USART_CALLBACK callback, uintptr_t context );
 
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
     }

@@ -1,7 +1,7 @@
 /**
  * \brief Component description for NMIC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_NMIC_COMPONENT_H_
 #define _SAMRH71_NMIC_COMPONENT_H_
 
@@ -158,31 +158,10 @@
 #define NMIC_ISR_NMI8_Pos                     _U_(8)                                               /**< (NMIC_ISR) Non-maskable Interrupt Source 8 Pending (cleared on read) Position */
 #define NMIC_ISR_NMI8_Msk                     (_U_(0x1) << NMIC_ISR_NMI8_Pos)                      /**< (NMIC_ISR) Non-maskable Interrupt Source 8 Pending (cleared on read) Mask */
 #define NMIC_ISR_NMI8(value)                  (NMIC_ISR_NMI8_Msk & ((value) << NMIC_ISR_NMI8_Pos))
-#define NMIC_ISR_NMI9_Pos                     _U_(9)                                               /**< (NMIC_ISR) Non-maskable Interrupt Source 9 Pending (cleared on read) Position */
-#define NMIC_ISR_NMI9_Msk                     (_U_(0x1) << NMIC_ISR_NMI9_Pos)                      /**< (NMIC_ISR) Non-maskable Interrupt Source 9 Pending (cleared on read) Mask */
-#define NMIC_ISR_NMI9(value)                  (NMIC_ISR_NMI9_Msk & ((value) << NMIC_ISR_NMI9_Pos))
-#define NMIC_ISR_NMI10_Pos                    _U_(10)                                              /**< (NMIC_ISR) Non-maskable Interrupt Source 10 Pending (cleared on read) Position */
-#define NMIC_ISR_NMI10_Msk                    (_U_(0x1) << NMIC_ISR_NMI10_Pos)                     /**< (NMIC_ISR) Non-maskable Interrupt Source 10 Pending (cleared on read) Mask */
-#define NMIC_ISR_NMI10(value)                 (NMIC_ISR_NMI10_Msk & ((value) << NMIC_ISR_NMI10_Pos))
-#define NMIC_ISR_NMI11_Pos                    _U_(11)                                              /**< (NMIC_ISR) Non-maskable Interrupt Source 11 Pending (cleared on read) Position */
-#define NMIC_ISR_NMI11_Msk                    (_U_(0x1) << NMIC_ISR_NMI11_Pos)                     /**< (NMIC_ISR) Non-maskable Interrupt Source 11 Pending (cleared on read) Mask */
-#define NMIC_ISR_NMI11(value)                 (NMIC_ISR_NMI11_Msk & ((value) << NMIC_ISR_NMI11_Pos))
-#define NMIC_ISR_NMI12_Pos                    _U_(12)                                              /**< (NMIC_ISR) Non-maskable Interrupt Source 12 Pending (cleared on read) Position */
-#define NMIC_ISR_NMI12_Msk                    (_U_(0x1) << NMIC_ISR_NMI12_Pos)                     /**< (NMIC_ISR) Non-maskable Interrupt Source 12 Pending (cleared on read) Mask */
-#define NMIC_ISR_NMI12(value)                 (NMIC_ISR_NMI12_Msk & ((value) << NMIC_ISR_NMI12_Pos))
-#define NMIC_ISR_NMI13_Pos                    _U_(13)                                              /**< (NMIC_ISR) Non-maskable Interrupt Source 13 Pending (cleared on read) Position */
-#define NMIC_ISR_NMI13_Msk                    (_U_(0x1) << NMIC_ISR_NMI13_Pos)                     /**< (NMIC_ISR) Non-maskable Interrupt Source 13 Pending (cleared on read) Mask */
-#define NMIC_ISR_NMI13(value)                 (NMIC_ISR_NMI13_Msk & ((value) << NMIC_ISR_NMI13_Pos))
-#define NMIC_ISR_NMI14_Pos                    _U_(14)                                              /**< (NMIC_ISR) Non-maskable Interrupt Source 14 Pending (cleared on read) Position */
-#define NMIC_ISR_NMI14_Msk                    (_U_(0x1) << NMIC_ISR_NMI14_Pos)                     /**< (NMIC_ISR) Non-maskable Interrupt Source 14 Pending (cleared on read) Mask */
-#define NMIC_ISR_NMI14(value)                 (NMIC_ISR_NMI14_Msk & ((value) << NMIC_ISR_NMI14_Pos))
-#define NMIC_ISR_NMI15_Pos                    _U_(15)                                              /**< (NMIC_ISR) Non-maskable Interrupt Source 15 Pending (cleared on read) Position */
-#define NMIC_ISR_NMI15_Msk                    (_U_(0x1) << NMIC_ISR_NMI15_Pos)                     /**< (NMIC_ISR) Non-maskable Interrupt Source 15 Pending (cleared on read) Mask */
-#define NMIC_ISR_NMI15(value)                 (NMIC_ISR_NMI15_Msk & ((value) << NMIC_ISR_NMI15_Pos))
-#define NMIC_ISR_Msk                          _U_(0x0000FFFF)                                      /**< (NMIC_ISR) Register Mask  */
+#define NMIC_ISR_Msk                          _U_(0x000001FF)                                      /**< (NMIC_ISR) Register Mask  */
 
-#define NMIC_ISR_NMI_Pos                      _U_(0)                                               /**< (NMIC_ISR Position) Non-maskable Interrupt Source x5 Pending (cleared on read) */
-#define NMIC_ISR_NMI_Msk                      (_U_(0xFFFF) << NMIC_ISR_NMI_Pos)                    /**< (NMIC_ISR Mask) NMI */
+#define NMIC_ISR_NMI_Pos                      _U_(0)                                               /**< (NMIC_ISR Position) Non-maskable Interrupt Source 8 Pending (cleared on read) */
+#define NMIC_ISR_NMI_Msk                      (_U_(0x1FF) << NMIC_ISR_NMI_Pos)                     /**< (NMIC_ISR Mask) NMI */
 #define NMIC_ISR_NMI(value)                   (NMIC_ISR_NMI_Msk & ((value) << NMIC_ISR_NMI_Pos))   
 
 /* -------- NMIC_GFCS : (NMIC Offset: 0x10) ( R/ 32) Glitch Filter Configuration Status Register -------- */
@@ -213,229 +192,208 @@
 #define NMIC_GFCS_RDY8_Pos                    _U_(8)                                               /**< (NMIC_GFCS) Filter 8 Configuration Ready Position */
 #define NMIC_GFCS_RDY8_Msk                    (_U_(0x1) << NMIC_GFCS_RDY8_Pos)                     /**< (NMIC_GFCS) Filter 8 Configuration Ready Mask */
 #define NMIC_GFCS_RDY8(value)                 (NMIC_GFCS_RDY8_Msk & ((value) << NMIC_GFCS_RDY8_Pos))
-#define NMIC_GFCS_RDY9_Pos                    _U_(9)                                               /**< (NMIC_GFCS) Filter 9 Configuration Ready Position */
-#define NMIC_GFCS_RDY9_Msk                    (_U_(0x1) << NMIC_GFCS_RDY9_Pos)                     /**< (NMIC_GFCS) Filter 9 Configuration Ready Mask */
-#define NMIC_GFCS_RDY9(value)                 (NMIC_GFCS_RDY9_Msk & ((value) << NMIC_GFCS_RDY9_Pos))
-#define NMIC_GFCS_RDY10_Pos                   _U_(10)                                              /**< (NMIC_GFCS) Filter 10 Configuration Ready Position */
-#define NMIC_GFCS_RDY10_Msk                   (_U_(0x1) << NMIC_GFCS_RDY10_Pos)                    /**< (NMIC_GFCS) Filter 10 Configuration Ready Mask */
-#define NMIC_GFCS_RDY10(value)                (NMIC_GFCS_RDY10_Msk & ((value) << NMIC_GFCS_RDY10_Pos))
-#define NMIC_GFCS_RDY11_Pos                   _U_(11)                                              /**< (NMIC_GFCS) Filter 11 Configuration Ready Position */
-#define NMIC_GFCS_RDY11_Msk                   (_U_(0x1) << NMIC_GFCS_RDY11_Pos)                    /**< (NMIC_GFCS) Filter 11 Configuration Ready Mask */
-#define NMIC_GFCS_RDY11(value)                (NMIC_GFCS_RDY11_Msk & ((value) << NMIC_GFCS_RDY11_Pos))
-#define NMIC_GFCS_RDY12_Pos                   _U_(12)                                              /**< (NMIC_GFCS) Filter 12 Configuration Ready Position */
-#define NMIC_GFCS_RDY12_Msk                   (_U_(0x1) << NMIC_GFCS_RDY12_Pos)                    /**< (NMIC_GFCS) Filter 12 Configuration Ready Mask */
-#define NMIC_GFCS_RDY12(value)                (NMIC_GFCS_RDY12_Msk & ((value) << NMIC_GFCS_RDY12_Pos))
-#define NMIC_GFCS_RDY13_Pos                   _U_(13)                                              /**< (NMIC_GFCS) Filter 13 Configuration Ready Position */
-#define NMIC_GFCS_RDY13_Msk                   (_U_(0x1) << NMIC_GFCS_RDY13_Pos)                    /**< (NMIC_GFCS) Filter 13 Configuration Ready Mask */
-#define NMIC_GFCS_RDY13(value)                (NMIC_GFCS_RDY13_Msk & ((value) << NMIC_GFCS_RDY13_Pos))
-#define NMIC_GFCS_RDY14_Pos                   _U_(14)                                              /**< (NMIC_GFCS) Filter 14 Configuration Ready Position */
-#define NMIC_GFCS_RDY14_Msk                   (_U_(0x1) << NMIC_GFCS_RDY14_Pos)                    /**< (NMIC_GFCS) Filter 14 Configuration Ready Mask */
-#define NMIC_GFCS_RDY14(value)                (NMIC_GFCS_RDY14_Msk & ((value) << NMIC_GFCS_RDY14_Pos))
-#define NMIC_GFCS_RDY15_Pos                   _U_(15)                                              /**< (NMIC_GFCS) Filter 15 Configuration Ready Position */
-#define NMIC_GFCS_RDY15_Msk                   (_U_(0x1) << NMIC_GFCS_RDY15_Pos)                    /**< (NMIC_GFCS) Filter 15 Configuration Ready Mask */
-#define NMIC_GFCS_RDY15(value)                (NMIC_GFCS_RDY15_Msk & ((value) << NMIC_GFCS_RDY15_Pos))
-#define NMIC_GFCS_Msk                         _U_(0x0000FFFF)                                      /**< (NMIC_GFCS) Register Mask  */
+#define NMIC_GFCS_Msk                         _U_(0x000001FF)                                      /**< (NMIC_GFCS) Register Mask  */
 
-#define NMIC_GFCS_RDY_Pos                     _U_(0)                                               /**< (NMIC_GFCS Position) Filter x5 Configuration Ready */
-#define NMIC_GFCS_RDY_Msk                     (_U_(0xFFFF) << NMIC_GFCS_RDY_Pos)                   /**< (NMIC_GFCS Mask) RDY */
+#define NMIC_GFCS_RDY_Pos                     _U_(0)                                               /**< (NMIC_GFCS Position) Filter 8 Configuration Ready */
+#define NMIC_GFCS_RDY_Msk                     (_U_(0x1FF) << NMIC_GFCS_RDY_Pos)                    /**< (NMIC_GFCS Mask) RDY */
 #define NMIC_GFCS_RDY(value)                  (NMIC_GFCS_RDY_Msk & ((value) << NMIC_GFCS_RDY_Pos)) 
 
-/* -------- NMIC_SCFGxR0 : (NMIC Offset: 0x14) (R/W 32) Source Configuration Register 0 0 -------- */
-#define NMIC_SCFGxR0_GFSEL_Pos                _U_(0)                                               /**< (NMIC_SCFGxR0) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR0_GFSEL_Msk                (_U_(0x3) << NMIC_SCFGxR0_GFSEL_Pos)                 /**< (NMIC_SCFGxR0) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR0_GFSEL(value)             (NMIC_SCFGxR0_GFSEL_Msk & ((value) << NMIC_SCFGxR0_GFSEL_Pos))
-#define NMIC_SCFGxR0_GFEN_Pos                 _U_(4)                                               /**< (NMIC_SCFGxR0) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR0_GFEN_Msk                 (_U_(0x1) << NMIC_SCFGxR0_GFEN_Pos)                  /**< (NMIC_SCFGxR0) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR0_GFEN(value)              (NMIC_SCFGxR0_GFEN_Msk & ((value) << NMIC_SCFGxR0_GFEN_Pos))
-#define NMIC_SCFGxR0_POL_Pos                  _U_(8)                                               /**< (NMIC_SCFGxR0) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR0_POL_Msk                  (_U_(0x1) << NMIC_SCFGxR0_POL_Pos)                   /**< (NMIC_SCFGxR0) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR0_POL(value)               (NMIC_SCFGxR0_POL_Msk & ((value) << NMIC_SCFGxR0_POL_Pos))
-#define NMIC_SCFGxR0_LVL_Pos                  _U_(9)                                               /**< (NMIC_SCFGxR0) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR0_LVL_Msk                  (_U_(0x1) << NMIC_SCFGxR0_LVL_Pos)                   /**< (NMIC_SCFGxR0) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR0_LVL(value)               (NMIC_SCFGxR0_LVL_Msk & ((value) << NMIC_SCFGxR0_LVL_Pos))
-#define NMIC_SCFGxR0_EN_Pos                   _U_(16)                                              /**< (NMIC_SCFGxR0) Source Enable Position */
-#define NMIC_SCFGxR0_EN_Msk                   (_U_(0x1) << NMIC_SCFGxR0_EN_Pos)                    /**< (NMIC_SCFGxR0) Source Enable Mask */
-#define NMIC_SCFGxR0_EN(value)                (NMIC_SCFGxR0_EN_Msk & ((value) << NMIC_SCFGxR0_EN_Pos))
-#define NMIC_SCFGxR0_FRZ_Pos                  _U_(31)                                              /**< (NMIC_SCFGxR0) Interrupt Line Freeze Position */
-#define NMIC_SCFGxR0_FRZ_Msk                  (_U_(0x1) << NMIC_SCFGxR0_FRZ_Pos)                   /**< (NMIC_SCFGxR0) Interrupt Line Freeze Mask */
-#define NMIC_SCFGxR0_FRZ(value)               (NMIC_SCFGxR0_FRZ_Msk & ((value) << NMIC_SCFGxR0_FRZ_Pos))
-#define NMIC_SCFGxR0_Msk                      _U_(0x80010313)                                      /**< (NMIC_SCFGxR0) Register Mask  */
+/* -------- NMIC_SCFG0R : (NMIC Offset: 0x14) (R/W 32) Source Configuration Register 0 -------- */
+#define NMIC_SCFG0R_GFSEL_Pos                 _U_(0)                                               /**< (NMIC_SCFG0R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG0R_GFSEL_Msk                 (_U_(0x3) << NMIC_SCFG0R_GFSEL_Pos)                  /**< (NMIC_SCFG0R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG0R_GFSEL(value)              (NMIC_SCFG0R_GFSEL_Msk & ((value) << NMIC_SCFG0R_GFSEL_Pos))
+#define NMIC_SCFG0R_GFEN_Pos                  _U_(4)                                               /**< (NMIC_SCFG0R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG0R_GFEN_Msk                  (_U_(0x1) << NMIC_SCFG0R_GFEN_Pos)                   /**< (NMIC_SCFG0R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG0R_GFEN(value)               (NMIC_SCFG0R_GFEN_Msk & ((value) << NMIC_SCFG0R_GFEN_Pos))
+#define NMIC_SCFG0R_POL_Pos                   _U_(8)                                               /**< (NMIC_SCFG0R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG0R_POL_Msk                   (_U_(0x1) << NMIC_SCFG0R_POL_Pos)                    /**< (NMIC_SCFG0R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG0R_POL(value)                (NMIC_SCFG0R_POL_Msk & ((value) << NMIC_SCFG0R_POL_Pos))
+#define NMIC_SCFG0R_LVL_Pos                   _U_(9)                                               /**< (NMIC_SCFG0R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG0R_LVL_Msk                   (_U_(0x1) << NMIC_SCFG0R_LVL_Pos)                    /**< (NMIC_SCFG0R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG0R_LVL(value)                (NMIC_SCFG0R_LVL_Msk & ((value) << NMIC_SCFG0R_LVL_Pos))
+#define NMIC_SCFG0R_EN_Pos                    _U_(16)                                              /**< (NMIC_SCFG0R) Source Enable Position */
+#define NMIC_SCFG0R_EN_Msk                    (_U_(0x1) << NMIC_SCFG0R_EN_Pos)                     /**< (NMIC_SCFG0R) Source Enable Mask */
+#define NMIC_SCFG0R_EN(value)                 (NMIC_SCFG0R_EN_Msk & ((value) << NMIC_SCFG0R_EN_Pos))
+#define NMIC_SCFG0R_FRZ_Pos                   _U_(31)                                              /**< (NMIC_SCFG0R) Interrupt Line Freeze Position */
+#define NMIC_SCFG0R_FRZ_Msk                   (_U_(0x1) << NMIC_SCFG0R_FRZ_Pos)                    /**< (NMIC_SCFG0R) Interrupt Line Freeze Mask */
+#define NMIC_SCFG0R_FRZ(value)                (NMIC_SCFG0R_FRZ_Msk & ((value) << NMIC_SCFG0R_FRZ_Pos))
+#define NMIC_SCFG0R_Msk                       _U_(0x80010313)                                      /**< (NMIC_SCFG0R) Register Mask  */
 
 
-/* -------- NMIC_SCFGxR1 : (NMIC Offset: 0x18) (R/W 32) Source Configuration Register 0 1 -------- */
-#define NMIC_SCFGxR1_GFSEL_Pos                _U_(0)                                               /**< (NMIC_SCFGxR1) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR1_GFSEL_Msk                (_U_(0x3) << NMIC_SCFGxR1_GFSEL_Pos)                 /**< (NMIC_SCFGxR1) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR1_GFSEL(value)             (NMIC_SCFGxR1_GFSEL_Msk & ((value) << NMIC_SCFGxR1_GFSEL_Pos))
-#define NMIC_SCFGxR1_GFEN_Pos                 _U_(4)                                               /**< (NMIC_SCFGxR1) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR1_GFEN_Msk                 (_U_(0x1) << NMIC_SCFGxR1_GFEN_Pos)                  /**< (NMIC_SCFGxR1) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR1_GFEN(value)              (NMIC_SCFGxR1_GFEN_Msk & ((value) << NMIC_SCFGxR1_GFEN_Pos))
-#define NMIC_SCFGxR1_POL_Pos                  _U_(8)                                               /**< (NMIC_SCFGxR1) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR1_POL_Msk                  (_U_(0x1) << NMIC_SCFGxR1_POL_Pos)                   /**< (NMIC_SCFGxR1) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR1_POL(value)               (NMIC_SCFGxR1_POL_Msk & ((value) << NMIC_SCFGxR1_POL_Pos))
-#define NMIC_SCFGxR1_LVL_Pos                  _U_(9)                                               /**< (NMIC_SCFGxR1) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR1_LVL_Msk                  (_U_(0x1) << NMIC_SCFGxR1_LVL_Pos)                   /**< (NMIC_SCFGxR1) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR1_LVL(value)               (NMIC_SCFGxR1_LVL_Msk & ((value) << NMIC_SCFGxR1_LVL_Pos))
-#define NMIC_SCFGxR1_EN_Pos                   _U_(16)                                              /**< (NMIC_SCFGxR1) Source Enable Position */
-#define NMIC_SCFGxR1_EN_Msk                   (_U_(0x1) << NMIC_SCFGxR1_EN_Pos)                    /**< (NMIC_SCFGxR1) Source Enable Mask */
-#define NMIC_SCFGxR1_EN(value)                (NMIC_SCFGxR1_EN_Msk & ((value) << NMIC_SCFGxR1_EN_Pos))
-#define NMIC_SCFGxR1_FRZ_Pos                  _U_(31)                                              /**< (NMIC_SCFGxR1) Interrupt Line Freeze Position */
-#define NMIC_SCFGxR1_FRZ_Msk                  (_U_(0x1) << NMIC_SCFGxR1_FRZ_Pos)                   /**< (NMIC_SCFGxR1) Interrupt Line Freeze Mask */
-#define NMIC_SCFGxR1_FRZ(value)               (NMIC_SCFGxR1_FRZ_Msk & ((value) << NMIC_SCFGxR1_FRZ_Pos))
-#define NMIC_SCFGxR1_Msk                      _U_(0x80010313)                                      /**< (NMIC_SCFGxR1) Register Mask  */
+/* -------- NMIC_SCFG1R : (NMIC Offset: 0x18) (R/W 32) Source Configuration Register 1 -------- */
+#define NMIC_SCFG1R_GFSEL_Pos                 _U_(0)                                               /**< (NMIC_SCFG1R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG1R_GFSEL_Msk                 (_U_(0x3) << NMIC_SCFG1R_GFSEL_Pos)                  /**< (NMIC_SCFG1R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG1R_GFSEL(value)              (NMIC_SCFG1R_GFSEL_Msk & ((value) << NMIC_SCFG1R_GFSEL_Pos))
+#define NMIC_SCFG1R_GFEN_Pos                  _U_(4)                                               /**< (NMIC_SCFG1R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG1R_GFEN_Msk                  (_U_(0x1) << NMIC_SCFG1R_GFEN_Pos)                   /**< (NMIC_SCFG1R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG1R_GFEN(value)               (NMIC_SCFG1R_GFEN_Msk & ((value) << NMIC_SCFG1R_GFEN_Pos))
+#define NMIC_SCFG1R_POL_Pos                   _U_(8)                                               /**< (NMIC_SCFG1R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG1R_POL_Msk                   (_U_(0x1) << NMIC_SCFG1R_POL_Pos)                    /**< (NMIC_SCFG1R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG1R_POL(value)                (NMIC_SCFG1R_POL_Msk & ((value) << NMIC_SCFG1R_POL_Pos))
+#define NMIC_SCFG1R_LVL_Pos                   _U_(9)                                               /**< (NMIC_SCFG1R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG1R_LVL_Msk                   (_U_(0x1) << NMIC_SCFG1R_LVL_Pos)                    /**< (NMIC_SCFG1R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG1R_LVL(value)                (NMIC_SCFG1R_LVL_Msk & ((value) << NMIC_SCFG1R_LVL_Pos))
+#define NMIC_SCFG1R_EN_Pos                    _U_(16)                                              /**< (NMIC_SCFG1R) Source Enable Position */
+#define NMIC_SCFG1R_EN_Msk                    (_U_(0x1) << NMIC_SCFG1R_EN_Pos)                     /**< (NMIC_SCFG1R) Source Enable Mask */
+#define NMIC_SCFG1R_EN(value)                 (NMIC_SCFG1R_EN_Msk & ((value) << NMIC_SCFG1R_EN_Pos))
+#define NMIC_SCFG1R_FRZ_Pos                   _U_(31)                                              /**< (NMIC_SCFG1R) Interrupt Line Freeze Position */
+#define NMIC_SCFG1R_FRZ_Msk                   (_U_(0x1) << NMIC_SCFG1R_FRZ_Pos)                    /**< (NMIC_SCFG1R) Interrupt Line Freeze Mask */
+#define NMIC_SCFG1R_FRZ(value)                (NMIC_SCFG1R_FRZ_Msk & ((value) << NMIC_SCFG1R_FRZ_Pos))
+#define NMIC_SCFG1R_Msk                       _U_(0x80010313)                                      /**< (NMIC_SCFG1R) Register Mask  */
 
 
-/* -------- NMIC_SCFGxR2 : (NMIC Offset: 0x1C) (R/W 32) Source Configuration Register 0 2 -------- */
-#define NMIC_SCFGxR2_GFSEL_Pos                _U_(0)                                               /**< (NMIC_SCFGxR2) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR2_GFSEL_Msk                (_U_(0x3) << NMIC_SCFGxR2_GFSEL_Pos)                 /**< (NMIC_SCFGxR2) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR2_GFSEL(value)             (NMIC_SCFGxR2_GFSEL_Msk & ((value) << NMIC_SCFGxR2_GFSEL_Pos))
-#define NMIC_SCFGxR2_GFEN_Pos                 _U_(4)                                               /**< (NMIC_SCFGxR2) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR2_GFEN_Msk                 (_U_(0x1) << NMIC_SCFGxR2_GFEN_Pos)                  /**< (NMIC_SCFGxR2) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR2_GFEN(value)              (NMIC_SCFGxR2_GFEN_Msk & ((value) << NMIC_SCFGxR2_GFEN_Pos))
-#define NMIC_SCFGxR2_POL_Pos                  _U_(8)                                               /**< (NMIC_SCFGxR2) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR2_POL_Msk                  (_U_(0x1) << NMIC_SCFGxR2_POL_Pos)                   /**< (NMIC_SCFGxR2) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR2_POL(value)               (NMIC_SCFGxR2_POL_Msk & ((value) << NMIC_SCFGxR2_POL_Pos))
-#define NMIC_SCFGxR2_LVL_Pos                  _U_(9)                                               /**< (NMIC_SCFGxR2) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR2_LVL_Msk                  (_U_(0x1) << NMIC_SCFGxR2_LVL_Pos)                   /**< (NMIC_SCFGxR2) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR2_LVL(value)               (NMIC_SCFGxR2_LVL_Msk & ((value) << NMIC_SCFGxR2_LVL_Pos))
-#define NMIC_SCFGxR2_EN_Pos                   _U_(16)                                              /**< (NMIC_SCFGxR2) Source Enable Position */
-#define NMIC_SCFGxR2_EN_Msk                   (_U_(0x1) << NMIC_SCFGxR2_EN_Pos)                    /**< (NMIC_SCFGxR2) Source Enable Mask */
-#define NMIC_SCFGxR2_EN(value)                (NMIC_SCFGxR2_EN_Msk & ((value) << NMIC_SCFGxR2_EN_Pos))
-#define NMIC_SCFGxR2_FRZ_Pos                  _U_(31)                                              /**< (NMIC_SCFGxR2) Interrupt Line Freeze Position */
-#define NMIC_SCFGxR2_FRZ_Msk                  (_U_(0x1) << NMIC_SCFGxR2_FRZ_Pos)                   /**< (NMIC_SCFGxR2) Interrupt Line Freeze Mask */
-#define NMIC_SCFGxR2_FRZ(value)               (NMIC_SCFGxR2_FRZ_Msk & ((value) << NMIC_SCFGxR2_FRZ_Pos))
-#define NMIC_SCFGxR2_Msk                      _U_(0x80010313)                                      /**< (NMIC_SCFGxR2) Register Mask  */
+/* -------- NMIC_SCFG2R : (NMIC Offset: 0x1C) (R/W 32) Source Configuration Register 2 -------- */
+#define NMIC_SCFG2R_GFSEL_Pos                 _U_(0)                                               /**< (NMIC_SCFG2R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG2R_GFSEL_Msk                 (_U_(0x3) << NMIC_SCFG2R_GFSEL_Pos)                  /**< (NMIC_SCFG2R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG2R_GFSEL(value)              (NMIC_SCFG2R_GFSEL_Msk & ((value) << NMIC_SCFG2R_GFSEL_Pos))
+#define NMIC_SCFG2R_GFEN_Pos                  _U_(4)                                               /**< (NMIC_SCFG2R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG2R_GFEN_Msk                  (_U_(0x1) << NMIC_SCFG2R_GFEN_Pos)                   /**< (NMIC_SCFG2R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG2R_GFEN(value)               (NMIC_SCFG2R_GFEN_Msk & ((value) << NMIC_SCFG2R_GFEN_Pos))
+#define NMIC_SCFG2R_POL_Pos                   _U_(8)                                               /**< (NMIC_SCFG2R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG2R_POL_Msk                   (_U_(0x1) << NMIC_SCFG2R_POL_Pos)                    /**< (NMIC_SCFG2R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG2R_POL(value)                (NMIC_SCFG2R_POL_Msk & ((value) << NMIC_SCFG2R_POL_Pos))
+#define NMIC_SCFG2R_LVL_Pos                   _U_(9)                                               /**< (NMIC_SCFG2R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG2R_LVL_Msk                   (_U_(0x1) << NMIC_SCFG2R_LVL_Pos)                    /**< (NMIC_SCFG2R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG2R_LVL(value)                (NMIC_SCFG2R_LVL_Msk & ((value) << NMIC_SCFG2R_LVL_Pos))
+#define NMIC_SCFG2R_EN_Pos                    _U_(16)                                              /**< (NMIC_SCFG2R) Source Enable Position */
+#define NMIC_SCFG2R_EN_Msk                    (_U_(0x1) << NMIC_SCFG2R_EN_Pos)                     /**< (NMIC_SCFG2R) Source Enable Mask */
+#define NMIC_SCFG2R_EN(value)                 (NMIC_SCFG2R_EN_Msk & ((value) << NMIC_SCFG2R_EN_Pos))
+#define NMIC_SCFG2R_FRZ_Pos                   _U_(31)                                              /**< (NMIC_SCFG2R) Interrupt Line Freeze Position */
+#define NMIC_SCFG2R_FRZ_Msk                   (_U_(0x1) << NMIC_SCFG2R_FRZ_Pos)                    /**< (NMIC_SCFG2R) Interrupt Line Freeze Mask */
+#define NMIC_SCFG2R_FRZ(value)                (NMIC_SCFG2R_FRZ_Msk & ((value) << NMIC_SCFG2R_FRZ_Pos))
+#define NMIC_SCFG2R_Msk                       _U_(0x80010313)                                      /**< (NMIC_SCFG2R) Register Mask  */
 
 
-/* -------- NMIC_SCFGxR3 : (NMIC Offset: 0x20) (R/W 32) Source Configuration Register 0 3 -------- */
-#define NMIC_SCFGxR3_GFSEL_Pos                _U_(0)                                               /**< (NMIC_SCFGxR3) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR3_GFSEL_Msk                (_U_(0x3) << NMIC_SCFGxR3_GFSEL_Pos)                 /**< (NMIC_SCFGxR3) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR3_GFSEL(value)             (NMIC_SCFGxR3_GFSEL_Msk & ((value) << NMIC_SCFGxR3_GFSEL_Pos))
-#define NMIC_SCFGxR3_GFEN_Pos                 _U_(4)                                               /**< (NMIC_SCFGxR3) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR3_GFEN_Msk                 (_U_(0x1) << NMIC_SCFGxR3_GFEN_Pos)                  /**< (NMIC_SCFGxR3) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR3_GFEN(value)              (NMIC_SCFGxR3_GFEN_Msk & ((value) << NMIC_SCFGxR3_GFEN_Pos))
-#define NMIC_SCFGxR3_POL_Pos                  _U_(8)                                               /**< (NMIC_SCFGxR3) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR3_POL_Msk                  (_U_(0x1) << NMIC_SCFGxR3_POL_Pos)                   /**< (NMIC_SCFGxR3) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR3_POL(value)               (NMIC_SCFGxR3_POL_Msk & ((value) << NMIC_SCFGxR3_POL_Pos))
-#define NMIC_SCFGxR3_LVL_Pos                  _U_(9)                                               /**< (NMIC_SCFGxR3) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR3_LVL_Msk                  (_U_(0x1) << NMIC_SCFGxR3_LVL_Pos)                   /**< (NMIC_SCFGxR3) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR3_LVL(value)               (NMIC_SCFGxR3_LVL_Msk & ((value) << NMIC_SCFGxR3_LVL_Pos))
-#define NMIC_SCFGxR3_EN_Pos                   _U_(16)                                              /**< (NMIC_SCFGxR3) Source Enable Position */
-#define NMIC_SCFGxR3_EN_Msk                   (_U_(0x1) << NMIC_SCFGxR3_EN_Pos)                    /**< (NMIC_SCFGxR3) Source Enable Mask */
-#define NMIC_SCFGxR3_EN(value)                (NMIC_SCFGxR3_EN_Msk & ((value) << NMIC_SCFGxR3_EN_Pos))
-#define NMIC_SCFGxR3_FRZ_Pos                  _U_(31)                                              /**< (NMIC_SCFGxR3) Interrupt Line Freeze Position */
-#define NMIC_SCFGxR3_FRZ_Msk                  (_U_(0x1) << NMIC_SCFGxR3_FRZ_Pos)                   /**< (NMIC_SCFGxR3) Interrupt Line Freeze Mask */
-#define NMIC_SCFGxR3_FRZ(value)               (NMIC_SCFGxR3_FRZ_Msk & ((value) << NMIC_SCFGxR3_FRZ_Pos))
-#define NMIC_SCFGxR3_Msk                      _U_(0x80010313)                                      /**< (NMIC_SCFGxR3) Register Mask  */
+/* -------- NMIC_SCFG3R : (NMIC Offset: 0x20) (R/W 32) Source Configuration Register 3 -------- */
+#define NMIC_SCFG3R_GFSEL_Pos                 _U_(0)                                               /**< (NMIC_SCFG3R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG3R_GFSEL_Msk                 (_U_(0x3) << NMIC_SCFG3R_GFSEL_Pos)                  /**< (NMIC_SCFG3R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG3R_GFSEL(value)              (NMIC_SCFG3R_GFSEL_Msk & ((value) << NMIC_SCFG3R_GFSEL_Pos))
+#define NMIC_SCFG3R_GFEN_Pos                  _U_(4)                                               /**< (NMIC_SCFG3R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG3R_GFEN_Msk                  (_U_(0x1) << NMIC_SCFG3R_GFEN_Pos)                   /**< (NMIC_SCFG3R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG3R_GFEN(value)               (NMIC_SCFG3R_GFEN_Msk & ((value) << NMIC_SCFG3R_GFEN_Pos))
+#define NMIC_SCFG3R_POL_Pos                   _U_(8)                                               /**< (NMIC_SCFG3R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG3R_POL_Msk                   (_U_(0x1) << NMIC_SCFG3R_POL_Pos)                    /**< (NMIC_SCFG3R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG3R_POL(value)                (NMIC_SCFG3R_POL_Msk & ((value) << NMIC_SCFG3R_POL_Pos))
+#define NMIC_SCFG3R_LVL_Pos                   _U_(9)                                               /**< (NMIC_SCFG3R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG3R_LVL_Msk                   (_U_(0x1) << NMIC_SCFG3R_LVL_Pos)                    /**< (NMIC_SCFG3R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG3R_LVL(value)                (NMIC_SCFG3R_LVL_Msk & ((value) << NMIC_SCFG3R_LVL_Pos))
+#define NMIC_SCFG3R_EN_Pos                    _U_(16)                                              /**< (NMIC_SCFG3R) Source Enable Position */
+#define NMIC_SCFG3R_EN_Msk                    (_U_(0x1) << NMIC_SCFG3R_EN_Pos)                     /**< (NMIC_SCFG3R) Source Enable Mask */
+#define NMIC_SCFG3R_EN(value)                 (NMIC_SCFG3R_EN_Msk & ((value) << NMIC_SCFG3R_EN_Pos))
+#define NMIC_SCFG3R_FRZ_Pos                   _U_(31)                                              /**< (NMIC_SCFG3R) Interrupt Line Freeze Position */
+#define NMIC_SCFG3R_FRZ_Msk                   (_U_(0x1) << NMIC_SCFG3R_FRZ_Pos)                    /**< (NMIC_SCFG3R) Interrupt Line Freeze Mask */
+#define NMIC_SCFG3R_FRZ(value)                (NMIC_SCFG3R_FRZ_Msk & ((value) << NMIC_SCFG3R_FRZ_Pos))
+#define NMIC_SCFG3R_Msk                       _U_(0x80010313)                                      /**< (NMIC_SCFG3R) Register Mask  */
 
 
-/* -------- NMIC_SCFGxR4 : (NMIC Offset: 0x24) (R/W 32) Source Configuration Register 0 4 -------- */
-#define NMIC_SCFGxR4_GFSEL_Pos                _U_(0)                                               /**< (NMIC_SCFGxR4) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR4_GFSEL_Msk                (_U_(0x3) << NMIC_SCFGxR4_GFSEL_Pos)                 /**< (NMIC_SCFGxR4) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR4_GFSEL(value)             (NMIC_SCFGxR4_GFSEL_Msk & ((value) << NMIC_SCFGxR4_GFSEL_Pos))
-#define NMIC_SCFGxR4_GFEN_Pos                 _U_(4)                                               /**< (NMIC_SCFGxR4) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR4_GFEN_Msk                 (_U_(0x1) << NMIC_SCFGxR4_GFEN_Pos)                  /**< (NMIC_SCFGxR4) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR4_GFEN(value)              (NMIC_SCFGxR4_GFEN_Msk & ((value) << NMIC_SCFGxR4_GFEN_Pos))
-#define NMIC_SCFGxR4_POL_Pos                  _U_(8)                                               /**< (NMIC_SCFGxR4) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR4_POL_Msk                  (_U_(0x1) << NMIC_SCFGxR4_POL_Pos)                   /**< (NMIC_SCFGxR4) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR4_POL(value)               (NMIC_SCFGxR4_POL_Msk & ((value) << NMIC_SCFGxR4_POL_Pos))
-#define NMIC_SCFGxR4_LVL_Pos                  _U_(9)                                               /**< (NMIC_SCFGxR4) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR4_LVL_Msk                  (_U_(0x1) << NMIC_SCFGxR4_LVL_Pos)                   /**< (NMIC_SCFGxR4) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR4_LVL(value)               (NMIC_SCFGxR4_LVL_Msk & ((value) << NMIC_SCFGxR4_LVL_Pos))
-#define NMIC_SCFGxR4_EN_Pos                   _U_(16)                                              /**< (NMIC_SCFGxR4) Source Enable Position */
-#define NMIC_SCFGxR4_EN_Msk                   (_U_(0x1) << NMIC_SCFGxR4_EN_Pos)                    /**< (NMIC_SCFGxR4) Source Enable Mask */
-#define NMIC_SCFGxR4_EN(value)                (NMIC_SCFGxR4_EN_Msk & ((value) << NMIC_SCFGxR4_EN_Pos))
-#define NMIC_SCFGxR4_FRZ_Pos                  _U_(31)                                              /**< (NMIC_SCFGxR4) Interrupt Line Freeze Position */
-#define NMIC_SCFGxR4_FRZ_Msk                  (_U_(0x1) << NMIC_SCFGxR4_FRZ_Pos)                   /**< (NMIC_SCFGxR4) Interrupt Line Freeze Mask */
-#define NMIC_SCFGxR4_FRZ(value)               (NMIC_SCFGxR4_FRZ_Msk & ((value) << NMIC_SCFGxR4_FRZ_Pos))
-#define NMIC_SCFGxR4_Msk                      _U_(0x80010313)                                      /**< (NMIC_SCFGxR4) Register Mask  */
+/* -------- NMIC_SCFG4R : (NMIC Offset: 0x24) (R/W 32) Source Configuration Register 4 -------- */
+#define NMIC_SCFG4R_GFSEL_Pos                 _U_(0)                                               /**< (NMIC_SCFG4R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG4R_GFSEL_Msk                 (_U_(0x3) << NMIC_SCFG4R_GFSEL_Pos)                  /**< (NMIC_SCFG4R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG4R_GFSEL(value)              (NMIC_SCFG4R_GFSEL_Msk & ((value) << NMIC_SCFG4R_GFSEL_Pos))
+#define NMIC_SCFG4R_GFEN_Pos                  _U_(4)                                               /**< (NMIC_SCFG4R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG4R_GFEN_Msk                  (_U_(0x1) << NMIC_SCFG4R_GFEN_Pos)                   /**< (NMIC_SCFG4R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG4R_GFEN(value)               (NMIC_SCFG4R_GFEN_Msk & ((value) << NMIC_SCFG4R_GFEN_Pos))
+#define NMIC_SCFG4R_POL_Pos                   _U_(8)                                               /**< (NMIC_SCFG4R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG4R_POL_Msk                   (_U_(0x1) << NMIC_SCFG4R_POL_Pos)                    /**< (NMIC_SCFG4R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG4R_POL(value)                (NMIC_SCFG4R_POL_Msk & ((value) << NMIC_SCFG4R_POL_Pos))
+#define NMIC_SCFG4R_LVL_Pos                   _U_(9)                                               /**< (NMIC_SCFG4R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG4R_LVL_Msk                   (_U_(0x1) << NMIC_SCFG4R_LVL_Pos)                    /**< (NMIC_SCFG4R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG4R_LVL(value)                (NMIC_SCFG4R_LVL_Msk & ((value) << NMIC_SCFG4R_LVL_Pos))
+#define NMIC_SCFG4R_EN_Pos                    _U_(16)                                              /**< (NMIC_SCFG4R) Source Enable Position */
+#define NMIC_SCFG4R_EN_Msk                    (_U_(0x1) << NMIC_SCFG4R_EN_Pos)                     /**< (NMIC_SCFG4R) Source Enable Mask */
+#define NMIC_SCFG4R_EN(value)                 (NMIC_SCFG4R_EN_Msk & ((value) << NMIC_SCFG4R_EN_Pos))
+#define NMIC_SCFG4R_FRZ_Pos                   _U_(31)                                              /**< (NMIC_SCFG4R) Interrupt Line Freeze Position */
+#define NMIC_SCFG4R_FRZ_Msk                   (_U_(0x1) << NMIC_SCFG4R_FRZ_Pos)                    /**< (NMIC_SCFG4R) Interrupt Line Freeze Mask */
+#define NMIC_SCFG4R_FRZ(value)                (NMIC_SCFG4R_FRZ_Msk & ((value) << NMIC_SCFG4R_FRZ_Pos))
+#define NMIC_SCFG4R_Msk                       _U_(0x80010313)                                      /**< (NMIC_SCFG4R) Register Mask  */
 
 
-/* -------- NMIC_SCFGxR5 : (NMIC Offset: 0x28) (R/W 32) Source Configuration Register 0 5 -------- */
-#define NMIC_SCFGxR5_GFSEL_Pos                _U_(0)                                               /**< (NMIC_SCFGxR5) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR5_GFSEL_Msk                (_U_(0x3) << NMIC_SCFGxR5_GFSEL_Pos)                 /**< (NMIC_SCFGxR5) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR5_GFSEL(value)             (NMIC_SCFGxR5_GFSEL_Msk & ((value) << NMIC_SCFGxR5_GFSEL_Pos))
-#define NMIC_SCFGxR5_GFEN_Pos                 _U_(4)                                               /**< (NMIC_SCFGxR5) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR5_GFEN_Msk                 (_U_(0x1) << NMIC_SCFGxR5_GFEN_Pos)                  /**< (NMIC_SCFGxR5) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR5_GFEN(value)              (NMIC_SCFGxR5_GFEN_Msk & ((value) << NMIC_SCFGxR5_GFEN_Pos))
-#define NMIC_SCFGxR5_POL_Pos                  _U_(8)                                               /**< (NMIC_SCFGxR5) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR5_POL_Msk                  (_U_(0x1) << NMIC_SCFGxR5_POL_Pos)                   /**< (NMIC_SCFGxR5) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR5_POL(value)               (NMIC_SCFGxR5_POL_Msk & ((value) << NMIC_SCFGxR5_POL_Pos))
-#define NMIC_SCFGxR5_LVL_Pos                  _U_(9)                                               /**< (NMIC_SCFGxR5) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR5_LVL_Msk                  (_U_(0x1) << NMIC_SCFGxR5_LVL_Pos)                   /**< (NMIC_SCFGxR5) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR5_LVL(value)               (NMIC_SCFGxR5_LVL_Msk & ((value) << NMIC_SCFGxR5_LVL_Pos))
-#define NMIC_SCFGxR5_EN_Pos                   _U_(16)                                              /**< (NMIC_SCFGxR5) Source Enable Position */
-#define NMIC_SCFGxR5_EN_Msk                   (_U_(0x1) << NMIC_SCFGxR5_EN_Pos)                    /**< (NMIC_SCFGxR5) Source Enable Mask */
-#define NMIC_SCFGxR5_EN(value)                (NMIC_SCFGxR5_EN_Msk & ((value) << NMIC_SCFGxR5_EN_Pos))
-#define NMIC_SCFGxR5_FRZ_Pos                  _U_(31)                                              /**< (NMIC_SCFGxR5) Interrupt Line Freeze Position */
-#define NMIC_SCFGxR5_FRZ_Msk                  (_U_(0x1) << NMIC_SCFGxR5_FRZ_Pos)                   /**< (NMIC_SCFGxR5) Interrupt Line Freeze Mask */
-#define NMIC_SCFGxR5_FRZ(value)               (NMIC_SCFGxR5_FRZ_Msk & ((value) << NMIC_SCFGxR5_FRZ_Pos))
-#define NMIC_SCFGxR5_Msk                      _U_(0x80010313)                                      /**< (NMIC_SCFGxR5) Register Mask  */
+/* -------- NMIC_SCFG5R : (NMIC Offset: 0x28) (R/W 32) Source Configuration Register 5 -------- */
+#define NMIC_SCFG5R_GFSEL_Pos                 _U_(0)                                               /**< (NMIC_SCFG5R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG5R_GFSEL_Msk                 (_U_(0x3) << NMIC_SCFG5R_GFSEL_Pos)                  /**< (NMIC_SCFG5R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG5R_GFSEL(value)              (NMIC_SCFG5R_GFSEL_Msk & ((value) << NMIC_SCFG5R_GFSEL_Pos))
+#define NMIC_SCFG5R_GFEN_Pos                  _U_(4)                                               /**< (NMIC_SCFG5R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG5R_GFEN_Msk                  (_U_(0x1) << NMIC_SCFG5R_GFEN_Pos)                   /**< (NMIC_SCFG5R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG5R_GFEN(value)               (NMIC_SCFG5R_GFEN_Msk & ((value) << NMIC_SCFG5R_GFEN_Pos))
+#define NMIC_SCFG5R_POL_Pos                   _U_(8)                                               /**< (NMIC_SCFG5R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG5R_POL_Msk                   (_U_(0x1) << NMIC_SCFG5R_POL_Pos)                    /**< (NMIC_SCFG5R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG5R_POL(value)                (NMIC_SCFG5R_POL_Msk & ((value) << NMIC_SCFG5R_POL_Pos))
+#define NMIC_SCFG5R_LVL_Pos                   _U_(9)                                               /**< (NMIC_SCFG5R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG5R_LVL_Msk                   (_U_(0x1) << NMIC_SCFG5R_LVL_Pos)                    /**< (NMIC_SCFG5R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG5R_LVL(value)                (NMIC_SCFG5R_LVL_Msk & ((value) << NMIC_SCFG5R_LVL_Pos))
+#define NMIC_SCFG5R_EN_Pos                    _U_(16)                                              /**< (NMIC_SCFG5R) Source Enable Position */
+#define NMIC_SCFG5R_EN_Msk                    (_U_(0x1) << NMIC_SCFG5R_EN_Pos)                     /**< (NMIC_SCFG5R) Source Enable Mask */
+#define NMIC_SCFG5R_EN(value)                 (NMIC_SCFG5R_EN_Msk & ((value) << NMIC_SCFG5R_EN_Pos))
+#define NMIC_SCFG5R_FRZ_Pos                   _U_(31)                                              /**< (NMIC_SCFG5R) Interrupt Line Freeze Position */
+#define NMIC_SCFG5R_FRZ_Msk                   (_U_(0x1) << NMIC_SCFG5R_FRZ_Pos)                    /**< (NMIC_SCFG5R) Interrupt Line Freeze Mask */
+#define NMIC_SCFG5R_FRZ(value)                (NMIC_SCFG5R_FRZ_Msk & ((value) << NMIC_SCFG5R_FRZ_Pos))
+#define NMIC_SCFG5R_Msk                       _U_(0x80010313)                                      /**< (NMIC_SCFG5R) Register Mask  */
 
 
-/* -------- NMIC_SCFGxR6 : (NMIC Offset: 0x2C) (R/W 32) Source Configuration Register 0 6 -------- */
-#define NMIC_SCFGxR6_GFSEL_Pos                _U_(0)                                               /**< (NMIC_SCFGxR6) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR6_GFSEL_Msk                (_U_(0x3) << NMIC_SCFGxR6_GFSEL_Pos)                 /**< (NMIC_SCFGxR6) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR6_GFSEL(value)             (NMIC_SCFGxR6_GFSEL_Msk & ((value) << NMIC_SCFGxR6_GFSEL_Pos))
-#define NMIC_SCFGxR6_GFEN_Pos                 _U_(4)                                               /**< (NMIC_SCFGxR6) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR6_GFEN_Msk                 (_U_(0x1) << NMIC_SCFGxR6_GFEN_Pos)                  /**< (NMIC_SCFGxR6) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR6_GFEN(value)              (NMIC_SCFGxR6_GFEN_Msk & ((value) << NMIC_SCFGxR6_GFEN_Pos))
-#define NMIC_SCFGxR6_POL_Pos                  _U_(8)                                               /**< (NMIC_SCFGxR6) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR6_POL_Msk                  (_U_(0x1) << NMIC_SCFGxR6_POL_Pos)                   /**< (NMIC_SCFGxR6) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR6_POL(value)               (NMIC_SCFGxR6_POL_Msk & ((value) << NMIC_SCFGxR6_POL_Pos))
-#define NMIC_SCFGxR6_LVL_Pos                  _U_(9)                                               /**< (NMIC_SCFGxR6) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR6_LVL_Msk                  (_U_(0x1) << NMIC_SCFGxR6_LVL_Pos)                   /**< (NMIC_SCFGxR6) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR6_LVL(value)               (NMIC_SCFGxR6_LVL_Msk & ((value) << NMIC_SCFGxR6_LVL_Pos))
-#define NMIC_SCFGxR6_EN_Pos                   _U_(16)                                              /**< (NMIC_SCFGxR6) Source Enable Position */
-#define NMIC_SCFGxR6_EN_Msk                   (_U_(0x1) << NMIC_SCFGxR6_EN_Pos)                    /**< (NMIC_SCFGxR6) Source Enable Mask */
-#define NMIC_SCFGxR6_EN(value)                (NMIC_SCFGxR6_EN_Msk & ((value) << NMIC_SCFGxR6_EN_Pos))
-#define NMIC_SCFGxR6_FRZ_Pos                  _U_(31)                                              /**< (NMIC_SCFGxR6) Interrupt Line Freeze Position */
-#define NMIC_SCFGxR6_FRZ_Msk                  (_U_(0x1) << NMIC_SCFGxR6_FRZ_Pos)                   /**< (NMIC_SCFGxR6) Interrupt Line Freeze Mask */
-#define NMIC_SCFGxR6_FRZ(value)               (NMIC_SCFGxR6_FRZ_Msk & ((value) << NMIC_SCFGxR6_FRZ_Pos))
-#define NMIC_SCFGxR6_Msk                      _U_(0x80010313)                                      /**< (NMIC_SCFGxR6) Register Mask  */
+/* -------- NMIC_SCFG6R : (NMIC Offset: 0x2C) (R/W 32) Source Configuration Register 6 -------- */
+#define NMIC_SCFG6R_GFSEL_Pos                 _U_(0)                                               /**< (NMIC_SCFG6R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG6R_GFSEL_Msk                 (_U_(0x3) << NMIC_SCFG6R_GFSEL_Pos)                  /**< (NMIC_SCFG6R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG6R_GFSEL(value)              (NMIC_SCFG6R_GFSEL_Msk & ((value) << NMIC_SCFG6R_GFSEL_Pos))
+#define NMIC_SCFG6R_GFEN_Pos                  _U_(4)                                               /**< (NMIC_SCFG6R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG6R_GFEN_Msk                  (_U_(0x1) << NMIC_SCFG6R_GFEN_Pos)                   /**< (NMIC_SCFG6R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG6R_GFEN(value)               (NMIC_SCFG6R_GFEN_Msk & ((value) << NMIC_SCFG6R_GFEN_Pos))
+#define NMIC_SCFG6R_POL_Pos                   _U_(8)                                               /**< (NMIC_SCFG6R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG6R_POL_Msk                   (_U_(0x1) << NMIC_SCFG6R_POL_Pos)                    /**< (NMIC_SCFG6R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG6R_POL(value)                (NMIC_SCFG6R_POL_Msk & ((value) << NMIC_SCFG6R_POL_Pos))
+#define NMIC_SCFG6R_LVL_Pos                   _U_(9)                                               /**< (NMIC_SCFG6R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG6R_LVL_Msk                   (_U_(0x1) << NMIC_SCFG6R_LVL_Pos)                    /**< (NMIC_SCFG6R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG6R_LVL(value)                (NMIC_SCFG6R_LVL_Msk & ((value) << NMIC_SCFG6R_LVL_Pos))
+#define NMIC_SCFG6R_EN_Pos                    _U_(16)                                              /**< (NMIC_SCFG6R) Source Enable Position */
+#define NMIC_SCFG6R_EN_Msk                    (_U_(0x1) << NMIC_SCFG6R_EN_Pos)                     /**< (NMIC_SCFG6R) Source Enable Mask */
+#define NMIC_SCFG6R_EN(value)                 (NMIC_SCFG6R_EN_Msk & ((value) << NMIC_SCFG6R_EN_Pos))
+#define NMIC_SCFG6R_FRZ_Pos                   _U_(31)                                              /**< (NMIC_SCFG6R) Interrupt Line Freeze Position */
+#define NMIC_SCFG6R_FRZ_Msk                   (_U_(0x1) << NMIC_SCFG6R_FRZ_Pos)                    /**< (NMIC_SCFG6R) Interrupt Line Freeze Mask */
+#define NMIC_SCFG6R_FRZ(value)                (NMIC_SCFG6R_FRZ_Msk & ((value) << NMIC_SCFG6R_FRZ_Pos))
+#define NMIC_SCFG6R_Msk                       _U_(0x80010313)                                      /**< (NMIC_SCFG6R) Register Mask  */
 
 
-/* -------- NMIC_SCFGxR7 : (NMIC Offset: 0x30) (R/W 32) Source Configuration Register 0 7 -------- */
-#define NMIC_SCFGxR7_GFSEL_Pos                _U_(0)                                               /**< (NMIC_SCFGxR7) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR7_GFSEL_Msk                (_U_(0x3) << NMIC_SCFGxR7_GFSEL_Pos)                 /**< (NMIC_SCFGxR7) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR7_GFSEL(value)             (NMIC_SCFGxR7_GFSEL_Msk & ((value) << NMIC_SCFGxR7_GFSEL_Pos))
-#define NMIC_SCFGxR7_GFEN_Pos                 _U_(4)                                               /**< (NMIC_SCFGxR7) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR7_GFEN_Msk                 (_U_(0x1) << NMIC_SCFGxR7_GFEN_Pos)                  /**< (NMIC_SCFGxR7) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR7_GFEN(value)              (NMIC_SCFGxR7_GFEN_Msk & ((value) << NMIC_SCFGxR7_GFEN_Pos))
-#define NMIC_SCFGxR7_POL_Pos                  _U_(8)                                               /**< (NMIC_SCFGxR7) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR7_POL_Msk                  (_U_(0x1) << NMIC_SCFGxR7_POL_Pos)                   /**< (NMIC_SCFGxR7) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR7_POL(value)               (NMIC_SCFGxR7_POL_Msk & ((value) << NMIC_SCFGxR7_POL_Pos))
-#define NMIC_SCFGxR7_LVL_Pos                  _U_(9)                                               /**< (NMIC_SCFGxR7) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR7_LVL_Msk                  (_U_(0x1) << NMIC_SCFGxR7_LVL_Pos)                   /**< (NMIC_SCFGxR7) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR7_LVL(value)               (NMIC_SCFGxR7_LVL_Msk & ((value) << NMIC_SCFGxR7_LVL_Pos))
-#define NMIC_SCFGxR7_EN_Pos                   _U_(16)                                              /**< (NMIC_SCFGxR7) Source Enable Position */
-#define NMIC_SCFGxR7_EN_Msk                   (_U_(0x1) << NMIC_SCFGxR7_EN_Pos)                    /**< (NMIC_SCFGxR7) Source Enable Mask */
-#define NMIC_SCFGxR7_EN(value)                (NMIC_SCFGxR7_EN_Msk & ((value) << NMIC_SCFGxR7_EN_Pos))
-#define NMIC_SCFGxR7_FRZ_Pos                  _U_(31)                                              /**< (NMIC_SCFGxR7) Interrupt Line Freeze Position */
-#define NMIC_SCFGxR7_FRZ_Msk                  (_U_(0x1) << NMIC_SCFGxR7_FRZ_Pos)                   /**< (NMIC_SCFGxR7) Interrupt Line Freeze Mask */
-#define NMIC_SCFGxR7_FRZ(value)               (NMIC_SCFGxR7_FRZ_Msk & ((value) << NMIC_SCFGxR7_FRZ_Pos))
-#define NMIC_SCFGxR7_Msk                      _U_(0x80010313)                                      /**< (NMIC_SCFGxR7) Register Mask  */
+/* -------- NMIC_SCFG7R : (NMIC Offset: 0x30) (R/W 32) Source Configuration Register 7 -------- */
+#define NMIC_SCFG7R_GFSEL_Pos                 _U_(0)                                               /**< (NMIC_SCFG7R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG7R_GFSEL_Msk                 (_U_(0x3) << NMIC_SCFG7R_GFSEL_Pos)                  /**< (NMIC_SCFG7R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG7R_GFSEL(value)              (NMIC_SCFG7R_GFSEL_Msk & ((value) << NMIC_SCFG7R_GFSEL_Pos))
+#define NMIC_SCFG7R_GFEN_Pos                  _U_(4)                                               /**< (NMIC_SCFG7R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG7R_GFEN_Msk                  (_U_(0x1) << NMIC_SCFG7R_GFEN_Pos)                   /**< (NMIC_SCFG7R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG7R_GFEN(value)               (NMIC_SCFG7R_GFEN_Msk & ((value) << NMIC_SCFG7R_GFEN_Pos))
+#define NMIC_SCFG7R_POL_Pos                   _U_(8)                                               /**< (NMIC_SCFG7R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG7R_POL_Msk                   (_U_(0x1) << NMIC_SCFG7R_POL_Pos)                    /**< (NMIC_SCFG7R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG7R_POL(value)                (NMIC_SCFG7R_POL_Msk & ((value) << NMIC_SCFG7R_POL_Pos))
+#define NMIC_SCFG7R_LVL_Pos                   _U_(9)                                               /**< (NMIC_SCFG7R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG7R_LVL_Msk                   (_U_(0x1) << NMIC_SCFG7R_LVL_Pos)                    /**< (NMIC_SCFG7R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG7R_LVL(value)                (NMIC_SCFG7R_LVL_Msk & ((value) << NMIC_SCFG7R_LVL_Pos))
+#define NMIC_SCFG7R_EN_Pos                    _U_(16)                                              /**< (NMIC_SCFG7R) Source Enable Position */
+#define NMIC_SCFG7R_EN_Msk                    (_U_(0x1) << NMIC_SCFG7R_EN_Pos)                     /**< (NMIC_SCFG7R) Source Enable Mask */
+#define NMIC_SCFG7R_EN(value)                 (NMIC_SCFG7R_EN_Msk & ((value) << NMIC_SCFG7R_EN_Pos))
+#define NMIC_SCFG7R_FRZ_Pos                   _U_(31)                                              /**< (NMIC_SCFG7R) Interrupt Line Freeze Position */
+#define NMIC_SCFG7R_FRZ_Msk                   (_U_(0x1) << NMIC_SCFG7R_FRZ_Pos)                    /**< (NMIC_SCFG7R) Interrupt Line Freeze Mask */
+#define NMIC_SCFG7R_FRZ(value)                (NMIC_SCFG7R_FRZ_Msk & ((value) << NMIC_SCFG7R_FRZ_Pos))
+#define NMIC_SCFG7R_Msk                       _U_(0x80010313)                                      /**< (NMIC_SCFG7R) Register Mask  */
 
 
-/* -------- NMIC_SCFGxR8 : (NMIC Offset: 0x34) (R/W 32) Source Configuration Register 0 8 -------- */
-#define NMIC_SCFGxR8_GFSEL_Pos                _U_(0)                                               /**< (NMIC_SCFGxR8) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR8_GFSEL_Msk                (_U_(0x3) << NMIC_SCFGxR8_GFSEL_Pos)                 /**< (NMIC_SCFGxR8) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR8_GFSEL(value)             (NMIC_SCFGxR8_GFSEL_Msk & ((value) << NMIC_SCFGxR8_GFSEL_Pos))
-#define NMIC_SCFGxR8_GFEN_Pos                 _U_(4)                                               /**< (NMIC_SCFGxR8) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR8_GFEN_Msk                 (_U_(0x1) << NMIC_SCFGxR8_GFEN_Pos)                  /**< (NMIC_SCFGxR8) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR8_GFEN(value)              (NMIC_SCFGxR8_GFEN_Msk & ((value) << NMIC_SCFGxR8_GFEN_Pos))
-#define NMIC_SCFGxR8_POL_Pos                  _U_(8)                                               /**< (NMIC_SCFGxR8) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR8_POL_Msk                  (_U_(0x1) << NMIC_SCFGxR8_POL_Pos)                   /**< (NMIC_SCFGxR8) Polarity (POL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR8_POL(value)               (NMIC_SCFGxR8_POL_Msk & ((value) << NMIC_SCFGxR8_POL_Pos))
-#define NMIC_SCFGxR8_LVL_Pos                  _U_(9)                                               /**< (NMIC_SCFGxR8) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Position */
-#define NMIC_SCFGxR8_LVL_Msk                  (_U_(0x1) << NMIC_SCFGxR8_LVL_Pos)                   /**< (NMIC_SCFGxR8) Level Detection (LVL bit is read-only in NMIC_SCFG0 to 8) Mask */
-#define NMIC_SCFGxR8_LVL(value)               (NMIC_SCFGxR8_LVL_Msk & ((value) << NMIC_SCFGxR8_LVL_Pos))
-#define NMIC_SCFGxR8_EN_Pos                   _U_(16)                                              /**< (NMIC_SCFGxR8) Source Enable Position */
-#define NMIC_SCFGxR8_EN_Msk                   (_U_(0x1) << NMIC_SCFGxR8_EN_Pos)                    /**< (NMIC_SCFGxR8) Source Enable Mask */
-#define NMIC_SCFGxR8_EN(value)                (NMIC_SCFGxR8_EN_Msk & ((value) << NMIC_SCFGxR8_EN_Pos))
-#define NMIC_SCFGxR8_FRZ_Pos                  _U_(31)                                              /**< (NMIC_SCFGxR8) Interrupt Line Freeze Position */
-#define NMIC_SCFGxR8_FRZ_Msk                  (_U_(0x1) << NMIC_SCFGxR8_FRZ_Pos)                   /**< (NMIC_SCFGxR8) Interrupt Line Freeze Mask */
-#define NMIC_SCFGxR8_FRZ(value)               (NMIC_SCFGxR8_FRZ_Msk & ((value) << NMIC_SCFGxR8_FRZ_Pos))
-#define NMIC_SCFGxR8_Msk                      _U_(0x80010313)                                      /**< (NMIC_SCFGxR8) Register Mask  */
+/* -------- NMIC_SCFG8R : (NMIC Offset: 0x34) (R/W 32) Source Configuration Register 8 -------- */
+#define NMIC_SCFG8R_GFSEL_Pos                 _U_(0)                                               /**< (NMIC_SCFG8R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG8R_GFSEL_Msk                 (_U_(0x3) << NMIC_SCFG8R_GFSEL_Pos)                  /**< (NMIC_SCFG8R) Glitch Filter Selector (GFSEL field is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG8R_GFSEL(value)              (NMIC_SCFG8R_GFSEL_Msk & ((value) << NMIC_SCFG8R_GFSEL_Pos))
+#define NMIC_SCFG8R_GFEN_Pos                  _U_(4)                                               /**< (NMIC_SCFG8R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG8R_GFEN_Msk                  (_U_(0x1) << NMIC_SCFG8R_GFEN_Pos)                   /**< (NMIC_SCFG8R) Glitch Filter Enable (GFEN bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG8R_GFEN(value)               (NMIC_SCFG8R_GFEN_Msk & ((value) << NMIC_SCFG8R_GFEN_Pos))
+#define NMIC_SCFG8R_POL_Pos                   _U_(8)                                               /**< (NMIC_SCFG8R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG8R_POL_Msk                   (_U_(0x1) << NMIC_SCFG8R_POL_Pos)                    /**< (NMIC_SCFG8R) Polarity (POL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG8R_POL(value)                (NMIC_SCFG8R_POL_Msk & ((value) << NMIC_SCFG8R_POL_Pos))
+#define NMIC_SCFG8R_LVL_Pos                   _U_(9)                                               /**< (NMIC_SCFG8R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Position */
+#define NMIC_SCFG8R_LVL_Msk                   (_U_(0x1) << NMIC_SCFG8R_LVL_Pos)                    /**< (NMIC_SCFG8R) Level Detection (LVL bit is read-only in NMIC_SCFG1 to 8) Mask */
+#define NMIC_SCFG8R_LVL(value)                (NMIC_SCFG8R_LVL_Msk & ((value) << NMIC_SCFG8R_LVL_Pos))
+#define NMIC_SCFG8R_EN_Pos                    _U_(16)                                              /**< (NMIC_SCFG8R) Source Enable Position */
+#define NMIC_SCFG8R_EN_Msk                    (_U_(0x1) << NMIC_SCFG8R_EN_Pos)                     /**< (NMIC_SCFG8R) Source Enable Mask */
+#define NMIC_SCFG8R_EN(value)                 (NMIC_SCFG8R_EN_Msk & ((value) << NMIC_SCFG8R_EN_Pos))
+#define NMIC_SCFG8R_FRZ_Pos                   _U_(31)                                              /**< (NMIC_SCFG8R) Interrupt Line Freeze Position */
+#define NMIC_SCFG8R_FRZ_Msk                   (_U_(0x1) << NMIC_SCFG8R_FRZ_Pos)                    /**< (NMIC_SCFG8R) Interrupt Line Freeze Mask */
+#define NMIC_SCFG8R_FRZ(value)                (NMIC_SCFG8R_FRZ_Msk & ((value) << NMIC_SCFG8R_FRZ_Pos))
+#define NMIC_SCFG8R_Msk                       _U_(0x80010313)                                      /**< (NMIC_SCFG8R) Register Mask  */
 
 
 /* -------- NMIC_WPMR : (NMIC Offset: 0xE4) (R/W 32) Write Protection Mode Register -------- */
@@ -475,15 +433,15 @@
 #define NMIC_IAR_REG_OFST              (0x08)              /**< (NMIC_IAR) Interrupt Active Register Offset */
 #define NMIC_ISR_REG_OFST              (0x0C)              /**< (NMIC_ISR) Interrupt Status Register Offset */
 #define NMIC_GFCS_REG_OFST             (0x10)              /**< (NMIC_GFCS) Glitch Filter Configuration Status Register Offset */
-#define NMIC_SCFGxR0_REG_OFST          (0x14)              /**< (NMIC_SCFGxR0) Source Configuration Register 0 0 Offset */
-#define NMIC_SCFGxR1_REG_OFST          (0x18)              /**< (NMIC_SCFGxR1) Source Configuration Register 0 1 Offset */
-#define NMIC_SCFGxR2_REG_OFST          (0x1C)              /**< (NMIC_SCFGxR2) Source Configuration Register 0 2 Offset */
-#define NMIC_SCFGxR3_REG_OFST          (0x20)              /**< (NMIC_SCFGxR3) Source Configuration Register 0 3 Offset */
-#define NMIC_SCFGxR4_REG_OFST          (0x24)              /**< (NMIC_SCFGxR4) Source Configuration Register 0 4 Offset */
-#define NMIC_SCFGxR5_REG_OFST          (0x28)              /**< (NMIC_SCFGxR5) Source Configuration Register 0 5 Offset */
-#define NMIC_SCFGxR6_REG_OFST          (0x2C)              /**< (NMIC_SCFGxR6) Source Configuration Register 0 6 Offset */
-#define NMIC_SCFGxR7_REG_OFST          (0x30)              /**< (NMIC_SCFGxR7) Source Configuration Register 0 7 Offset */
-#define NMIC_SCFGxR8_REG_OFST          (0x34)              /**< (NMIC_SCFGxR8) Source Configuration Register 0 8 Offset */
+#define NMIC_SCFG0R_REG_OFST           (0x14)              /**< (NMIC_SCFG0R) Source Configuration Register 0 Offset */
+#define NMIC_SCFG1R_REG_OFST           (0x18)              /**< (NMIC_SCFG1R) Source Configuration Register 1 Offset */
+#define NMIC_SCFG2R_REG_OFST           (0x1C)              /**< (NMIC_SCFG2R) Source Configuration Register 2 Offset */
+#define NMIC_SCFG3R_REG_OFST           (0x20)              /**< (NMIC_SCFG3R) Source Configuration Register 3 Offset */
+#define NMIC_SCFG4R_REG_OFST           (0x24)              /**< (NMIC_SCFG4R) Source Configuration Register 4 Offset */
+#define NMIC_SCFG5R_REG_OFST           (0x28)              /**< (NMIC_SCFG5R) Source Configuration Register 5 Offset */
+#define NMIC_SCFG6R_REG_OFST           (0x2C)              /**< (NMIC_SCFG6R) Source Configuration Register 6 Offset */
+#define NMIC_SCFG7R_REG_OFST           (0x30)              /**< (NMIC_SCFG7R) Source Configuration Register 7 Offset */
+#define NMIC_SCFG8R_REG_OFST           (0x34)              /**< (NMIC_SCFG8R) Source Configuration Register 8 Offset */
 #define NMIC_WPMR_REG_OFST             (0xE4)              /**< (NMIC_WPMR) Write Protection Mode Register Offset */
 #define NMIC_WPSR_REG_OFST             (0xE8)              /**< (NMIC_WPSR) Write Protection Status Register Offset */
 
@@ -496,15 +454,15 @@ typedef struct
   __I   uint32_t                       NMIC_IAR;           /**< Offset: 0x08 (R/   32) Interrupt Active Register */
   __I   uint32_t                       NMIC_ISR;           /**< Offset: 0x0C (R/   32) Interrupt Status Register */
   __I   uint32_t                       NMIC_GFCS;          /**< Offset: 0x10 (R/   32) Glitch Filter Configuration Status Register */
-  __IO  uint32_t                       NMIC_SCFGxR0;       /**< Offset: 0x14 (R/W  32) Source Configuration Register 0 0 */
-  __IO  uint32_t                       NMIC_SCFGxR1;       /**< Offset: 0x18 (R/W  32) Source Configuration Register 0 1 */
-  __IO  uint32_t                       NMIC_SCFGxR2;       /**< Offset: 0x1C (R/W  32) Source Configuration Register 0 2 */
-  __IO  uint32_t                       NMIC_SCFGxR3;       /**< Offset: 0x20 (R/W  32) Source Configuration Register 0 3 */
-  __IO  uint32_t                       NMIC_SCFGxR4;       /**< Offset: 0x24 (R/W  32) Source Configuration Register 0 4 */
-  __IO  uint32_t                       NMIC_SCFGxR5;       /**< Offset: 0x28 (R/W  32) Source Configuration Register 0 5 */
-  __IO  uint32_t                       NMIC_SCFGxR6;       /**< Offset: 0x2C (R/W  32) Source Configuration Register 0 6 */
-  __IO  uint32_t                       NMIC_SCFGxR7;       /**< Offset: 0x30 (R/W  32) Source Configuration Register 0 7 */
-  __IO  uint32_t                       NMIC_SCFGxR8;       /**< Offset: 0x34 (R/W  32) Source Configuration Register 0 8 */
+  __IO  uint32_t                       NMIC_SCFG0R;        /**< Offset: 0x14 (R/W  32) Source Configuration Register 0 */
+  __IO  uint32_t                       NMIC_SCFG1R;        /**< Offset: 0x18 (R/W  32) Source Configuration Register 1 */
+  __IO  uint32_t                       NMIC_SCFG2R;        /**< Offset: 0x1C (R/W  32) Source Configuration Register 2 */
+  __IO  uint32_t                       NMIC_SCFG3R;        /**< Offset: 0x20 (R/W  32) Source Configuration Register 3 */
+  __IO  uint32_t                       NMIC_SCFG4R;        /**< Offset: 0x24 (R/W  32) Source Configuration Register 4 */
+  __IO  uint32_t                       NMIC_SCFG5R;        /**< Offset: 0x28 (R/W  32) Source Configuration Register 5 */
+  __IO  uint32_t                       NMIC_SCFG6R;        /**< Offset: 0x2C (R/W  32) Source Configuration Register 6 */
+  __IO  uint32_t                       NMIC_SCFG7R;        /**< Offset: 0x30 (R/W  32) Source Configuration Register 7 */
+  __IO  uint32_t                       NMIC_SCFG8R;        /**< Offset: 0x34 (R/W  32) Source Configuration Register 8 */
   __I   uint8_t                        Reserved1[0xAC];
   __IO  uint32_t                       NMIC_WPMR;          /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I   uint32_t                       NMIC_WPSR;          /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
