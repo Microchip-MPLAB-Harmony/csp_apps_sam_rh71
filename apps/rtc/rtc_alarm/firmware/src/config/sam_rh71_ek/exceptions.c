@@ -44,6 +44,7 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+#include "interrupts.h"
 #include "definitions.h"
 #include <stdio.h>
 
@@ -60,7 +61,7 @@ void __attribute__((noreturn)) NonMaskableInt_Handler(void)
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
     __builtin_software_breakpoint();
 #endif
-    while (1)
+    while (true)
     {
     }
 }
@@ -119,7 +120,7 @@ void __attribute__((noreturn)) HardFault_Handler_C(uint32_t * hardfault_args, un
    __builtin_software_breakpoint();
   #endif
 
-   while (1)
+   while (true)
    {
        // Do Nothing
    }
@@ -172,7 +173,7 @@ void __attribute__((noreturn)) DebugMonitor_Handler_C(uint32_t * hardfault_args,
   #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
    __builtin_software_breakpoint();
   #endif
-   while (1)
+   while (true)
    {
        // Do Nothing
    }
@@ -231,7 +232,7 @@ void __attribute__((noreturn)) MemoryManagement_Handler_C(uint32_t * hardfault_a
   #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
    __builtin_software_breakpoint();
   #endif
-   while (1)
+   while (true)
    {
        // Do Nothing
    }
@@ -291,7 +292,7 @@ void __attribute__((noreturn)) BusFault_Handler_C(uint32_t * hardfault_args, uns
   #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
    __builtin_software_breakpoint();
   #endif
-   while (1)
+   while (true)
    {
        // Do Nothing
    }
@@ -347,7 +348,7 @@ void __attribute__((noreturn)) UsageFault_Handler_C(uint32_t * hardfault_args, u
   #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
    __builtin_software_breakpoint();
   #endif
-   while (1)
+   while (true)
    {
        // Do Nothing
    }

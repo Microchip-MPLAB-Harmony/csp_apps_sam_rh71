@@ -1,7 +1,7 @@
 /**
  * \brief Component description for QSPI
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_QSPI_COMPONENT_H_
 #define _SAMRH71_QSPI_COMPONENT_H_
 
@@ -85,20 +85,13 @@
 #define   QSPI_MR_NBBITS_16_BIT_Val           _U_(0x8)                                             /**< (QSPI_MR) 16 bits for transfer  */
 #define QSPI_MR_NBBITS_8_BIT                  (QSPI_MR_NBBITS_8_BIT_Val << QSPI_MR_NBBITS_Pos)     /**< (QSPI_MR) 8 bits for transfer Position  */
 #define QSPI_MR_NBBITS_16_BIT                 (QSPI_MR_NBBITS_16_BIT_Val << QSPI_MR_NBBITS_Pos)    /**< (QSPI_MR) 16 bits for transfer Position  */
-#define QSPI_MR_PHYCR_Pos                     _U_(14)                                              /**< (QSPI_MR) Physical Interface Clock Ratio Position */
-#define QSPI_MR_PHYCR_Msk                     (_U_(0x1) << QSPI_MR_PHYCR_Pos)                      /**< (QSPI_MR) Physical Interface Clock Ratio Mask */
-#define QSPI_MR_PHYCR(value)                  (QSPI_MR_PHYCR_Msk & ((value) << QSPI_MR_PHYCR_Pos))
-#define   QSPI_MR_PHYCR_RATIO_1_1_Val         _U_(0x0)                                             /**< (QSPI_MR) The physical interface clock is at the same speed as the QSPI controller clock.  */
-#define   QSPI_MR_PHYCR_RATIO_1_2_Val         _U_(0x1)                                             /**< (QSPI_MR) The physical interface clock is twice as fast as the QSPI controller clock.  */
-#define QSPI_MR_PHYCR_RATIO_1_1               (QSPI_MR_PHYCR_RATIO_1_1_Val << QSPI_MR_PHYCR_Pos)   /**< (QSPI_MR) The physical interface clock is at the same speed as the QSPI controller clock. Position  */
-#define QSPI_MR_PHYCR_RATIO_1_2               (QSPI_MR_PHYCR_RATIO_1_2_Val << QSPI_MR_PHYCR_Pos)   /**< (QSPI_MR) The physical interface clock is twice as fast as the QSPI controller clock. Position  */
 #define QSPI_MR_DLYBCT_Pos                    _U_(16)                                              /**< (QSPI_MR) Delay Between Consecutive Transfers Position */
 #define QSPI_MR_DLYBCT_Msk                    (_U_(0xFF) << QSPI_MR_DLYBCT_Pos)                    /**< (QSPI_MR) Delay Between Consecutive Transfers Mask */
 #define QSPI_MR_DLYBCT(value)                 (QSPI_MR_DLYBCT_Msk & ((value) << QSPI_MR_DLYBCT_Pos))
 #define QSPI_MR_DLYCS_Pos                     _U_(24)                                              /**< (QSPI_MR) Minimum Inactive QCS Delay Position */
 #define QSPI_MR_DLYCS_Msk                     (_U_(0xFF) << QSPI_MR_DLYCS_Pos)                     /**< (QSPI_MR) Minimum Inactive QCS Delay Mask */
 #define QSPI_MR_DLYCS(value)                  (QSPI_MR_DLYCS_Msk & ((value) << QSPI_MR_DLYCS_Pos))
-#define QSPI_MR_Msk                           _U_(0xFFFF4F3F)                                      /**< (QSPI_MR) Register Mask  */
+#define QSPI_MR_Msk                           _U_(0xFFFF0F3F)                                      /**< (QSPI_MR) Register Mask  */
 
 
 /* -------- QSPI_RDR : (QSPI Offset: 0x08) ( R/ 32) Receive Data Register -------- */
