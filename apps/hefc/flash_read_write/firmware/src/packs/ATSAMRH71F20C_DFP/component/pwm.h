@@ -1,7 +1,7 @@
 /**
  * \brief Component description for PWM
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_PWM_COMPONENT_H_
 #define _SAMRH71_PWM_COMPONENT_H_
 
@@ -162,7 +162,7 @@
 #define PWM_DTUPD_Msk                         _U_(0xFFFFFFFF)                                      /**< (PWM_DTUPD) Register Mask  */
 
 
-/* -------- PWM_CMPV : (PWM Offset: 0x00) (R/W 32) PWM Comparison 0 Value Register -------- */
+/* -------- PWM_CMPV : (PWM Offset: 0x00) (R/W 32) PWM Comparison x Value Register -------- */
 #define PWM_CMPV_CV_Pos                       _U_(0)                                               /**< (PWM_CMPV) Comparison x Value Position */
 #define PWM_CMPV_CV_Msk                       (_U_(0xFFFFFF) << PWM_CMPV_CV_Pos)                   /**< (PWM_CMPV) Comparison x Value Mask */
 #define PWM_CMPV_CV(value)                    (PWM_CMPV_CV_Msk & ((value) << PWM_CMPV_CV_Pos))    
@@ -176,7 +176,7 @@
 #define PWM_CMPV_Msk                          _U_(0x01FFFFFF)                                      /**< (PWM_CMPV) Register Mask  */
 
 
-/* -------- PWM_CMPVUPD : (PWM Offset: 0x04) ( /W 32) PWM Comparison 0 Value Update Register -------- */
+/* -------- PWM_CMPVUPD : (PWM Offset: 0x04) ( /W 32) PWM Comparison x Value Update Register -------- */
 #define PWM_CMPVUPD_CVUPD_Pos                 _U_(0)                                               /**< (PWM_CMPVUPD) Comparison x Value Update Position */
 #define PWM_CMPVUPD_CVUPD_Msk                 (_U_(0xFFFFFF) << PWM_CMPVUPD_CVUPD_Pos)             /**< (PWM_CMPVUPD) Comparison x Value Update Mask */
 #define PWM_CMPVUPD_CVUPD(value)              (PWM_CMPVUPD_CVUPD_Msk & ((value) << PWM_CMPVUPD_CVUPD_Pos))
@@ -186,7 +186,7 @@
 #define PWM_CMPVUPD_Msk                       _U_(0x01FFFFFF)                                      /**< (PWM_CMPVUPD) Register Mask  */
 
 
-/* -------- PWM_CMPM : (PWM Offset: 0x08) (R/W 32) PWM Comparison 0 Mode Register -------- */
+/* -------- PWM_CMPM : (PWM Offset: 0x08) (R/W 32) PWM Comparison x Mode Register -------- */
 #define PWM_CMPM_CEN_Pos                      _U_(0)                                               /**< (PWM_CMPM) Comparison x Enable Position */
 #define PWM_CMPM_CEN_Msk                      (_U_(0x1) << PWM_CMPM_CEN_Pos)                       /**< (PWM_CMPM) Comparison x Enable Mask */
 #define PWM_CMPM_CEN(value)                   (PWM_CMPM_CEN_Msk & ((value) << PWM_CMPM_CEN_Pos))  
@@ -208,7 +208,7 @@
 #define PWM_CMPM_Msk                          _U_(0x00FFFFF1)                                      /**< (PWM_CMPM) Register Mask  */
 
 
-/* -------- PWM_CMPMUPD : (PWM Offset: 0x0C) ( /W 32) PWM Comparison 0 Mode Update Register -------- */
+/* -------- PWM_CMPMUPD : (PWM Offset: 0x0C) ( /W 32) PWM Comparison x Mode Update Register -------- */
 #define PWM_CMPMUPD_CENUPD_Pos                _U_(0)                                               /**< (PWM_CMPMUPD) Comparison x Enable Update Position */
 #define PWM_CMPMUPD_CENUPD_Msk                (_U_(0x1) << PWM_CMPMUPD_CENUPD_Pos)                 /**< (PWM_CMPMUPD) Comparison x Enable Update Mask */
 #define PWM_CMPMUPD_CENUPD(value)             (PWM_CMPMUPD_CENUPD_Msk & ((value) << PWM_CMPMUPD_CENUPD_Pos))
@@ -1090,7 +1090,7 @@
 #define PWM_FPE_Msk                           _U_(0xFFFFFFFF)                                      /**< (PWM_FPE) Register Mask  */
 
 
-/* -------- PWM_ELMR : (PWM Offset: 0x7C) (R/W 32) PWM Event Line 0 Mode Register 0 -------- */
+/* -------- PWM_ELMR : (PWM Offset: 0x7C) (R/W 32) PWM Event Line 0 Mode Register -------- */
 #define PWM_ELMR_CSEL0_Pos                    _U_(0)                                               /**< (PWM_ELMR) Comparison 0 Selection Position */
 #define PWM_ELMR_CSEL0_Msk                    (_U_(0x1) << PWM_ELMR_CSEL0_Pos)                     /**< (PWM_ELMR) Comparison 0 Selection Mask */
 #define PWM_ELMR_CSEL0(value)                 (PWM_ELMR_CSEL0_Msk & ((value) << PWM_ELMR_CSEL0_Pos))
@@ -1225,8 +1225,8 @@
 #define PWM_WPCR_WPKEY_Pos                    _U_(8)                                               /**< (PWM_WPCR) Write Protection Key Position */
 #define PWM_WPCR_WPKEY_Msk                    (_U_(0xFFFFFF) << PWM_WPCR_WPKEY_Pos)                /**< (PWM_WPCR) Write Protection Key Mask */
 #define PWM_WPCR_WPKEY(value)                 (PWM_WPCR_WPKEY_Msk & ((value) << PWM_WPCR_WPKEY_Pos))
-#define   PWM_WPCR_WPKEY_PASSWD_Val           _U_(0x50574D)                                        /**< (PWM_WPCR) Writing any other value in this field aborts the write operation of the WPCMD field.Always reads as 0  */
-#define PWM_WPCR_WPKEY_PASSWD                 (PWM_WPCR_WPKEY_PASSWD_Val << PWM_WPCR_WPKEY_Pos)    /**< (PWM_WPCR) Writing any other value in this field aborts the write operation of the WPCMD field.Always reads as 0 Position  */
+#define   PWM_WPCR_WPKEY_PASSWD_Val           _U_(0x50574D)                                        /**< (PWM_WPCR) Writing any other value in this field aborts the write operation of the WPCMD field. Always reads as 0  */
+#define PWM_WPCR_WPKEY_PASSWD                 (PWM_WPCR_WPKEY_PASSWD_Val << PWM_WPCR_WPKEY_Pos)    /**< (PWM_WPCR) Writing any other value in this field aborts the write operation of the WPCMD field. Always reads as 0 Position  */
 #define PWM_WPCR_Msk                          _U_(0xFFFFFFFF)                                      /**< (PWM_WPCR) Register Mask  */
 
 #define PWM_WPCR_WPRG_Pos                     _U_(2)                                               /**< (PWM_WPCR Position) Write Protection Register Group x */
@@ -1323,10 +1323,10 @@
 #define PWM_ETRG1_TRGEDGE_Pos                 _U_(28)                                              /**< (PWM_ETRG1) Edge Selection Position */
 #define PWM_ETRG1_TRGEDGE_Msk                 (_U_(0x1) << PWM_ETRG1_TRGEDGE_Pos)                  /**< (PWM_ETRG1) Edge Selection Mask */
 #define PWM_ETRG1_TRGEDGE(value)              (PWM_ETRG1_TRGEDGE_Msk & ((value) << PWM_ETRG1_TRGEDGE_Pos))
-#define   PWM_ETRG1_TRGEDGE_FALLING_ZERO_Val  _U_(0x0)                                             /**< (PWM_ETRG1) TRGMODE = 1: TRGINx event detection on falling edge.TRGMODE = 2, 3: TRGINx active level is 0  */
-#define   PWM_ETRG1_TRGEDGE_RISING_ONE_Val    _U_(0x1)                                             /**< (PWM_ETRG1) TRGMODE = 1: TRGINx event detection on rising edge.TRGMODE = 2, 3: TRGINx active level is 1  */
-#define PWM_ETRG1_TRGEDGE_FALLING_ZERO        (PWM_ETRG1_TRGEDGE_FALLING_ZERO_Val << PWM_ETRG1_TRGEDGE_Pos) /**< (PWM_ETRG1) TRGMODE = 1: TRGINx event detection on falling edge.TRGMODE = 2, 3: TRGINx active level is 0 Position  */
-#define PWM_ETRG1_TRGEDGE_RISING_ONE          (PWM_ETRG1_TRGEDGE_RISING_ONE_Val << PWM_ETRG1_TRGEDGE_Pos) /**< (PWM_ETRG1) TRGMODE = 1: TRGINx event detection on rising edge.TRGMODE = 2, 3: TRGINx active level is 1 Position  */
+#define   PWM_ETRG1_TRGEDGE_FALLING_ZERO_Val  _U_(0x0)                                             /**< (PWM_ETRG1) TRGMODE = 1: TRGINx event detection on falling edge. TRGMODE = 2, 3: TRGINx active level is 0  */
+#define   PWM_ETRG1_TRGEDGE_RISING_ONE_Val    _U_(0x1)                                             /**< (PWM_ETRG1) TRGMODE = 1: TRGINx event detection on rising edge. TRGMODE = 2, 3: TRGINx active level is 1  */
+#define PWM_ETRG1_TRGEDGE_FALLING_ZERO        (PWM_ETRG1_TRGEDGE_FALLING_ZERO_Val << PWM_ETRG1_TRGEDGE_Pos) /**< (PWM_ETRG1) TRGMODE = 1: TRGINx event detection on falling edge. TRGMODE = 2, 3: TRGINx active level is 0 Position  */
+#define PWM_ETRG1_TRGEDGE_RISING_ONE          (PWM_ETRG1_TRGEDGE_RISING_ONE_Val << PWM_ETRG1_TRGEDGE_Pos) /**< (PWM_ETRG1) TRGMODE = 1: TRGINx event detection on rising edge. TRGMODE = 2, 3: TRGINx active level is 1 Position  */
 #define PWM_ETRG1_TRGFILT_Pos                 _U_(29)                                              /**< (PWM_ETRG1) Filtered input Position */
 #define PWM_ETRG1_TRGFILT_Msk                 (_U_(0x1) << PWM_ETRG1_TRGFILT_Pos)                  /**< (PWM_ETRG1) Filtered input Mask */
 #define PWM_ETRG1_TRGFILT(value)              (PWM_ETRG1_TRGFILT_Msk & ((value) << PWM_ETRG1_TRGFILT_Pos))
@@ -1386,10 +1386,10 @@
 #define PWM_ETRG2_TRGEDGE_Pos                 _U_(28)                                              /**< (PWM_ETRG2) Edge Selection Position */
 #define PWM_ETRG2_TRGEDGE_Msk                 (_U_(0x1) << PWM_ETRG2_TRGEDGE_Pos)                  /**< (PWM_ETRG2) Edge Selection Mask */
 #define PWM_ETRG2_TRGEDGE(value)              (PWM_ETRG2_TRGEDGE_Msk & ((value) << PWM_ETRG2_TRGEDGE_Pos))
-#define   PWM_ETRG2_TRGEDGE_FALLING_ZERO_Val  _U_(0x0)                                             /**< (PWM_ETRG2) TRGMODE = 1: TRGINx event detection on falling edge.TRGMODE = 2, 3: TRGINx active level is 0  */
-#define   PWM_ETRG2_TRGEDGE_RISING_ONE_Val    _U_(0x1)                                             /**< (PWM_ETRG2) TRGMODE = 1: TRGINx event detection on rising edge.TRGMODE = 2, 3: TRGINx active level is 1  */
-#define PWM_ETRG2_TRGEDGE_FALLING_ZERO        (PWM_ETRG2_TRGEDGE_FALLING_ZERO_Val << PWM_ETRG2_TRGEDGE_Pos) /**< (PWM_ETRG2) TRGMODE = 1: TRGINx event detection on falling edge.TRGMODE = 2, 3: TRGINx active level is 0 Position  */
-#define PWM_ETRG2_TRGEDGE_RISING_ONE          (PWM_ETRG2_TRGEDGE_RISING_ONE_Val << PWM_ETRG2_TRGEDGE_Pos) /**< (PWM_ETRG2) TRGMODE = 1: TRGINx event detection on rising edge.TRGMODE = 2, 3: TRGINx active level is 1 Position  */
+#define   PWM_ETRG2_TRGEDGE_FALLING_ZERO_Val  _U_(0x0)                                             /**< (PWM_ETRG2) TRGMODE = 1: TRGINx event detection on falling edge. TRGMODE = 2, 3: TRGINx active level is 0  */
+#define   PWM_ETRG2_TRGEDGE_RISING_ONE_Val    _U_(0x1)                                             /**< (PWM_ETRG2) TRGMODE = 1: TRGINx event detection on rising edge. TRGMODE = 2, 3: TRGINx active level is 1  */
+#define PWM_ETRG2_TRGEDGE_FALLING_ZERO        (PWM_ETRG2_TRGEDGE_FALLING_ZERO_Val << PWM_ETRG2_TRGEDGE_Pos) /**< (PWM_ETRG2) TRGMODE = 1: TRGINx event detection on falling edge. TRGMODE = 2, 3: TRGINx active level is 0 Position  */
+#define PWM_ETRG2_TRGEDGE_RISING_ONE          (PWM_ETRG2_TRGEDGE_RISING_ONE_Val << PWM_ETRG2_TRGEDGE_Pos) /**< (PWM_ETRG2) TRGMODE = 1: TRGINx event detection on rising edge. TRGMODE = 2, 3: TRGINx active level is 1 Position  */
 #define PWM_ETRG2_TRGFILT_Pos                 _U_(29)                                              /**< (PWM_ETRG2) Filtered input Position */
 #define PWM_ETRG2_TRGFILT_Msk                 (_U_(0x1) << PWM_ETRG2_TRGFILT_Pos)                  /**< (PWM_ETRG2) Filtered input Mask */
 #define PWM_ETRG2_TRGFILT(value)              (PWM_ETRG2_TRGFILT_Msk & ((value) << PWM_ETRG2_TRGFILT_Pos))
@@ -1440,10 +1440,10 @@
 #define PWM_CCNT_REG_OFST              (0x14)              /**< (PWM_CCNT) PWM Channel Counter Register Offset */
 #define PWM_DT_REG_OFST                (0x18)              /**< (PWM_DT) PWM Channel Dead Time Register Offset */
 #define PWM_DTUPD_REG_OFST             (0x1C)              /**< (PWM_DTUPD) PWM Channel Dead Time Update Register Offset */
-#define PWM_CMPV_REG_OFST              (0x00)              /**< (PWM_CMPV) PWM Comparison 0 Value Register Offset */
-#define PWM_CMPVUPD_REG_OFST           (0x04)              /**< (PWM_CMPVUPD) PWM Comparison 0 Value Update Register Offset */
-#define PWM_CMPM_REG_OFST              (0x08)              /**< (PWM_CMPM) PWM Comparison 0 Mode Register Offset */
-#define PWM_CMPMUPD_REG_OFST           (0x0C)              /**< (PWM_CMPMUPD) PWM Comparison 0 Mode Update Register Offset */
+#define PWM_CMPV_REG_OFST              (0x00)              /**< (PWM_CMPV) PWM Comparison x Value Register Offset */
+#define PWM_CMPVUPD_REG_OFST           (0x04)              /**< (PWM_CMPVUPD) PWM Comparison x Value Update Register Offset */
+#define PWM_CMPM_REG_OFST              (0x08)              /**< (PWM_CMPM) PWM Comparison x Mode Register Offset */
+#define PWM_CMPMUPD_REG_OFST           (0x0C)              /**< (PWM_CMPMUPD) PWM Comparison x Mode Update Register Offset */
 #define PWM_CLK_REG_OFST               (0x00)              /**< (PWM_CLK) PWM Clock Register Offset */
 #define PWM_ENA_REG_OFST               (0x04)              /**< (PWM_ENA) PWM Enable Register Offset */
 #define PWM_DIS_REG_OFST               (0x08)              /**< (PWM_DIS) PWM Disable Register Offset */
@@ -1472,7 +1472,9 @@
 #define PWM_FCR_REG_OFST               (0x64)              /**< (PWM_FCR) PWM Fault Clear Register Offset */
 #define PWM_FPV1_REG_OFST              (0x68)              /**< (PWM_FPV1) PWM Fault Protection Value Register 1 Offset */
 #define PWM_FPE_REG_OFST               (0x6C)              /**< (PWM_FPE) PWM Fault Protection Enable Register Offset */
-#define PWM_ELMR_REG_OFST              (0x7C)              /**< (PWM_ELMR) PWM Event Line 0 Mode Register 0 Offset */
+#define PWM_ELMR_REG_OFST              (0x7C)              /**< (PWM_ELMR) PWM Event Line 0 Mode Register Offset */
+#define PWM_ELMR0_REG_OFST             (0x7C)              /**< (PWM_ELMR0) PWM Event Line 0 Mode Register Offset */
+#define PWM_ELMR1_REG_OFST             (0x80)              /**< (PWM_ELMR1) PWM Event Line 0 Mode Register Offset */
 #define PWM_SSPR_REG_OFST              (0xA0)              /**< (PWM_SSPR) PWM Spread Spectrum Register Offset */
 #define PWM_SSPUP_REG_OFST             (0xA4)              /**< (PWM_SSPUP) PWM Spread Spectrum Update Register Offset */
 #define PWM_SMMR_REG_OFST              (0xB0)              /**< (PWM_SMMR) PWM Stepper Motor Mode Register Offset */
@@ -1505,10 +1507,10 @@ typedef struct
 /** \brief PWM_CMP register API structure */
 typedef struct
 {
-  __IO  uint32_t                       PWM_CMPV;           /**< Offset: 0x00 (R/W  32) PWM Comparison 0 Value Register */
-  __O   uint32_t                       PWM_CMPVUPD;        /**< Offset: 0x04 ( /W  32) PWM Comparison 0 Value Update Register */
-  __IO  uint32_t                       PWM_CMPM;           /**< Offset: 0x08 (R/W  32) PWM Comparison 0 Mode Register */
-  __O   uint32_t                       PWM_CMPMUPD;        /**< Offset: 0x0C ( /W  32) PWM Comparison 0 Mode Update Register */
+  __IO  uint32_t                       PWM_CMPV;           /**< Offset: 0x00 (R/W  32) PWM Comparison x Value Register */
+  __O   uint32_t                       PWM_CMPVUPD;        /**< Offset: 0x04 ( /W  32) PWM Comparison x Value Update Register */
+  __IO  uint32_t                       PWM_CMPM;           /**< Offset: 0x08 (R/W  32) PWM Comparison x Mode Register */
+  __O   uint32_t                       PWM_CMPMUPD;        /**< Offset: 0x0C ( /W  32) PWM Comparison x Mode Update Register */
 } pwm_cmp_registers_t;
 
 #define PWM_CMP_NUMBER _U_(8)
@@ -1547,7 +1549,7 @@ typedef struct
   __IO  uint32_t                       PWM_FPV1;           /**< Offset: 0x68 (R/W  32) PWM Fault Protection Value Register 1 */
   __IO  uint32_t                       PWM_FPE;            /**< Offset: 0x6C (R/W  32) PWM Fault Protection Enable Register */
   __I   uint8_t                        Reserved1[0x0C];
-  __IO  uint32_t                       PWM_ELMR[2];        /**< Offset: 0x7C (R/W  32) PWM Event Line 0 Mode Register 0 */
+  __IO  uint32_t                       PWM_ELMR[2];        /**< Offset: 0x7C (R/W  32) PWM Event Line 0 Mode Register */
   __I   uint8_t                        Reserved2[0x1C];
   __IO  uint32_t                       PWM_SSPR;           /**< Offset: 0xA0 (R/W  32) PWM Spread Spectrum Register */
   __O   uint32_t                       PWM_SSPUP;          /**< Offset: 0xA4 ( /W  32) PWM Spread Spectrum Update Register */

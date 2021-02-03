@@ -105,6 +105,7 @@
 void SYS_Initialize ( void* data )
 {
 
+
     HEFC_Initialize();
   
     CLOCK_Initialize();
