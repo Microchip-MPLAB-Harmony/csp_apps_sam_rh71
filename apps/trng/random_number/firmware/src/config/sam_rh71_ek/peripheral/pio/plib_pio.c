@@ -42,6 +42,7 @@
 //DOM-IGNORE-END
 
 #include "plib_pio.h"
+#include "interrupts.h"
 
 /* Array to store callback objects of each configured interrupt */
 PIO_PIN_CALLBACK_OBJ portPinCbObj[1];
