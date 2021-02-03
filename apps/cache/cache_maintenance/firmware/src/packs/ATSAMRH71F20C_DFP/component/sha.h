@@ -1,7 +1,7 @@
 /**
  * \brief Component description for SHA
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_SHA_COMPONENT_H_
 #define _SAMRH71_SHA_COMPONENT_H_
 
@@ -432,8 +432,8 @@
 #define SHA_WPMR_WPKEY_Pos                    _U_(8)                                               /**< (SHA_WPMR) Write Protection Key Position */
 #define SHA_WPMR_WPKEY_Msk                    (_U_(0xFFFFFF) << SHA_WPMR_WPKEY_Pos)                /**< (SHA_WPMR) Write Protection Key Mask */
 #define SHA_WPMR_WPKEY(value)                 (SHA_WPMR_WPKEY_Msk & ((value) << SHA_WPMR_WPKEY_Pos))
-#define   SHA_WPMR_WPKEY_PASSWD_Val           _U_(0x534841)                                        /**< (SHA_WPMR) Writing any other value in this field aborts the write operation of the WPEN,WPITEN,WPCREN bits.Always reads as 0.  */
-#define SHA_WPMR_WPKEY_PASSWD                 (SHA_WPMR_WPKEY_PASSWD_Val << SHA_WPMR_WPKEY_Pos)    /**< (SHA_WPMR) Writing any other value in this field aborts the write operation of the WPEN,WPITEN,WPCREN bits.Always reads as 0. Position  */
+#define   SHA_WPMR_WPKEY_PASSWD_Val           _U_(0x534841)                                        /**< (SHA_WPMR) Writing any other value in this field aborts the write operation of the WPEN,WPITEN,WPCREN bits. Always reads as 0.  */
+#define SHA_WPMR_WPKEY_PASSWD                 (SHA_WPMR_WPKEY_PASSWD_Val << SHA_WPMR_WPKEY_Pos)    /**< (SHA_WPMR) Writing any other value in this field aborts the write operation of the WPEN,WPITEN,WPCREN bits. Always reads as 0. Position  */
 #define SHA_WPMR_Msk                          _U_(0xFFFFFF07)                                      /**< (SHA_WPMR) Register Mask  */
 
 
