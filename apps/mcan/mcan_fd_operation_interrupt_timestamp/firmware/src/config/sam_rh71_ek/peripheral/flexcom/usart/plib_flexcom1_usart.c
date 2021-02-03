@@ -50,6 +50,8 @@
 /* This section lists the other files that are included in this file.
 */
 #include "plib_flexcom1_usart.h"
+#include "interrupts.h"
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -59,14 +61,25 @@
 
 void static FLEXCOM1_USART_ErrorClear( void )
 {
-    uint8_t dummyData = 0u;
+    uint16_t dummyData = 0;
 
-    FLEXCOM1_REGS->FLEX_US_CR = FLEX_US_CR_RSTSTA_Msk;
-
-    /* Flush existing error bytes from the RX FIFO */
-    while( FLEX_US_CSR_RXRDY_Msk == (FLEXCOM1_REGS->FLEX_US_CSR& FLEX_US_CSR_RXRDY_Msk) )
+    if (FLEXCOM1_REGS->FLEX_US_CSR & (FLEX_US_CSR_OVRE_Msk | FLEX_US_CSR_FRAME_Msk | FLEX_US_CSR_PARE_Msk))
     {
-        dummyData = (FLEXCOM1_REGS->FLEX_US_RHR& FLEX_US_RHR_RXCHR_Msk);
+        /* Clear the error flags */
+        FLEXCOM1_REGS->FLEX_US_CR = FLEX_US_CR_RSTSTA_Msk;
+
+        /* Flush existing error bytes from the RX FIFO */
+        while( FLEXCOM1_REGS->FLEX_US_CSR & FLEX_US_CSR_RXRDY_Msk )
+        {
+            if (FLEXCOM1_REGS->FLEX_US_MR & FLEX_US_MR_MODE9_Msk)
+            {
+                dummyData = *((uint16_t*)&FLEXCOM1_REGS->FLEX_US_RHR) & FLEX_US_RHR_RXCHR_Msk;
+            }
+            else
+            {
+                dummyData = *((uint8_t*)&FLEXCOM1_REGS->FLEX_US_RHR);
+            }
+        }
     }
 
     /* Ignore the warning */
@@ -75,22 +88,28 @@ void static FLEXCOM1_USART_ErrorClear( void )
     return;
 }
 
+
 void FLEXCOM1_USART_Initialize( void )
 {
     /* Set FLEXCOM USART operating mode */
     FLEXCOM1_REGS->FLEX_MR = FLEX_MR_OPMODE_USART;
 
     /* Reset FLEXCOM1 USART */
-    FLEXCOM1_REGS->FLEX_US_CR = (FLEX_US_CR_RSTRX_Msk | FLEX_US_CR_RSTTX_Msk | FLEX_US_CR_RSTSTA_Msk);
+    FLEXCOM1_REGS->FLEX_US_CR = (FLEX_US_CR_RSTRX_Msk | FLEX_US_CR_RSTTX_Msk | FLEX_US_CR_RSTSTA_Msk );
+
+
+    /* Setup transmitter timeguard register */
+    FLEXCOM1_REGS->FLEX_US_TTGR = 0;
+
+    /* Configure FLEXCOM1 USART mode */
+    FLEXCOM1_REGS->FLEX_US_MR = ( FLEX_US_MR_USART_MODE_NORMAL | FLEX_US_MR_USCLKS_MCK | FLEX_US_MR_CHRL_8_BIT | FLEX_US_MR_PAR_NO | FLEX_US_MR_NBSTOP_1_BIT | (0 << FLEX_US_MR_OVER_Pos));
+
+    /* Configure FLEXCOM1 USART Baud Rate */
+    FLEXCOM1_REGS->FLEX_US_BRGR = FLEX_US_BRGR_CD(27);
 
     /* Enable FLEXCOM1 USART */
     FLEXCOM1_REGS->FLEX_US_CR = (FLEX_US_CR_TXEN_Msk | FLEX_US_CR_RXEN_Msk);
 
-    /* Configure FLEXCOM1 USART mode */
-    FLEXCOM1_REGS->FLEX_US_MR = ((FLEX_US_MR_USCLKS_MCK) | FLEX_US_MR_CHRL_8_BIT | FLEX_US_MR_PAR_NO | FLEX_US_MR_NBSTOP_1_BIT | (0 << FLEX_US_MR_OVER_Pos));
-
-    /* Configure FLEXCOM1 USART Baud Rate */
-    FLEXCOM1_REGS->FLEX_US_BRGR = FLEX_US_BRGR_CD(27);
 
     return;
 }
@@ -178,17 +197,18 @@ bool FLEXCOM1_USART_Read( void *buffer, const size_t size )
     bool status = false;
     uint32_t errorStatus = 0;
     size_t processedSize = 0;
-    uint8_t * lBuffer = (uint8_t *)buffer;
+    uint8_t* pBuffer = (uint8_t*)buffer;
 
-    if(NULL != lBuffer)
+    if(pBuffer != NULL)
     {
-        /* Clear errors before submitting the request.
-         * ErrorGet clears errors internally. */
-        FLEXCOM1_USART_ErrorGet();
+        /* Clear errors that may have got generated when there was no active read request pending */
+        FLEXCOM1_USART_ErrorClear();
 
-        while( size > processedSize )
+        while( processedSize < size )
         {
-            /* Error status */
+            while(!(FLEXCOM1_REGS->FLEX_US_CSR & FLEX_US_CSR_RXRDY_Msk));
+
+            /* Read error status */
             errorStatus = (FLEXCOM1_REGS->FLEX_US_CSR & (FLEX_US_CSR_OVRE_Msk | FLEX_US_CSR_FRAME_Msk | FLEX_US_CSR_PARE_Msk));
 
             if(errorStatus != 0)
@@ -196,18 +216,23 @@ bool FLEXCOM1_USART_Read( void *buffer, const size_t size )
                 break;
             }
 
-            if(FLEX_US_CSR_RXRDY_Msk == (FLEXCOM1_REGS->FLEX_US_CSR & FLEX_US_CSR_RXRDY_Msk))
+            if (FLEXCOM1_REGS->FLEX_US_MR & FLEX_US_MR_MODE9_Msk)
             {
-                *lBuffer++ = (FLEXCOM1_REGS->FLEX_US_RHR& FLEX_US_RHR_RXCHR_Msk);
-                processedSize++;
+                *((uint16_t*)pBuffer) = *((uint16_t*)&FLEXCOM1_REGS->FLEX_US_RHR) & FLEX_US_RHR_RXCHR_Msk;
+                pBuffer += 2;
             }
+            else
+            {
+                *pBuffer++ = *((uint8_t*)&FLEXCOM1_REGS->FLEX_US_RHR);
+            }
+
+            processedSize++;
         }
 
         if(size == processedSize)
         {
             status = true;
         }
-
     }
 
     return status;
@@ -217,16 +242,21 @@ bool FLEXCOM1_USART_Write( void *buffer, const size_t size )
 {
     bool status = false;
     size_t processedSize = 0;
-    uint8_t * lBuffer = (uint8_t *)buffer;
+    uint8_t* pBuffer = (uint8_t*)buffer;
 
-    if(NULL != lBuffer)
+    if(pBuffer != NULL)
     {
-        while( size > processedSize )
+        while( processedSize < size )
         {
-            if(FLEX_US_CSR_TXEMPTY_Msk == (FLEXCOM1_REGS->FLEX_US_CSR& FLEX_US_CSR_TXEMPTY_Msk))
+            while (!(FLEXCOM1_REGS->FLEX_US_CSR & FLEX_US_CSR_TXRDY_Msk));
+
+            if (FLEXCOM1_REGS->FLEX_US_MR & FLEX_US_MR_MODE9_Msk)
             {
-                FLEXCOM1_REGS->FLEX_US_THR = (FLEX_US_THR_TXCHR(*lBuffer++) & FLEX_US_THR_TXCHR_Msk);
-                processedSize++;
+                *((uint16_t*)&FLEXCOM1_REGS->FLEX_US_THR) = ((uint16_t*)pBuffer)[processedSize++] & FLEX_US_THR_TXCHR_Msk;
+            }
+            else
+            {
+                *((uint8_t*)&FLEXCOM1_REGS->FLEX_US_THR) = ((uint8_t*)pBuffer)[processedSize++];
             }
         }
 
@@ -236,6 +266,7 @@ bool FLEXCOM1_USART_Write( void *buffer, const size_t size )
     return status;
 }
 
+
 uint8_t FLEXCOM1_USART_ReadByte(void)
 {
     return(FLEXCOM1_REGS->FLEX_US_RHR & FLEX_US_RHR_RXCHR_Msk);
@@ -243,17 +274,33 @@ uint8_t FLEXCOM1_USART_ReadByte(void)
 
 void FLEXCOM1_USART_WriteByte(uint8_t data)
 {
-    while (FLEX_US_CSR_TXEMPTY_Msk != (FLEXCOM1_REGS->FLEX_US_CSR & FLEX_US_CSR_TXEMPTY_Msk));
+    while (!(FLEXCOM1_REGS->FLEX_US_CSR & FLEX_US_CSR_TXRDY_Msk));
+
     FLEXCOM1_REGS->FLEX_US_THR = (FLEX_US_THR_TXCHR(data) & FLEX_US_THR_TXCHR_Msk);
 }
 
 bool FLEXCOM1_USART_TransmitterIsReady( void )
 {
-    return (FLEX_US_CSR_TXEMPTY_Msk == (FLEXCOM1_REGS->FLEX_US_CSR& FLEX_US_CSR_TXEMPTY_Msk));
+    if (FLEXCOM1_REGS->FLEX_US_CSR & FLEX_US_CSR_TXRDY_Msk)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 bool FLEXCOM1_USART_ReceiverIsReady( void )
 {
-    return (FLEX_US_CSR_RXRDY_Msk == (FLEXCOM1_REGS->FLEX_US_CSR& FLEX_US_CSR_RXRDY_Msk));
+    if (FLEXCOM1_REGS->FLEX_US_CSR & FLEX_US_CSR_RXRDY_Msk)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
+
 
