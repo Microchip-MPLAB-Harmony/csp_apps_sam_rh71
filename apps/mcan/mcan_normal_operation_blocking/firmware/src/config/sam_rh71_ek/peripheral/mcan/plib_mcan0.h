@@ -105,6 +105,8 @@ bool MCAN0_TxFIFOIsFull(void);
 void MCAN0_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress);
 bool MCAN0_StandardFilterElementSet(uint8_t filterNumber, mcan_sidfe_registers_t *stdMsgIDFilterElement);
 bool MCAN0_StandardFilterElementGet(uint8_t filterNumber, mcan_sidfe_registers_t *stdMsgIDFilterElement);
+void MCAN0_SleepModeEnter(void);
+void MCAN0_SleepModeExit(void);
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
     }
