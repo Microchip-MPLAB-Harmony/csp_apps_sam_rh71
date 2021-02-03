@@ -1,7 +1,7 @@
 /**
  * \brief Component description for XDMAC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_XDMAC_COMPONENT_H_
 #define _SAMRH71_XDMAC_COMPONENT_H_
 
@@ -231,10 +231,10 @@
 #define XDMAC_CC_PROT_Pos                     _U_(5)                                               /**< (XDMAC_CC) Channel x Protection Position */
 #define XDMAC_CC_PROT_Msk                     (_U_(0x1) << XDMAC_CC_PROT_Pos)                      /**< (XDMAC_CC) Channel x Protection Mask */
 #define XDMAC_CC_PROT(value)                  (XDMAC_CC_PROT_Msk & ((value) << XDMAC_CC_PROT_Pos))
-#define   XDMAC_CC_PROT_HWR_CONNECTED_Val     _U_(0x0)                                             /**< (XDMAC_CC) Hardware request line is connected to the peripheral request line.  */
-#define   XDMAC_CC_PROT_SWR_CONNECTED_Val     _U_(0x1)                                             /**< (XDMAC_CC) Software request is connected to the peripheral request line.  */
-#define XDMAC_CC_PROT_HWR_CONNECTED           (XDMAC_CC_PROT_HWR_CONNECTED_Val << XDMAC_CC_PROT_Pos) /**< (XDMAC_CC) Hardware request line is connected to the peripheral request line. Position  */
-#define XDMAC_CC_PROT_SWR_CONNECTED           (XDMAC_CC_PROT_SWR_CONNECTED_Val << XDMAC_CC_PROT_Pos) /**< (XDMAC_CC) Software request is connected to the peripheral request line. Position  */
+#define   XDMAC_CC_PROT_PRIVILEGED_Val        _U_(0x0)                                             /**< (XDMAC_CC) Channel uses Privileged mode.  */
+#define   XDMAC_CC_PROT_USER_Val              _U_(0x1)                                             /**< (XDMAC_CC) Channel uses User mode.  */
+#define XDMAC_CC_PROT_PRIVILEGED              (XDMAC_CC_PROT_PRIVILEGED_Val << XDMAC_CC_PROT_Pos)  /**< (XDMAC_CC) Channel uses Privileged mode. Position  */
+#define XDMAC_CC_PROT_USER                    (XDMAC_CC_PROT_USER_Val << XDMAC_CC_PROT_Pos)        /**< (XDMAC_CC) Channel uses User mode. Position  */
 #define XDMAC_CC_SWREQ_Pos                    _U_(6)                                               /**< (XDMAC_CC) Channel x Software Request Trigger Position */
 #define XDMAC_CC_SWREQ_Msk                    (_U_(0x1) << XDMAC_CC_SWREQ_Pos)                     /**< (XDMAC_CC) Channel x Software Request Trigger Mask */
 #define XDMAC_CC_SWREQ(value)                 (XDMAC_CC_SWREQ_Msk & ((value) << XDMAC_CC_SWREQ_Pos))
