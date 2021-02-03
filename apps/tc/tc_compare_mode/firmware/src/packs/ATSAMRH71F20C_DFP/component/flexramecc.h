@@ -1,7 +1,7 @@
 /**
  * \brief Component description for FLEXRAMECC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_FLEXRAMECC_COMPONENT_H_
 #define _SAMRH71_FLEXRAMECC_COMPONENT_H_
 
@@ -29,9 +29,9 @@
 /* ************************************************************************** */
 
 /* -------- FLEXRAMECC_CR : (FLEXRAMECC Offset: 0x00) (R/W 32) FLEXRAMECC Control Register -------- */
-#define FLEXRAMECC_CR_ENABLE_Pos              _U_(0)                                               /**< (FLEXRAMECC_CR) ECC protection enable Position */
-#define FLEXRAMECC_CR_ENABLE_Msk              (_U_(0x1) << FLEXRAMECC_CR_ENABLE_Pos)               /**< (FLEXRAMECC_CR) ECC protection enable Mask */
-#define FLEXRAMECC_CR_ENABLE(value)           (FLEXRAMECC_CR_ENABLE_Msk & ((value) << FLEXRAMECC_CR_ENABLE_Pos))
+#define FLEXRAMECC_CR_ONE_Pos                 _U_(0)                                               /**< (FLEXRAMECC_CR) Shall be always write at '1' Position */
+#define FLEXRAMECC_CR_ONE_Msk                 (_U_(0x1) << FLEXRAMECC_CR_ONE_Pos)                  /**< (FLEXRAMECC_CR) Shall be always write at '1' Mask */
+#define FLEXRAMECC_CR_ONE(value)              (FLEXRAMECC_CR_ONE_Msk & ((value) << FLEXRAMECC_CR_ONE_Pos))
 #define FLEXRAMECC_CR_TEST_MODE_RD_Pos        _U_(1)                                               /**< (FLEXRAMECC_CR) test mode of ECC protection - read mode Position */
 #define FLEXRAMECC_CR_TEST_MODE_RD_Msk        (_U_(0x1) << FLEXRAMECC_CR_TEST_MODE_RD_Pos)         /**< (FLEXRAMECC_CR) test mode of ECC protection - read mode Mask */
 #define FLEXRAMECC_CR_TEST_MODE_RD(value)     (FLEXRAMECC_CR_TEST_MODE_RD_Msk & ((value) << FLEXRAMECC_CR_TEST_MODE_RD_Pos))
@@ -44,10 +44,7 @@
 #define FLEXRAMECC_CR_RST_NOFIX_CPT_Pos       _U_(5)                                               /**< (FLEXRAMECC_CR) reset the un-fixable error counter Position */
 #define FLEXRAMECC_CR_RST_NOFIX_CPT_Msk       (_U_(0x1) << FLEXRAMECC_CR_RST_NOFIX_CPT_Pos)        /**< (FLEXRAMECC_CR) reset the un-fixable error counter Mask */
 #define FLEXRAMECC_CR_RST_NOFIX_CPT(value)    (FLEXRAMECC_CR_RST_NOFIX_CPT_Msk & ((value) << FLEXRAMECC_CR_RST_NOFIX_CPT_Pos))
-#define FLEXRAMECC_CR_ECC12_ENABLE_Pos        _U_(6)                                               /**< (FLEXRAMECC_CR) BCH ECC enable Position */
-#define FLEXRAMECC_CR_ECC12_ENABLE_Msk        (_U_(0x1) << FLEXRAMECC_CR_ECC12_ENABLE_Pos)         /**< (FLEXRAMECC_CR) BCH ECC enable Mask */
-#define FLEXRAMECC_CR_ECC12_ENABLE(value)     (FLEXRAMECC_CR_ECC12_ENABLE_Msk & ((value) << FLEXRAMECC_CR_ECC12_ENABLE_Pos))
-#define FLEXRAMECC_CR_Msk                     _U_(0x00000077)                                      /**< (FLEXRAMECC_CR) Register Mask  */
+#define FLEXRAMECC_CR_Msk                     _U_(0x00000037)                                      /**< (FLEXRAMECC_CR) Register Mask  */
 
 
 /* -------- FLEXRAMECC_TESTCB1 : (FLEXRAMECC Offset: 0x04) (R/W 32) FLEXRAMECC Test mode register 1 -------- */
