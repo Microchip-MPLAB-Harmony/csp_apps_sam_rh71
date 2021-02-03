@@ -1,7 +1,7 @@
 /**
  * \brief Component description for SFR
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_SFR_COMPONENT_H_
 #define _SAMRH71_SFR_COMPONENT_H_
 
@@ -28,14 +28,14 @@
 /*   SOFTWARE API DEFINITION FOR SFR                                          */
 /* ************************************************************************** */
 
-/* -------- SFR_CAN0 : (SFR Offset: 0xA0) (R/W 32) CAN0 MSB Base Address 0 -------- */
+/* -------- SFR_CAN0 : (SFR Offset: 0xA0) (R/W 32) CAN0 MSB Base Address -------- */
 #define SFR_CAN0_EXT_MEM_ADDR_Pos             _U_(16)                                              /**< (SFR_CAN0) MSB Base Address Position */
 #define SFR_CAN0_EXT_MEM_ADDR_Msk             (_U_(0xFFFF) << SFR_CAN0_EXT_MEM_ADDR_Pos)           /**< (SFR_CAN0) MSB Base Address Mask */
 #define SFR_CAN0_EXT_MEM_ADDR(value)          (SFR_CAN0_EXT_MEM_ADDR_Msk & ((value) << SFR_CAN0_EXT_MEM_ADDR_Pos))
 #define SFR_CAN0_Msk                          _U_(0xFFFF0000)                                      /**< (SFR_CAN0) Register Mask  */
 
 
-/* -------- SFR_CAN1 : (SFR Offset: 0xA4) (R/W 32) CAN0 MSB Base Address 1 -------- */
+/* -------- SFR_CAN1 : (SFR Offset: 0xA4) (R/W 32) CAN1 MSB Base Address -------- */
 #define SFR_CAN1_EXT_MEM_ADDR_Pos             _U_(16)                                              /**< (SFR_CAN1) MSB Base Address Position */
 #define SFR_CAN1_EXT_MEM_ADDR_Msk             (_U_(0xFFFF) << SFR_CAN1_EXT_MEM_ADDR_Pos)           /**< (SFR_CAN1) MSB Base Address Mask */
 #define SFR_CAN1_EXT_MEM_ADDR(value)          (SFR_CAN1_EXT_MEM_ADDR_Msk & ((value) << SFR_CAN1_EXT_MEM_ADDR_Pos))
@@ -55,8 +55,8 @@
 
 
 /** \brief SFR register offsets definitions */
-#define SFR_CAN0_REG_OFST              (0xA0)              /**< (SFR_CAN0) CAN0 MSB Base Address 0 Offset */
-#define SFR_CAN1_REG_OFST              (0xA4)              /**< (SFR_CAN1) CAN0 MSB Base Address 1 Offset */
+#define SFR_CAN0_REG_OFST              (0xA0)              /**< (SFR_CAN0) CAN0 MSB Base Address Offset */
+#define SFR_CAN1_REG_OFST              (0xA4)              /**< (SFR_CAN1) CAN1 MSB Base Address Offset */
 #define SFR_WPMR_REG_OFST              (0xE4)              /**< (SFR_WPMR) Write Protection Mode Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
@@ -64,8 +64,8 @@
 typedef struct
 {
   __I   uint8_t                        Reserved1[0xA0];
-  __IO  uint32_t                       SFR_CAN0;           /**< Offset: 0xA0 (R/W  32) CAN0 MSB Base Address 0 */
-  __IO  uint32_t                       SFR_CAN1;           /**< Offset: 0xA4 (R/W  32) CAN0 MSB Base Address 1 */
+  __IO  uint32_t                       SFR_CAN0;           /**< Offset: 0xA0 (R/W  32) CAN0 MSB Base Address */
+  __IO  uint32_t                       SFR_CAN1;           /**< Offset: 0xA4 (R/W  32) CAN1 MSB Base Address */
   __I   uint8_t                        Reserved2[0x3C];
   __IO  uint32_t                       SFR_WPMR;           /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
 } sfr_registers_t;

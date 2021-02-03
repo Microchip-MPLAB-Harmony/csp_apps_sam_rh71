@@ -1,7 +1,7 @@
 /**
  * \brief Component description for RSTC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_RSTC_COMPONENT_H_
 #define _SAMRH71_RSTC_COMPONENT_H_
 
@@ -56,13 +56,11 @@
 #define   RSTC_SR_RSTTYP_GENERAL_RST_Val      _U_(0x0)                                             /**< (RSTC_SR) First powerup reset  */
 #define   RSTC_SR_RSTTYP_WDT_RST_Val          _U_(0x2)                                             /**< (RSTC_SR) Watchdog fault occurred  */
 #define   RSTC_SR_RSTTYP_SOFT_RST_Val         _U_(0x3)                                             /**< (RSTC_SR) Processor reset required by the software  */
-#define   RSTC_SR_RSTTYP_USER_RST_Val         _U_(0x4)                                             /**< (RSTC_SR) NRST pin detected low  */
 #define   RSTC_SR_RSTTYP_CPU_FAIL_RST_Val     _U_(0x6)                                             /**< (RSTC_SR) CPU clock failure detection occurred  */
 #define   RSTC_SR_RSTTYP_SLCK_XTAL_RST_Val    _U_(0x7)                                             /**< (RSTC_SR) 32.768 kHz crystal failure detection fault occurred  */
 #define RSTC_SR_RSTTYP_GENERAL_RST            (RSTC_SR_RSTTYP_GENERAL_RST_Val << RSTC_SR_RSTTYP_Pos) /**< (RSTC_SR) First powerup reset Position  */
 #define RSTC_SR_RSTTYP_WDT_RST                (RSTC_SR_RSTTYP_WDT_RST_Val << RSTC_SR_RSTTYP_Pos)   /**< (RSTC_SR) Watchdog fault occurred Position  */
 #define RSTC_SR_RSTTYP_SOFT_RST               (RSTC_SR_RSTTYP_SOFT_RST_Val << RSTC_SR_RSTTYP_Pos)  /**< (RSTC_SR) Processor reset required by the software Position  */
-#define RSTC_SR_RSTTYP_USER_RST               (RSTC_SR_RSTTYP_USER_RST_Val << RSTC_SR_RSTTYP_Pos)  /**< (RSTC_SR) NRST pin detected low Position  */
 #define RSTC_SR_RSTTYP_CPU_FAIL_RST           (RSTC_SR_RSTTYP_CPU_FAIL_RST_Val << RSTC_SR_RSTTYP_Pos) /**< (RSTC_SR) CPU clock failure detection occurred Position  */
 #define RSTC_SR_RSTTYP_SLCK_XTAL_RST          (RSTC_SR_RSTTYP_SLCK_XTAL_RST_Val << RSTC_SR_RSTTYP_Pos) /**< (RSTC_SR) 32.768 kHz crystal failure detection fault occurred Position  */
 #define RSTC_SR_NRSTL_Pos                     _U_(16)                                              /**< (RSTC_SR) NRST Pin Level Position */
@@ -84,8 +82,8 @@
 #define RSTC_MR_KEY_Pos                       _U_(24)                                              /**< (RSTC_MR) Write Access Password Position */
 #define RSTC_MR_KEY_Msk                       (_U_(0xFF) << RSTC_MR_KEY_Pos)                       /**< (RSTC_MR) Write Access Password Mask */
 #define RSTC_MR_KEY(value)                    (RSTC_MR_KEY_Msk & ((value) << RSTC_MR_KEY_Pos))    
-#define   RSTC_MR_KEY_PASSWD_Val              _U_(0xA5)                                            /**< (RSTC_MR) Writing any other value in this field aborts the write operation.Always reads as 0.  */
-#define RSTC_MR_KEY_PASSWD                    (RSTC_MR_KEY_PASSWD_Val << RSTC_MR_KEY_Pos)          /**< (RSTC_MR) Writing any other value in this field aborts the write operation.Always reads as 0. Position  */
+#define   RSTC_MR_KEY_PASSWD_Val              _U_(0xA5)                                            /**< (RSTC_MR) Writing any other value in this field aborts the write operation. Always reads as 0.  */
+#define RSTC_MR_KEY_PASSWD                    (RSTC_MR_KEY_PASSWD_Val << RSTC_MR_KEY_Pos)          /**< (RSTC_MR) Writing any other value in this field aborts the write operation. Always reads as 0. Position  */
 #define RSTC_MR_Msk                           _U_(0xFF00000A)                                      /**< (RSTC_MR) Register Mask  */
 
 
