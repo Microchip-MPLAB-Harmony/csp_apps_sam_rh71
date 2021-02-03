@@ -1,7 +1,7 @@
 /**
  * \brief Component description for SUPC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_SUPC_COMPONENT_H_
 #define _SAMRH71_SUPC_COMPONENT_H_
 
@@ -126,8 +126,8 @@
 #define SYSC_WPMR_WPKEY_Pos                   _U_(8)                                               /**< (SYSC_WPMR) Write Protection Key. Position */
 #define SYSC_WPMR_WPKEY_Msk                   (_U_(0xFFFFFF) << SYSC_WPMR_WPKEY_Pos)               /**< (SYSC_WPMR) Write Protection Key. Mask */
 #define SYSC_WPMR_WPKEY(value)                (SYSC_WPMR_WPKEY_Msk & ((value) << SYSC_WPMR_WPKEY_Pos))
-#define   SYSC_WPMR_WPKEY_PASSWD_Val          _U_(0x525443)                                        /**< (SYSC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit.Always reads as 0.  */
-#define SYSC_WPMR_WPKEY_PASSWD                (SYSC_WPMR_WPKEY_PASSWD_Val << SYSC_WPMR_WPKEY_Pos)  /**< (SYSC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit.Always reads as 0. Position  */
+#define   SYSC_WPMR_WPKEY_PASSWD_Val          _U_(0x525443)                                        /**< (SYSC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit. Always reads as 0.  */
+#define SYSC_WPMR_WPKEY_PASSWD                (SYSC_WPMR_WPKEY_PASSWD_Val << SYSC_WPMR_WPKEY_Pos)  /**< (SYSC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit. Always reads as 0. Position  */
 #define SYSC_WPMR_Msk                         _U_(0xFFFFFF01)                                      /**< (SYSC_WPMR) Register Mask  */
 
 
