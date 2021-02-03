@@ -1,7 +1,7 @@
 /**
  * \brief Component description for MCAN
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_MCAN_COMPONENT_H_
 #define _SAMRH71_MCAN_COMPONENT_H_
 
@@ -488,9 +488,9 @@
 #define MCAN_CCCR_CSR_Msk                     (_U_(0x1) << MCAN_CCCR_CSR_Pos)                      /**< (MCAN_CCCR) Clock Stop Request (read/write) Mask */
 #define MCAN_CCCR_CSR(value)                  (MCAN_CCCR_CSR_Msk & ((value) << MCAN_CCCR_CSR_Pos))
 #define   MCAN_CCCR_CSR_NO_CLOCK_STOP_Val     _U_(0x0)                                             /**< (MCAN_CCCR) No clock stop is requested.  */
-#define   MCAN_CCCR_CSR_CLOCK_STOP_Val        _U_(0x1)                                             /**< (MCAN_CCCR) Clock stop requested. When clock stop is requested, first INIT and then CSA will be set after all pend-ing transfer requests have been completed and the CAN bus reached idle.  */
+#define   MCAN_CCCR_CSR_CLOCK_STOP_Val        _U_(0x1)                                             /**< (MCAN_CCCR) Clock stop requested. When clock stop is requested, first INIT and then CSA will be set after all pending transfer requests have been completed and the CAN bus reached idle.  */
 #define MCAN_CCCR_CSR_NO_CLOCK_STOP           (MCAN_CCCR_CSR_NO_CLOCK_STOP_Val << MCAN_CCCR_CSR_Pos) /**< (MCAN_CCCR) No clock stop is requested. Position  */
-#define MCAN_CCCR_CSR_CLOCK_STOP              (MCAN_CCCR_CSR_CLOCK_STOP_Val << MCAN_CCCR_CSR_Pos)  /**< (MCAN_CCCR) Clock stop requested. When clock stop is requested, first INIT and then CSA will be set after all pend-ing transfer requests have been completed and the CAN bus reached idle. Position  */
+#define MCAN_CCCR_CSR_CLOCK_STOP              (MCAN_CCCR_CSR_CLOCK_STOP_Val << MCAN_CCCR_CSR_Pos)  /**< (MCAN_CCCR) Clock stop requested. When clock stop is requested, first INIT and then CSA will be set after all pending transfer requests have been completed and the CAN bus reached idle. Position  */
 #define MCAN_CCCR_MON_Pos                     _U_(5)                                               /**< (MCAN_CCCR) Bus Monitoring Mode (read/write, write protection against '1') Position */
 #define MCAN_CCCR_MON_Msk                     (_U_(0x1) << MCAN_CCCR_MON_Pos)                      /**< (MCAN_CCCR) Bus Monitoring Mode (read/write, write protection against '1') Mask */
 #define MCAN_CCCR_MON(value)                  (MCAN_CCCR_MON_Msk & ((value) << MCAN_CCCR_MON_Pos))
@@ -760,12 +760,6 @@
 #define MCAN_IR_DRX_Pos                       _U_(19)                                              /**< (MCAN_IR) Message stored to Dedicated Receive Buffer Position */
 #define MCAN_IR_DRX_Msk                       (_U_(0x1) << MCAN_IR_DRX_Pos)                        /**< (MCAN_IR) Message stored to Dedicated Receive Buffer Mask */
 #define MCAN_IR_DRX(value)                    (MCAN_IR_DRX_Msk & ((value) << MCAN_IR_DRX_Pos))    
-#define MCAN_IR_BEC_Pos                       _U_(20)                                              /**< (MCAN_IR) Bit Error Corrected Position */
-#define MCAN_IR_BEC_Msk                       (_U_(0x1) << MCAN_IR_BEC_Pos)                        /**< (MCAN_IR) Bit Error Corrected Mask */
-#define MCAN_IR_BEC(value)                    (MCAN_IR_BEC_Msk & ((value) << MCAN_IR_BEC_Pos))    
-#define MCAN_IR_BEU_Pos                       _U_(21)                                              /**< (MCAN_IR) Bit Error Uncorrected Position */
-#define MCAN_IR_BEU_Msk                       (_U_(0x1) << MCAN_IR_BEU_Pos)                        /**< (MCAN_IR) Bit Error Uncorrected Mask */
-#define MCAN_IR_BEU(value)                    (MCAN_IR_BEU_Msk & ((value) << MCAN_IR_BEU_Pos))    
 #define MCAN_IR_ELO_Pos                       _U_(22)                                              /**< (MCAN_IR) Error Logging Overflow Position */
 #define MCAN_IR_ELO_Msk                       (_U_(0x1) << MCAN_IR_ELO_Pos)                        /**< (MCAN_IR) Error Logging Overflow Mask */
 #define MCAN_IR_ELO(value)                    (MCAN_IR_ELO_Msk & ((value) << MCAN_IR_ELO_Pos))    
@@ -790,7 +784,7 @@
 #define MCAN_IR_ARA_Pos                       _U_(29)                                              /**< (MCAN_IR) Access to Reserved Address Position */
 #define MCAN_IR_ARA_Msk                       (_U_(0x1) << MCAN_IR_ARA_Pos)                        /**< (MCAN_IR) Access to Reserved Address Mask */
 #define MCAN_IR_ARA(value)                    (MCAN_IR_ARA_Msk & ((value) << MCAN_IR_ARA_Pos))    
-#define MCAN_IR_Msk                           _U_(0x3FFFFFFF)                                      /**< (MCAN_IR) Register Mask  */
+#define MCAN_IR_Msk                           _U_(0x3FCFFFFF)                                      /**< (MCAN_IR) Register Mask  */
 
 
 /* -------- MCAN_IE : (MCAN Offset: 0x54) (R/W 32) Interrupt Enable Register -------- */
@@ -854,12 +848,6 @@
 #define MCAN_IE_DRXE_Pos                      _U_(19)                                              /**< (MCAN_IE) Message stored to Dedicated Receive Buffer Interrupt Enable Position */
 #define MCAN_IE_DRXE_Msk                      (_U_(0x1) << MCAN_IE_DRXE_Pos)                       /**< (MCAN_IE) Message stored to Dedicated Receive Buffer Interrupt Enable Mask */
 #define MCAN_IE_DRXE(value)                   (MCAN_IE_DRXE_Msk & ((value) << MCAN_IE_DRXE_Pos))  
-#define MCAN_IE_BECE_Pos                      _U_(20)                                              /**< (MCAN_IE) Bit Error Corrected Interrupt Enable Position */
-#define MCAN_IE_BECE_Msk                      (_U_(0x1) << MCAN_IE_BECE_Pos)                       /**< (MCAN_IE) Bit Error Corrected Interrupt Enable Mask */
-#define MCAN_IE_BECE(value)                   (MCAN_IE_BECE_Msk & ((value) << MCAN_IE_BECE_Pos))  
-#define MCAN_IE_BEUE_Pos                      _U_(21)                                              /**< (MCAN_IE) Bit Error Uncorrected Interrupt Enable Position */
-#define MCAN_IE_BEUE_Msk                      (_U_(0x1) << MCAN_IE_BEUE_Pos)                       /**< (MCAN_IE) Bit Error Uncorrected Interrupt Enable Mask */
-#define MCAN_IE_BEUE(value)                   (MCAN_IE_BEUE_Msk & ((value) << MCAN_IE_BEUE_Pos))  
 #define MCAN_IE_ELOE_Pos                      _U_(22)                                              /**< (MCAN_IE) Error Logging Overflow Interrupt Enable Position */
 #define MCAN_IE_ELOE_Msk                      (_U_(0x1) << MCAN_IE_ELOE_Pos)                       /**< (MCAN_IE) Error Logging Overflow Interrupt Enable Mask */
 #define MCAN_IE_ELOE(value)                   (MCAN_IE_ELOE_Msk & ((value) << MCAN_IE_ELOE_Pos))  
@@ -884,7 +872,7 @@
 #define MCAN_IE_ARAE_Pos                      _U_(29)                                              /**< (MCAN_IE) Access to Reserved Address Enable Position */
 #define MCAN_IE_ARAE_Msk                      (_U_(0x1) << MCAN_IE_ARAE_Pos)                       /**< (MCAN_IE) Access to Reserved Address Enable Mask */
 #define MCAN_IE_ARAE(value)                   (MCAN_IE_ARAE_Msk & ((value) << MCAN_IE_ARAE_Pos))  
-#define MCAN_IE_Msk                           _U_(0x3FFFFFFF)                                      /**< (MCAN_IE) Register Mask  */
+#define MCAN_IE_Msk                           _U_(0x3FCFFFFF)                                      /**< (MCAN_IE) Register Mask  */
 
 
 /* -------- MCAN_ILS : (MCAN Offset: 0x58) (R/W 32) Interrupt Line Select Register -------- */
@@ -948,12 +936,6 @@
 #define MCAN_ILS_DRXL_Pos                     _U_(19)                                              /**< (MCAN_ILS) Message stored to Dedicated Receive Buffer Interrupt Line Position */
 #define MCAN_ILS_DRXL_Msk                     (_U_(0x1) << MCAN_ILS_DRXL_Pos)                      /**< (MCAN_ILS) Message stored to Dedicated Receive Buffer Interrupt Line Mask */
 #define MCAN_ILS_DRXL(value)                  (MCAN_ILS_DRXL_Msk & ((value) << MCAN_ILS_DRXL_Pos))
-#define MCAN_ILS_BECL_Pos                     _U_(20)                                              /**< (MCAN_ILS) Bit Error Corrected Interrupt Line Position */
-#define MCAN_ILS_BECL_Msk                     (_U_(0x1) << MCAN_ILS_BECL_Pos)                      /**< (MCAN_ILS) Bit Error Corrected Interrupt Line Mask */
-#define MCAN_ILS_BECL(value)                  (MCAN_ILS_BECL_Msk & ((value) << MCAN_ILS_BECL_Pos))
-#define MCAN_ILS_BEUL_Pos                     _U_(21)                                              /**< (MCAN_ILS) Bit Error Uncorrected Interrupt Line Position */
-#define MCAN_ILS_BEUL_Msk                     (_U_(0x1) << MCAN_ILS_BEUL_Pos)                      /**< (MCAN_ILS) Bit Error Uncorrected Interrupt Line Mask */
-#define MCAN_ILS_BEUL(value)                  (MCAN_ILS_BEUL_Msk & ((value) << MCAN_ILS_BEUL_Pos))
 #define MCAN_ILS_ELOL_Pos                     _U_(22)                                              /**< (MCAN_ILS) Error Logging Overflow Interrupt Line Position */
 #define MCAN_ILS_ELOL_Msk                     (_U_(0x1) << MCAN_ILS_ELOL_Pos)                      /**< (MCAN_ILS) Error Logging Overflow Interrupt Line Mask */
 #define MCAN_ILS_ELOL(value)                  (MCAN_ILS_ELOL_Msk & ((value) << MCAN_ILS_ELOL_Pos))
@@ -978,7 +960,7 @@
 #define MCAN_ILS_ARAL_Pos                     _U_(29)                                              /**< (MCAN_ILS) Access to Reserved Address Line Position */
 #define MCAN_ILS_ARAL_Msk                     (_U_(0x1) << MCAN_ILS_ARAL_Pos)                      /**< (MCAN_ILS) Access to Reserved Address Line Mask */
 #define MCAN_ILS_ARAL(value)                  (MCAN_ILS_ARAL_Msk & ((value) << MCAN_ILS_ARAL_Pos))
-#define MCAN_ILS_Msk                          _U_(0x3FFFFFFF)                                      /**< (MCAN_ILS) Register Mask  */
+#define MCAN_ILS_Msk                          _U_(0x3FCFFFFF)                                      /**< (MCAN_ILS) Register Mask  */
 
 
 /* -------- MCAN_ILE : (MCAN Offset: 0x5C) (R/W 32) Interrupt Line Enable Register -------- */
@@ -1287,8 +1269,8 @@
 #define MCAN_RXF0C_F0SA_Pos                   _U_(2)                                               /**< (MCAN_RXF0C) Receive FIFO 0 Start Address Position */
 #define MCAN_RXF0C_F0SA_Msk                   (_U_(0x3FFF) << MCAN_RXF0C_F0SA_Pos)                 /**< (MCAN_RXF0C) Receive FIFO 0 Start Address Mask */
 #define MCAN_RXF0C_F0SA(value)                (MCAN_RXF0C_F0SA_Msk & ((value) << MCAN_RXF0C_F0SA_Pos))
-#define MCAN_RXF0C_F0S_Pos                    _U_(16)                                              /**< (MCAN_RXF0C) Receive FIFO 0 Start Address Position */
-#define MCAN_RXF0C_F0S_Msk                    (_U_(0x7F) << MCAN_RXF0C_F0S_Pos)                    /**< (MCAN_RXF0C) Receive FIFO 0 Start Address Mask */
+#define MCAN_RXF0C_F0S_Pos                    _U_(16)                                              /**< (MCAN_RXF0C) Receive FIFO 0 Size Position */
+#define MCAN_RXF0C_F0S_Msk                    (_U_(0x7F) << MCAN_RXF0C_F0S_Pos)                    /**< (MCAN_RXF0C) Receive FIFO 0 Size Mask */
 #define MCAN_RXF0C_F0S(value)                 (MCAN_RXF0C_F0S_Msk & ((value) << MCAN_RXF0C_F0S_Pos))
 #define MCAN_RXF0C_F0WM_Pos                   _U_(24)                                              /**< (MCAN_RXF0C) Receive FIFO 0 Watermark Position */
 #define MCAN_RXF0C_F0WM_Msk                   (_U_(0x7F) << MCAN_RXF0C_F0WM_Pos)                   /**< (MCAN_RXF0C) Receive FIFO 0 Watermark Mask */
@@ -1309,8 +1291,8 @@
 #define MCAN_RXF0S_F0PI_Pos                   _U_(16)                                              /**< (MCAN_RXF0S) Receive FIFO 0 Put Index Position */
 #define MCAN_RXF0S_F0PI_Msk                   (_U_(0x3F) << MCAN_RXF0S_F0PI_Pos)                   /**< (MCAN_RXF0S) Receive FIFO 0 Put Index Mask */
 #define MCAN_RXF0S_F0PI(value)                (MCAN_RXF0S_F0PI_Msk & ((value) << MCAN_RXF0S_F0PI_Pos))
-#define MCAN_RXF0S_F0F_Pos                    _U_(24)                                              /**< (MCAN_RXF0S) Receive FIFO 0 Fill Level Position */
-#define MCAN_RXF0S_F0F_Msk                    (_U_(0x1) << MCAN_RXF0S_F0F_Pos)                     /**< (MCAN_RXF0S) Receive FIFO 0 Fill Level Mask */
+#define MCAN_RXF0S_F0F_Pos                    _U_(24)                                              /**< (MCAN_RXF0S) Receive FIFO 0 Full Position */
+#define MCAN_RXF0S_F0F_Msk                    (_U_(0x1) << MCAN_RXF0S_F0F_Pos)                     /**< (MCAN_RXF0S) Receive FIFO 0 Full Mask */
 #define MCAN_RXF0S_F0F(value)                 (MCAN_RXF0S_F0F_Msk & ((value) << MCAN_RXF0S_F0F_Pos))
 #define MCAN_RXF0S_RF0L_Pos                   _U_(25)                                              /**< (MCAN_RXF0S) Receive FIFO 0 Message Lost Position */
 #define MCAN_RXF0S_RF0L_Msk                   (_U_(0x1) << MCAN_RXF0S_RF0L_Pos)                    /**< (MCAN_RXF0S) Receive FIFO 0 Message Lost Mask */
@@ -1336,8 +1318,8 @@
 #define MCAN_RXF1C_F1SA_Pos                   _U_(2)                                               /**< (MCAN_RXF1C) Receive FIFO 1 Start Address Position */
 #define MCAN_RXF1C_F1SA_Msk                   (_U_(0x3FFF) << MCAN_RXF1C_F1SA_Pos)                 /**< (MCAN_RXF1C) Receive FIFO 1 Start Address Mask */
 #define MCAN_RXF1C_F1SA(value)                (MCAN_RXF1C_F1SA_Msk & ((value) << MCAN_RXF1C_F1SA_Pos))
-#define MCAN_RXF1C_F1S_Pos                    _U_(16)                                              /**< (MCAN_RXF1C) Receive FIFO 1 Start Address Position */
-#define MCAN_RXF1C_F1S_Msk                    (_U_(0x7F) << MCAN_RXF1C_F1S_Pos)                    /**< (MCAN_RXF1C) Receive FIFO 1 Start Address Mask */
+#define MCAN_RXF1C_F1S_Pos                    _U_(16)                                              /**< (MCAN_RXF1C) Receive FIFO 1 Size Position */
+#define MCAN_RXF1C_F1S_Msk                    (_U_(0x7F) << MCAN_RXF1C_F1S_Pos)                    /**< (MCAN_RXF1C) Receive FIFO 1 Size Mask */
 #define MCAN_RXF1C_F1S(value)                 (MCAN_RXF1C_F1S_Msk & ((value) << MCAN_RXF1C_F1S_Pos))
 #define MCAN_RXF1C_F1WM_Pos                   _U_(24)                                              /**< (MCAN_RXF1C) Receive FIFO 1 Watermark Position */
 #define MCAN_RXF1C_F1WM_Msk                   (_U_(0x7F) << MCAN_RXF1C_F1WM_Pos)                   /**< (MCAN_RXF1C) Receive FIFO 1 Watermark Mask */
@@ -1358,8 +1340,8 @@
 #define MCAN_RXF1S_F1PI_Pos                   _U_(16)                                              /**< (MCAN_RXF1S) Receive FIFO 1 Put Index Position */
 #define MCAN_RXF1S_F1PI_Msk                   (_U_(0x3F) << MCAN_RXF1S_F1PI_Pos)                   /**< (MCAN_RXF1S) Receive FIFO 1 Put Index Mask */
 #define MCAN_RXF1S_F1PI(value)                (MCAN_RXF1S_F1PI_Msk & ((value) << MCAN_RXF1S_F1PI_Pos))
-#define MCAN_RXF1S_F1F_Pos                    _U_(24)                                              /**< (MCAN_RXF1S) Receive FIFO 1 Fill Level Position */
-#define MCAN_RXF1S_F1F_Msk                    (_U_(0x1) << MCAN_RXF1S_F1F_Pos)                     /**< (MCAN_RXF1S) Receive FIFO 1 Fill Level Mask */
+#define MCAN_RXF1S_F1F_Pos                    _U_(24)                                              /**< (MCAN_RXF1S) Receive FIFO 1 Full Position */
+#define MCAN_RXF1S_F1F_Msk                    (_U_(0x1) << MCAN_RXF1S_F1F_Pos)                     /**< (MCAN_RXF1S) Receive FIFO 1 Full Mask */
 #define MCAN_RXF1S_F1F(value)                 (MCAN_RXF1S_F1F_Msk & ((value) << MCAN_RXF1S_F1F_Pos))
 #define MCAN_RXF1S_RF1L_Pos                   _U_(25)                                              /**< (MCAN_RXF1S) Receive FIFO 1 Message Lost Position */
 #define MCAN_RXF1S_RF1L_Msk                   (_U_(0x1) << MCAN_RXF1S_RF1L_Pos)                    /**< (MCAN_RXF1S) Receive FIFO 1 Message Lost Mask */
