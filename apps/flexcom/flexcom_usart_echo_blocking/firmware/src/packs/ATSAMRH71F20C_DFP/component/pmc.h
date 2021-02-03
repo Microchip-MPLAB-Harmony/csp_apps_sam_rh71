@@ -1,7 +1,7 @@
 /**
  * \brief Component description for PMC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_PMC_COMPONENT_H_
 #define _SAMRH71_PMC_COMPONENT_H_
 
@@ -112,8 +112,8 @@
 #define CKGR_MOR_KEY_Pos                      _U_(16)                                              /**< (CKGR_MOR) Write Access Password Position */
 #define CKGR_MOR_KEY_Msk                      (_U_(0xFF) << CKGR_MOR_KEY_Pos)                      /**< (CKGR_MOR) Write Access Password Mask */
 #define CKGR_MOR_KEY(value)                   (CKGR_MOR_KEY_Msk & ((value) << CKGR_MOR_KEY_Pos))  
-#define   CKGR_MOR_KEY_PASSWD_Val             _U_(0x37)                                            /**< (CKGR_MOR) Writing any other value in this field aborts the write operation.Always reads as 0.  */
-#define CKGR_MOR_KEY_PASSWD                   (CKGR_MOR_KEY_PASSWD_Val << CKGR_MOR_KEY_Pos)        /**< (CKGR_MOR) Writing any other value in this field aborts the write operation.Always reads as 0. Position  */
+#define   CKGR_MOR_KEY_PASSWD_Val             _U_(0x37)                                            /**< (CKGR_MOR) Writing any other value in this field aborts the write operation. Always reads as 0.  */
+#define CKGR_MOR_KEY_PASSWD                   (CKGR_MOR_KEY_PASSWD_Val << CKGR_MOR_KEY_Pos)        /**< (CKGR_MOR) Writing any other value in this field aborts the write operation. Always reads as 0. Position  */
 #define CKGR_MOR_MOSCSEL_Pos                  _U_(24)                                              /**< (CKGR_MOR) Main Clock Oscillator Selection Position */
 #define CKGR_MOR_MOSCSEL_Msk                  (_U_(0x1) << CKGR_MOR_MOSCSEL_Pos)                   /**< (CKGR_MOR) Main Clock Oscillator Selection Mask */
 #define CKGR_MOR_MOSCSEL(value)               (CKGR_MOR_MOSCSEL_Msk & ((value) << CKGR_MOR_MOSCSEL_Pos))
@@ -248,7 +248,10 @@
 #define   PMC_MCKR_MDIV_PCK_DIV2_Val          _U_(0x1)                                             /**< (PMC_MCKR) MCK is FCLK divided by 2.  */
 #define PMC_MCKR_MDIV_EQ_PCK                  (PMC_MCKR_MDIV_EQ_PCK_Val << PMC_MCKR_MDIV_Pos)      /**< (PMC_MCKR) MCK is FCLK divided by 1. Position  */
 #define PMC_MCKR_MDIV_PCK_DIV2                (PMC_MCKR_MDIV_PCK_DIV2_Val << PMC_MCKR_MDIV_Pos)    /**< (PMC_MCKR) MCK is FCLK divided by 2. Position  */
-#define PMC_MCKR_Msk                          _U_(0x00000173)                                      /**< (PMC_MCKR) Register Mask  */
+#define PMC_MCKR_ZERO_Pos                     _U_(13)                                              /**< (PMC_MCKR) Shall be always write at '0' Position */
+#define PMC_MCKR_ZERO_Msk                     (_U_(0x1) << PMC_MCKR_ZERO_Pos)                      /**< (PMC_MCKR) Shall be always write at '0' Mask */
+#define PMC_MCKR_ZERO(value)                  (PMC_MCKR_ZERO_Msk & ((value) << PMC_MCKR_ZERO_Pos))
+#define PMC_MCKR_Msk                          _U_(0x00002173)                                      /**< (PMC_MCKR) Register Mask  */
 
 
 /* -------- PMC_PCK : (PMC Offset: 0x40) (R/W 32) Programmable Clock Register -------- */
@@ -613,15 +616,15 @@
 #define PMC_OCR1_SEL8_Pos                     _U_(15)                                              /**< (PMC_OCR1) Selection of Main RC Oscillator Calibration Bits for 8 MHz Position */
 #define PMC_OCR1_SEL8_Msk                     (_U_(0x1) << PMC_OCR1_SEL8_Pos)                      /**< (PMC_OCR1) Selection of Main RC Oscillator Calibration Bits for 8 MHz Mask */
 #define PMC_OCR1_SEL8(value)                  (PMC_OCR1_SEL8_Msk & ((value) << PMC_OCR1_SEL8_Pos))
-#define PMC_OCR1_CAL10_Pos                    _U_(16)                                              /**< (PMC_OCR1) Main RC Oscillator Calibration Bits for 10 MHz Position */
-#define PMC_OCR1_CAL10_Msk                    (_U_(0x7F) << PMC_OCR1_CAL10_Pos)                    /**< (PMC_OCR1) Main RC Oscillator Calibration Bits for 10 MHz Mask */
-#define PMC_OCR1_CAL10(value)                 (PMC_OCR1_CAL10_Msk & ((value) << PMC_OCR1_CAL10_Pos))
+#define PMC_OCR1_CAL12_Pos                    _U_(16)                                              /**< (PMC_OCR1) Main RC Oscillator Calibration Bits for 12 MHz Position */
+#define PMC_OCR1_CAL12_Msk                    (_U_(0x7F) << PMC_OCR1_CAL12_Pos)                    /**< (PMC_OCR1) Main RC Oscillator Calibration Bits for 12 MHz Mask */
+#define PMC_OCR1_CAL12(value)                 (PMC_OCR1_CAL12_Msk & ((value) << PMC_OCR1_CAL12_Pos))
 #define PMC_OCR1_SEL10_Pos                    _U_(23)                                              /**< (PMC_OCR1) Selection of Main RC Oscillator Calibration Bits for 10 MHz Position */
 #define PMC_OCR1_SEL10_Msk                    (_U_(0x1) << PMC_OCR1_SEL10_Pos)                     /**< (PMC_OCR1) Selection of Main RC Oscillator Calibration Bits for 10 MHz Mask */
 #define PMC_OCR1_SEL10(value)                 (PMC_OCR1_SEL10_Msk & ((value) << PMC_OCR1_SEL10_Pos))
-#define PMC_OCR1_CAL12_Pos                    _U_(24)                                              /**< (PMC_OCR1) Main RC Oscillator Calibration Bits for 12 MHz Position */
-#define PMC_OCR1_CAL12_Msk                    (_U_(0x7F) << PMC_OCR1_CAL12_Pos)                    /**< (PMC_OCR1) Main RC Oscillator Calibration Bits for 12 MHz Mask */
-#define PMC_OCR1_CAL12(value)                 (PMC_OCR1_CAL12_Msk & ((value) << PMC_OCR1_CAL12_Pos))
+#define PMC_OCR1_CAL10_Pos                    _U_(24)                                              /**< (PMC_OCR1) Main RC Oscillator Calibration Bits for 10 MHz Position */
+#define PMC_OCR1_CAL10_Msk                    (_U_(0x7F) << PMC_OCR1_CAL10_Pos)                    /**< (PMC_OCR1) Main RC Oscillator Calibration Bits for 10 MHz Mask */
+#define PMC_OCR1_CAL10(value)                 (PMC_OCR1_CAL10_Msk & ((value) << PMC_OCR1_CAL10_Pos))
 #define PMC_OCR1_SEL12_Pos                    _U_(31)                                              /**< (PMC_OCR1) Selection of Main RC Oscillator Calibration Bits for 12 MHz Position */
 #define PMC_OCR1_SEL12_Msk                    (_U_(0x1) << PMC_OCR1_SEL12_Pos)                     /**< (PMC_OCR1) Selection of Main RC Oscillator Calibration Bits for 12 MHz Mask */
 #define PMC_OCR1_SEL12(value)                 (PMC_OCR1_SEL12_Msk & ((value) << PMC_OCR1_SEL12_Pos))
@@ -1514,18 +1517,18 @@
 #define PMC_OCR2_SEL8_Pos                     _U_(15)                                              /**< (PMC_OCR2) Selection of Main RC Oscillator Calibration Bits for 8 MHz Position */
 #define PMC_OCR2_SEL8_Msk                     (_U_(0x1) << PMC_OCR2_SEL8_Pos)                      /**< (PMC_OCR2) Selection of Main RC Oscillator Calibration Bits for 8 MHz Mask */
 #define PMC_OCR2_SEL8(value)                  (PMC_OCR2_SEL8_Msk & ((value) << PMC_OCR2_SEL8_Pos))
-#define PMC_OCR2_CAL10_Pos                    _U_(16)                                              /**< (PMC_OCR2) Main RC Oscillator Calibration Bits for 10 MHz Position */
-#define PMC_OCR2_CAL10_Msk                    (_U_(0x7F) << PMC_OCR2_CAL10_Pos)                    /**< (PMC_OCR2) Main RC Oscillator Calibration Bits for 10 MHz Mask */
-#define PMC_OCR2_CAL10(value)                 (PMC_OCR2_CAL10_Msk & ((value) << PMC_OCR2_CAL10_Pos))
-#define PMC_OCR2_SEL10_Pos                    _U_(23)                                              /**< (PMC_OCR2) Selection of Main RC Oscillator Calibration Bits for 10 MHz Position */
-#define PMC_OCR2_SEL10_Msk                    (_U_(0x1) << PMC_OCR2_SEL10_Pos)                     /**< (PMC_OCR2) Selection of Main RC Oscillator Calibration Bits for 10 MHz Mask */
-#define PMC_OCR2_SEL10(value)                 (PMC_OCR2_SEL10_Msk & ((value) << PMC_OCR2_SEL10_Pos))
-#define PMC_OCR2_CAL12_Pos                    _U_(24)                                              /**< (PMC_OCR2) Main RC Oscillator Calibration Bits for 12 MHz Position */
+#define PMC_OCR2_CAL12_Pos                    _U_(16)                                              /**< (PMC_OCR2) Main RC Oscillator Calibration Bits for 12 MHz Position */
 #define PMC_OCR2_CAL12_Msk                    (_U_(0x7F) << PMC_OCR2_CAL12_Pos)                    /**< (PMC_OCR2) Main RC Oscillator Calibration Bits for 12 MHz Mask */
 #define PMC_OCR2_CAL12(value)                 (PMC_OCR2_CAL12_Msk & ((value) << PMC_OCR2_CAL12_Pos))
-#define PMC_OCR2_SEL12_Pos                    _U_(31)                                              /**< (PMC_OCR2) Selection of Main RC Oscillator Calibration Bits for 12 MHz Position */
+#define PMC_OCR2_SEL12_Pos                    _U_(23)                                              /**< (PMC_OCR2) Selection of Main RC Oscillator Calibration Bits for 12 MHz Position */
 #define PMC_OCR2_SEL12_Msk                    (_U_(0x1) << PMC_OCR2_SEL12_Pos)                     /**< (PMC_OCR2) Selection of Main RC Oscillator Calibration Bits for 12 MHz Mask */
 #define PMC_OCR2_SEL12(value)                 (PMC_OCR2_SEL12_Msk & ((value) << PMC_OCR2_SEL12_Pos))
+#define PMC_OCR2_CAL10_Pos                    _U_(24)                                              /**< (PMC_OCR2) Main RC Oscillator Calibration Bits for 10 MHz Position */
+#define PMC_OCR2_CAL10_Msk                    (_U_(0x7F) << PMC_OCR2_CAL10_Pos)                    /**< (PMC_OCR2) Main RC Oscillator Calibration Bits for 10 MHz Mask */
+#define PMC_OCR2_CAL10(value)                 (PMC_OCR2_CAL10_Msk & ((value) << PMC_OCR2_CAL10_Pos))
+#define PMC_OCR2_SEL10_Pos                    _U_(31)                                              /**< (PMC_OCR2) Selection of Main RC Oscillator Calibration Bits for 10 MHz Position */
+#define PMC_OCR2_SEL10_Msk                    (_U_(0x1) << PMC_OCR2_SEL10_Pos)                     /**< (PMC_OCR2) Selection of Main RC Oscillator Calibration Bits for 10 MHz Mask */
+#define PMC_OCR2_SEL10(value)                 (PMC_OCR2_SEL10_Msk & ((value) << PMC_OCR2_SEL10_Pos))
 #define PMC_OCR2_Msk                          _U_(0xFFFFFFFF)                                      /**< (PMC_OCR2) Register Mask  */
 
 
@@ -1539,6 +1542,10 @@
 #define CKGR_PLLBR_REG_OFST            (0x2C)              /**< (CKGR_PLLBR) PLLB Register Offset */
 #define PMC_MCKR_REG_OFST              (0x30)              /**< (PMC_MCKR) Master Clock Register Offset */
 #define PMC_PCK_REG_OFST               (0x40)              /**< (PMC_PCK) Programmable Clock Register Offset */
+#define PMC_PCK0_REG_OFST              (0x40)              /**< (PMC_PCK0) Programmable Clock Register Offset */
+#define PMC_PCK1_REG_OFST              (0x44)              /**< (PMC_PCK1) Programmable Clock Register Offset */
+#define PMC_PCK2_REG_OFST              (0x48)              /**< (PMC_PCK2) Programmable Clock Register Offset */
+#define PMC_PCK3_REG_OFST              (0x4C)              /**< (PMC_PCK3) Programmable Clock Register Offset */
 #define PMC_IER_REG_OFST               (0x60)              /**< (PMC_IER) Interrupt Enable Register Offset */
 #define PMC_IDR_REG_OFST               (0x64)              /**< (PMC_IDR) Interrupt Disable Register Offset */
 #define PMC_SR_REG_OFST                (0x68)              /**< (PMC_SR) Status Register Offset */
