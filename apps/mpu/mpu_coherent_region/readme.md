@@ -62,5 +62,5 @@ The following table shows the target hardware for the application projects.
 
 | Board      | LED Name |
 | ---------- | -------- |
-| SAM RH71 Evaluation Kit   |LED1 |
+| SAM RH71 Evaluation Kit | LED0 |
 |||

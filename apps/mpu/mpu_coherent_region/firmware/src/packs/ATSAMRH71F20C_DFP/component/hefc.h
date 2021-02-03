@@ -1,7 +1,7 @@
 /**
  * \brief Component description for HEFC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_HEFC_COMPONENT_H_
 #define _SAMRH71_HEFC_COMPONENT_H_
 
@@ -790,6 +790,9 @@
 #define HEFC_HECC_FAILAR_REG_OFST      (0x190)             /**< (HEFC_HECC_FAILAR) HECC Fail address register Offset */
 #define HEFC_GPNVM_MISC_REG_OFST       (0x00)              /**< (HEFC_GPNVM_MISC) HEFC GPNVM word miscellaneous Offset */
 #define HEFC_GPNVM_RC_TRIM_REG_OFST    (0x04)              /**< (HEFC_GPNVM_RC_TRIM) HEFC GPNVM word RC trim (1..3) Offset */
+#define HEFC_GPNVM_RC_TRIM0_REG_OFST   (0x04)              /**< (HEFC_GPNVM_RC_TRIM0) HEFC GPNVM word RC trim (1..3) Offset */
+#define HEFC_GPNVM_RC_TRIM1_REG_OFST   (0x08)              /**< (HEFC_GPNVM_RC_TRIM1) HEFC GPNVM word RC trim (1..3) Offset */
+#define HEFC_GPNVM_RC_TRIM2_REG_OFST   (0x0C)              /**< (HEFC_GPNVM_RC_TRIM2) HEFC GPNVM word RC trim (1..3) Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief HEFC register API structure */
