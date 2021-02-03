@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_flexcom2_spi.c
+    plib_flexcom2_spi_master.c
 
   Summary:
-    FLEXCOM2 SPI PLIB Implementation File.
+    FLEXCOM2 SPI Master PLIB Implementation File.
 
   Description:
     This file defines the interface to the FLEXCOM SPI peripheral library.
@@ -45,7 +45,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#include "plib_flexcom2_spi.h"
+#include "plib_flexcom2_spi_master.h"
+#include "interrupts.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -63,11 +64,15 @@ void FLEXCOM2_SPI_Initialize ( void )
     /* Disable and Reset the FLEXCOM SPI */
     FLEXCOM2_REGS->FLEX_SPI_CR = FLEX_SPI_CR_SPIDIS_Msk | FLEX_SPI_CR_SWRST_Msk;
 
-    /* Enable Master mode, select clock source, select particular NPCS line for chip select and disable mode fault detection */
-    FLEXCOM2_REGS->FLEX_SPI_MR = FLEX_SPI_MR_MSTR_Msk | FLEX_SPI_MR_BRSRCCLK_PERIPH_CLK | FLEX_SPI_MR_PCS(0) | FLEX_SPI_MR_MODFDIS_Msk;
 
-    /* Set up clock Polarity, data phase, Communication Width, Baud Rate and Chip select active after transfer */
-    FLEXCOM2_REGS->FLEX_SPI_CSR[0]= FLEX_SPI_CSR_CPOL(0) | FLEX_SPI_CSR_NCPHA(1) | FLEX_SPI_CSR_BITS_8_BIT | FLEX_SPI_CSR_SCBR(50) | FLEX_SPI_CSR_CSAAT_Msk;
+    /* Enable Master mode, select clock source, select particular NPCS line for chip select and disable mode fault detection */
+    FLEXCOM2_REGS->FLEX_SPI_MR = FLEX_SPI_MR_MSTR_Msk | FLEX_SPI_MR_BRSRCCLK_PERIPH_CLK | FLEX_SPI_MR_DLYBCS(0) | FLEX_SPI_MR_PCS(FLEXCOM_SPI_CHIP_SELECT_NPCS0) | FLEX_SPI_MR_MODFDIS_Msk;
+
+    /* Set up clock Polarity, data phase, Communication Width, Baud Rate */
+    FLEXCOM2_REGS->FLEX_SPI_CSR[0]= FLEX_SPI_CSR_CPOL(0) | FLEX_SPI_CSR_NCPHA(1) | FLEX_SPI_CSR_BITS_8_BIT | FLEX_SPI_CSR_SCBR(50) | FLEX_SPI_CSR_DLYBS(0) | FLEX_SPI_CSR_DLYBCT(0) | FLEX_SPI_CSR_CSAAT_Msk;
+
+
+
 
     /* Initialize global variables */
     flexcom2SpiObj.transferIsBusy = false;
@@ -77,6 +82,8 @@ void FLEXCOM2_SPI_Initialize ( void )
     FLEXCOM2_REGS->FLEX_SPI_CR = FLEX_SPI_CR_SPIEN_Msk;
     return;
 }
+
+
 
 bool FLEXCOM2_SPI_WriteRead (void* pTransmitData, size_t txSize, void* pReceiveData, size_t rxSize)
 {
@@ -148,7 +155,7 @@ bool FLEXCOM2_SPI_WriteRead (void* pTransmitData, size_t txSize, void* pReceiveD
             }
             else if (flexcom2SpiObj.dummySize > 0)
             {
-                FLEXCOM2_REGS->FLEX_SPI_TDR = (uint16_t)(0xff);
+                FLEXCOM2_REGS->FLEX_SPI_TDR = (uint16_t)(0xffff);
                 flexcom2SpiObj.dummySize--;
             }
         }
@@ -192,7 +199,7 @@ bool FLEXCOM2_SPI_TransferSetup (FLEXCOM_SPI_TRANSFER_SETUP * setup, uint32_t sp
         scbr = 255;
     }
 
-    FLEXCOM2_REGS->FLEX_SPI_CSR[0]= (uint32_t)setup->clockPolarity | (uint32_t)setup->clockPhase | (uint32_t)setup->dataBits | FLEX_SPI_CSR_SCBR(scbr);
+    FLEXCOM2_REGS->FLEX_SPI_CSR[0]= (FLEXCOM2_REGS->FLEX_SPI_CSR[0] & ~(FLEX_SPI_CSR_CPOL_Msk | FLEX_SPI_CSR_NCPHA_Msk | FLEX_SPI_CSR_BITS_Msk | FLEX_SPI_CSR_SCBR_Msk)) | ((uint32_t)setup->clockPolarity | (uint32_t)setup->clockPhase | (uint32_t)setup->dataBits | FLEX_SPI_CSR_SCBR(scbr));
 
     return true;
 }
@@ -273,7 +280,7 @@ void FLEXCOM2_InterruptHandler(void)
             }
             else if (flexcom2SpiObj.dummySize > 0)
             {
-                FLEXCOM2_REGS->FLEX_SPI_TDR = (uint16_t)(0xff);
+                FLEXCOM2_REGS->FLEX_SPI_TDR = (uint16_t)(0xffff);
                 flexcom2SpiObj.dummySize--;
             }
         }
@@ -294,8 +301,6 @@ void FLEXCOM2_InterruptHandler(void)
              */
 
             isLastByteTransferInProgress = true;
-            /* Set Last transfer to deassert NPCS after the last byte written in TDR has been transferred. */
-            FLEXCOM2_REGS->FLEX_SPI_CR = FLEX_SPI_CR_LASTXFER_Msk;
         }
         else if (flexcom2SpiObj.rxCount == flexcom2SpiObj.rxSize)
         {
@@ -312,6 +317,9 @@ void FLEXCOM2_InterruptHandler(void)
     {
         if (flexcom2SpiObj.rxCount == flexcom2SpiObj.rxSize)
         {
+            /* Set Last transfer to deassert NPCS after the last byte written in TDR has been transferred. */
+            FLEXCOM2_REGS->FLEX_SPI_CR = FLEX_SPI_CR_LASTXFER_Msk;
+
             flexcom2SpiObj.transferIsBusy = false;
 
             /* Disable TDRE, RDRF and TXEMPTY interrupts */

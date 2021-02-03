@@ -52,7 +52,7 @@
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/matrix/plib_matrix.h"
 #include "peripheral/nvic/plib_nvic.h"
-#include "peripheral/flexcom/spi/plib_flexcom2_spi.h"
+#include "peripheral/flexcom/spi/master/plib_flexcom2_spi_master.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -61,6 +61,9 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* CPU clock frequency */
+#define CPU_CLOCK_FREQUENCY 100000000
 
 // *****************************************************************************
 // *****************************************************************************

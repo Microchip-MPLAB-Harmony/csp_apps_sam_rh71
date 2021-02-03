@@ -1,7 +1,7 @@
 /**
  * \brief Component description for SPW
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_SPW_COMPONENT_H_
 #define _SAMRH71_SPW_COMPONENT_H_
 
@@ -5144,7 +5144,7 @@
 #define SPW_GROUP_IRQSTS2_Msk                 _U_(0x00FC0000)                                      /**< (SPW_GROUP_IRQSTS2) Register Mask  */
 
 
-/* -------- SPW_GROUP_EDACSTS : (SPW Offset: 0xF08) ( R/ 32) SpW Group Interrupt status -------- */
+/* -------- SPW_GROUP_EDACSTS : (SPW Offset: 0xF0C) ( R/ 32) SpW Group Interrupt status -------- */
 #define SPW_GROUP_EDACSTS_CORR_Pos            _U_(0)                                               /**< (SPW_GROUP_EDACSTS) Correction Count Position */
 #define SPW_GROUP_EDACSTS_CORR_Msk            (_U_(0xFF) << SPW_GROUP_EDACSTS_CORR_Pos)            /**< (SPW_GROUP_EDACSTS) Correction Count Mask */
 #define SPW_GROUP_EDACSTS_CORR(value)         (SPW_GROUP_EDACSTS_CORR_Msk & ((value) << SPW_GROUP_EDACSTS_CORR_Pos))
@@ -5159,6 +5159,230 @@
 #define SPW_ROUTER_CFG_REG_OFST        (0x04)              /**< (SPW_ROUTER_CFG) SpW Router Config Offset */
 #define SPW_ROUTER_TIMEOUT_REG_OFST    (0x08)              /**< (SPW_ROUTER_TIMEOUT) SpW Router Timeout Offset */
 #define SPW_ROUTER_TABLE_REG_OFST      (0x80)              /**< (SPW_ROUTER_TABLE) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE0_REG_OFST     (0x80)              /**< (SPW_ROUTER_TABLE0) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE1_REG_OFST     (0x84)              /**< (SPW_ROUTER_TABLE1) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE2_REG_OFST     (0x88)              /**< (SPW_ROUTER_TABLE2) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE3_REG_OFST     (0x8C)              /**< (SPW_ROUTER_TABLE3) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE4_REG_OFST     (0x90)              /**< (SPW_ROUTER_TABLE4) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE5_REG_OFST     (0x94)              /**< (SPW_ROUTER_TABLE5) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE6_REG_OFST     (0x98)              /**< (SPW_ROUTER_TABLE6) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE7_REG_OFST     (0x9C)              /**< (SPW_ROUTER_TABLE7) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE8_REG_OFST     (0xA0)              /**< (SPW_ROUTER_TABLE8) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE9_REG_OFST     (0xA4)              /**< (SPW_ROUTER_TABLE9) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE10_REG_OFST    (0xA8)              /**< (SPW_ROUTER_TABLE10) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE11_REG_OFST    (0xAC)              /**< (SPW_ROUTER_TABLE11) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE12_REG_OFST    (0xB0)              /**< (SPW_ROUTER_TABLE12) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE13_REG_OFST    (0xB4)              /**< (SPW_ROUTER_TABLE13) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE14_REG_OFST    (0xB8)              /**< (SPW_ROUTER_TABLE14) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE15_REG_OFST    (0xBC)              /**< (SPW_ROUTER_TABLE15) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE16_REG_OFST    (0xC0)              /**< (SPW_ROUTER_TABLE16) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE17_REG_OFST    (0xC4)              /**< (SPW_ROUTER_TABLE17) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE18_REG_OFST    (0xC8)              /**< (SPW_ROUTER_TABLE18) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE19_REG_OFST    (0xCC)              /**< (SPW_ROUTER_TABLE19) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE20_REG_OFST    (0xD0)              /**< (SPW_ROUTER_TABLE20) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE21_REG_OFST    (0xD4)              /**< (SPW_ROUTER_TABLE21) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE22_REG_OFST    (0xD8)              /**< (SPW_ROUTER_TABLE22) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE23_REG_OFST    (0xDC)              /**< (SPW_ROUTER_TABLE23) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE24_REG_OFST    (0xE0)              /**< (SPW_ROUTER_TABLE24) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE25_REG_OFST    (0xE4)              /**< (SPW_ROUTER_TABLE25) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE26_REG_OFST    (0xE8)              /**< (SPW_ROUTER_TABLE26) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE27_REG_OFST    (0xEC)              /**< (SPW_ROUTER_TABLE27) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE28_REG_OFST    (0xF0)              /**< (SPW_ROUTER_TABLE28) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE29_REG_OFST    (0xF4)              /**< (SPW_ROUTER_TABLE29) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE30_REG_OFST    (0xF8)              /**< (SPW_ROUTER_TABLE30) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE31_REG_OFST    (0xFC)              /**< (SPW_ROUTER_TABLE31) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE32_REG_OFST    (0x100)             /**< (SPW_ROUTER_TABLE32) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE33_REG_OFST    (0x104)             /**< (SPW_ROUTER_TABLE33) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE34_REG_OFST    (0x108)             /**< (SPW_ROUTER_TABLE34) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE35_REG_OFST    (0x10C)             /**< (SPW_ROUTER_TABLE35) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE36_REG_OFST    (0x110)             /**< (SPW_ROUTER_TABLE36) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE37_REG_OFST    (0x114)             /**< (SPW_ROUTER_TABLE37) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE38_REG_OFST    (0x118)             /**< (SPW_ROUTER_TABLE38) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE39_REG_OFST    (0x11C)             /**< (SPW_ROUTER_TABLE39) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE40_REG_OFST    (0x120)             /**< (SPW_ROUTER_TABLE40) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE41_REG_OFST    (0x124)             /**< (SPW_ROUTER_TABLE41) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE42_REG_OFST    (0x128)             /**< (SPW_ROUTER_TABLE42) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE43_REG_OFST    (0x12C)             /**< (SPW_ROUTER_TABLE43) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE44_REG_OFST    (0x130)             /**< (SPW_ROUTER_TABLE44) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE45_REG_OFST    (0x134)             /**< (SPW_ROUTER_TABLE45) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE46_REG_OFST    (0x138)             /**< (SPW_ROUTER_TABLE46) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE47_REG_OFST    (0x13C)             /**< (SPW_ROUTER_TABLE47) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE48_REG_OFST    (0x140)             /**< (SPW_ROUTER_TABLE48) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE49_REG_OFST    (0x144)             /**< (SPW_ROUTER_TABLE49) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE50_REG_OFST    (0x148)             /**< (SPW_ROUTER_TABLE50) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE51_REG_OFST    (0x14C)             /**< (SPW_ROUTER_TABLE51) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE52_REG_OFST    (0x150)             /**< (SPW_ROUTER_TABLE52) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE53_REG_OFST    (0x154)             /**< (SPW_ROUTER_TABLE53) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE54_REG_OFST    (0x158)             /**< (SPW_ROUTER_TABLE54) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE55_REG_OFST    (0x15C)             /**< (SPW_ROUTER_TABLE55) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE56_REG_OFST    (0x160)             /**< (SPW_ROUTER_TABLE56) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE57_REG_OFST    (0x164)             /**< (SPW_ROUTER_TABLE57) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE58_REG_OFST    (0x168)             /**< (SPW_ROUTER_TABLE58) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE59_REG_OFST    (0x16C)             /**< (SPW_ROUTER_TABLE59) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE60_REG_OFST    (0x170)             /**< (SPW_ROUTER_TABLE60) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE61_REG_OFST    (0x174)             /**< (SPW_ROUTER_TABLE61) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE62_REG_OFST    (0x178)             /**< (SPW_ROUTER_TABLE62) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE63_REG_OFST    (0x17C)             /**< (SPW_ROUTER_TABLE63) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE64_REG_OFST    (0x180)             /**< (SPW_ROUTER_TABLE64) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE65_REG_OFST    (0x184)             /**< (SPW_ROUTER_TABLE65) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE66_REG_OFST    (0x188)             /**< (SPW_ROUTER_TABLE66) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE67_REG_OFST    (0x18C)             /**< (SPW_ROUTER_TABLE67) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE68_REG_OFST    (0x190)             /**< (SPW_ROUTER_TABLE68) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE69_REG_OFST    (0x194)             /**< (SPW_ROUTER_TABLE69) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE70_REG_OFST    (0x198)             /**< (SPW_ROUTER_TABLE70) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE71_REG_OFST    (0x19C)             /**< (SPW_ROUTER_TABLE71) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE72_REG_OFST    (0x1A0)             /**< (SPW_ROUTER_TABLE72) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE73_REG_OFST    (0x1A4)             /**< (SPW_ROUTER_TABLE73) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE74_REG_OFST    (0x1A8)             /**< (SPW_ROUTER_TABLE74) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE75_REG_OFST    (0x1AC)             /**< (SPW_ROUTER_TABLE75) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE76_REG_OFST    (0x1B0)             /**< (SPW_ROUTER_TABLE76) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE77_REG_OFST    (0x1B4)             /**< (SPW_ROUTER_TABLE77) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE78_REG_OFST    (0x1B8)             /**< (SPW_ROUTER_TABLE78) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE79_REG_OFST    (0x1BC)             /**< (SPW_ROUTER_TABLE79) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE80_REG_OFST    (0x1C0)             /**< (SPW_ROUTER_TABLE80) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE81_REG_OFST    (0x1C4)             /**< (SPW_ROUTER_TABLE81) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE82_REG_OFST    (0x1C8)             /**< (SPW_ROUTER_TABLE82) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE83_REG_OFST    (0x1CC)             /**< (SPW_ROUTER_TABLE83) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE84_REG_OFST    (0x1D0)             /**< (SPW_ROUTER_TABLE84) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE85_REG_OFST    (0x1D4)             /**< (SPW_ROUTER_TABLE85) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE86_REG_OFST    (0x1D8)             /**< (SPW_ROUTER_TABLE86) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE87_REG_OFST    (0x1DC)             /**< (SPW_ROUTER_TABLE87) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE88_REG_OFST    (0x1E0)             /**< (SPW_ROUTER_TABLE88) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE89_REG_OFST    (0x1E4)             /**< (SPW_ROUTER_TABLE89) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE90_REG_OFST    (0x1E8)             /**< (SPW_ROUTER_TABLE90) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE91_REG_OFST    (0x1EC)             /**< (SPW_ROUTER_TABLE91) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE92_REG_OFST    (0x1F0)             /**< (SPW_ROUTER_TABLE92) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE93_REG_OFST    (0x1F4)             /**< (SPW_ROUTER_TABLE93) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE94_REG_OFST    (0x1F8)             /**< (SPW_ROUTER_TABLE94) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE95_REG_OFST    (0x1FC)             /**< (SPW_ROUTER_TABLE95) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE96_REG_OFST    (0x200)             /**< (SPW_ROUTER_TABLE96) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE97_REG_OFST    (0x204)             /**< (SPW_ROUTER_TABLE97) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE98_REG_OFST    (0x208)             /**< (SPW_ROUTER_TABLE98) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE99_REG_OFST    (0x20C)             /**< (SPW_ROUTER_TABLE99) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE100_REG_OFST   (0x210)             /**< (SPW_ROUTER_TABLE100) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE101_REG_OFST   (0x214)             /**< (SPW_ROUTER_TABLE101) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE102_REG_OFST   (0x218)             /**< (SPW_ROUTER_TABLE102) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE103_REG_OFST   (0x21C)             /**< (SPW_ROUTER_TABLE103) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE104_REG_OFST   (0x220)             /**< (SPW_ROUTER_TABLE104) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE105_REG_OFST   (0x224)             /**< (SPW_ROUTER_TABLE105) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE106_REG_OFST   (0x228)             /**< (SPW_ROUTER_TABLE106) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE107_REG_OFST   (0x22C)             /**< (SPW_ROUTER_TABLE107) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE108_REG_OFST   (0x230)             /**< (SPW_ROUTER_TABLE108) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE109_REG_OFST   (0x234)             /**< (SPW_ROUTER_TABLE109) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE110_REG_OFST   (0x238)             /**< (SPW_ROUTER_TABLE110) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE111_REG_OFST   (0x23C)             /**< (SPW_ROUTER_TABLE111) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE112_REG_OFST   (0x240)             /**< (SPW_ROUTER_TABLE112) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE113_REG_OFST   (0x244)             /**< (SPW_ROUTER_TABLE113) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE114_REG_OFST   (0x248)             /**< (SPW_ROUTER_TABLE114) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE115_REG_OFST   (0x24C)             /**< (SPW_ROUTER_TABLE115) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE116_REG_OFST   (0x250)             /**< (SPW_ROUTER_TABLE116) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE117_REG_OFST   (0x254)             /**< (SPW_ROUTER_TABLE117) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE118_REG_OFST   (0x258)             /**< (SPW_ROUTER_TABLE118) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE119_REG_OFST   (0x25C)             /**< (SPW_ROUTER_TABLE119) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE120_REG_OFST   (0x260)             /**< (SPW_ROUTER_TABLE120) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE121_REG_OFST   (0x264)             /**< (SPW_ROUTER_TABLE121) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE122_REG_OFST   (0x268)             /**< (SPW_ROUTER_TABLE122) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE123_REG_OFST   (0x26C)             /**< (SPW_ROUTER_TABLE123) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE124_REG_OFST   (0x270)             /**< (SPW_ROUTER_TABLE124) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE125_REG_OFST   (0x274)             /**< (SPW_ROUTER_TABLE125) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE126_REG_OFST   (0x278)             /**< (SPW_ROUTER_TABLE126) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE127_REG_OFST   (0x27C)             /**< (SPW_ROUTER_TABLE127) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE128_REG_OFST   (0x280)             /**< (SPW_ROUTER_TABLE128) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE129_REG_OFST   (0x284)             /**< (SPW_ROUTER_TABLE129) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE130_REG_OFST   (0x288)             /**< (SPW_ROUTER_TABLE130) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE131_REG_OFST   (0x28C)             /**< (SPW_ROUTER_TABLE131) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE132_REG_OFST   (0x290)             /**< (SPW_ROUTER_TABLE132) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE133_REG_OFST   (0x294)             /**< (SPW_ROUTER_TABLE133) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE134_REG_OFST   (0x298)             /**< (SPW_ROUTER_TABLE134) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE135_REG_OFST   (0x29C)             /**< (SPW_ROUTER_TABLE135) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE136_REG_OFST   (0x2A0)             /**< (SPW_ROUTER_TABLE136) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE137_REG_OFST   (0x2A4)             /**< (SPW_ROUTER_TABLE137) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE138_REG_OFST   (0x2A8)             /**< (SPW_ROUTER_TABLE138) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE139_REG_OFST   (0x2AC)             /**< (SPW_ROUTER_TABLE139) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE140_REG_OFST   (0x2B0)             /**< (SPW_ROUTER_TABLE140) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE141_REG_OFST   (0x2B4)             /**< (SPW_ROUTER_TABLE141) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE142_REG_OFST   (0x2B8)             /**< (SPW_ROUTER_TABLE142) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE143_REG_OFST   (0x2BC)             /**< (SPW_ROUTER_TABLE143) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE144_REG_OFST   (0x2C0)             /**< (SPW_ROUTER_TABLE144) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE145_REG_OFST   (0x2C4)             /**< (SPW_ROUTER_TABLE145) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE146_REG_OFST   (0x2C8)             /**< (SPW_ROUTER_TABLE146) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE147_REG_OFST   (0x2CC)             /**< (SPW_ROUTER_TABLE147) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE148_REG_OFST   (0x2D0)             /**< (SPW_ROUTER_TABLE148) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE149_REG_OFST   (0x2D4)             /**< (SPW_ROUTER_TABLE149) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE150_REG_OFST   (0x2D8)             /**< (SPW_ROUTER_TABLE150) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE151_REG_OFST   (0x2DC)             /**< (SPW_ROUTER_TABLE151) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE152_REG_OFST   (0x2E0)             /**< (SPW_ROUTER_TABLE152) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE153_REG_OFST   (0x2E4)             /**< (SPW_ROUTER_TABLE153) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE154_REG_OFST   (0x2E8)             /**< (SPW_ROUTER_TABLE154) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE155_REG_OFST   (0x2EC)             /**< (SPW_ROUTER_TABLE155) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE156_REG_OFST   (0x2F0)             /**< (SPW_ROUTER_TABLE156) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE157_REG_OFST   (0x2F4)             /**< (SPW_ROUTER_TABLE157) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE158_REG_OFST   (0x2F8)             /**< (SPW_ROUTER_TABLE158) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE159_REG_OFST   (0x2FC)             /**< (SPW_ROUTER_TABLE159) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE160_REG_OFST   (0x300)             /**< (SPW_ROUTER_TABLE160) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE161_REG_OFST   (0x304)             /**< (SPW_ROUTER_TABLE161) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE162_REG_OFST   (0x308)             /**< (SPW_ROUTER_TABLE162) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE163_REG_OFST   (0x30C)             /**< (SPW_ROUTER_TABLE163) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE164_REG_OFST   (0x310)             /**< (SPW_ROUTER_TABLE164) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE165_REG_OFST   (0x314)             /**< (SPW_ROUTER_TABLE165) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE166_REG_OFST   (0x318)             /**< (SPW_ROUTER_TABLE166) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE167_REG_OFST   (0x31C)             /**< (SPW_ROUTER_TABLE167) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE168_REG_OFST   (0x320)             /**< (SPW_ROUTER_TABLE168) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE169_REG_OFST   (0x324)             /**< (SPW_ROUTER_TABLE169) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE170_REG_OFST   (0x328)             /**< (SPW_ROUTER_TABLE170) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE171_REG_OFST   (0x32C)             /**< (SPW_ROUTER_TABLE171) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE172_REG_OFST   (0x330)             /**< (SPW_ROUTER_TABLE172) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE173_REG_OFST   (0x334)             /**< (SPW_ROUTER_TABLE173) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE174_REG_OFST   (0x338)             /**< (SPW_ROUTER_TABLE174) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE175_REG_OFST   (0x33C)             /**< (SPW_ROUTER_TABLE175) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE176_REG_OFST   (0x340)             /**< (SPW_ROUTER_TABLE176) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE177_REG_OFST   (0x344)             /**< (SPW_ROUTER_TABLE177) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE178_REG_OFST   (0x348)             /**< (SPW_ROUTER_TABLE178) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE179_REG_OFST   (0x34C)             /**< (SPW_ROUTER_TABLE179) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE180_REG_OFST   (0x350)             /**< (SPW_ROUTER_TABLE180) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE181_REG_OFST   (0x354)             /**< (SPW_ROUTER_TABLE181) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE182_REG_OFST   (0x358)             /**< (SPW_ROUTER_TABLE182) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE183_REG_OFST   (0x35C)             /**< (SPW_ROUTER_TABLE183) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE184_REG_OFST   (0x360)             /**< (SPW_ROUTER_TABLE184) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE185_REG_OFST   (0x364)             /**< (SPW_ROUTER_TABLE185) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE186_REG_OFST   (0x368)             /**< (SPW_ROUTER_TABLE186) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE187_REG_OFST   (0x36C)             /**< (SPW_ROUTER_TABLE187) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE188_REG_OFST   (0x370)             /**< (SPW_ROUTER_TABLE188) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE189_REG_OFST   (0x374)             /**< (SPW_ROUTER_TABLE189) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE190_REG_OFST   (0x378)             /**< (SPW_ROUTER_TABLE190) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE191_REG_OFST   (0x37C)             /**< (SPW_ROUTER_TABLE191) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE192_REG_OFST   (0x380)             /**< (SPW_ROUTER_TABLE192) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE193_REG_OFST   (0x384)             /**< (SPW_ROUTER_TABLE193) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE194_REG_OFST   (0x388)             /**< (SPW_ROUTER_TABLE194) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE195_REG_OFST   (0x38C)             /**< (SPW_ROUTER_TABLE195) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE196_REG_OFST   (0x390)             /**< (SPW_ROUTER_TABLE196) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE197_REG_OFST   (0x394)             /**< (SPW_ROUTER_TABLE197) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE198_REG_OFST   (0x398)             /**< (SPW_ROUTER_TABLE198) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE199_REG_OFST   (0x39C)             /**< (SPW_ROUTER_TABLE199) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE200_REG_OFST   (0x3A0)             /**< (SPW_ROUTER_TABLE200) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE201_REG_OFST   (0x3A4)             /**< (SPW_ROUTER_TABLE201) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE202_REG_OFST   (0x3A8)             /**< (SPW_ROUTER_TABLE202) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE203_REG_OFST   (0x3AC)             /**< (SPW_ROUTER_TABLE203) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE204_REG_OFST   (0x3B0)             /**< (SPW_ROUTER_TABLE204) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE205_REG_OFST   (0x3B4)             /**< (SPW_ROUTER_TABLE205) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE206_REG_OFST   (0x3B8)             /**< (SPW_ROUTER_TABLE206) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE207_REG_OFST   (0x3BC)             /**< (SPW_ROUTER_TABLE207) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE208_REG_OFST   (0x3C0)             /**< (SPW_ROUTER_TABLE208) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE209_REG_OFST   (0x3C4)             /**< (SPW_ROUTER_TABLE209) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE210_REG_OFST   (0x3C8)             /**< (SPW_ROUTER_TABLE210) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE211_REG_OFST   (0x3CC)             /**< (SPW_ROUTER_TABLE211) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE212_REG_OFST   (0x3D0)             /**< (SPW_ROUTER_TABLE212) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE213_REG_OFST   (0x3D4)             /**< (SPW_ROUTER_TABLE213) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE214_REG_OFST   (0x3D8)             /**< (SPW_ROUTER_TABLE214) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE215_REG_OFST   (0x3DC)             /**< (SPW_ROUTER_TABLE215) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE216_REG_OFST   (0x3E0)             /**< (SPW_ROUTER_TABLE216) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE217_REG_OFST   (0x3E4)             /**< (SPW_ROUTER_TABLE217) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE218_REG_OFST   (0x3E8)             /**< (SPW_ROUTER_TABLE218) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE219_REG_OFST   (0x3EC)             /**< (SPW_ROUTER_TABLE219) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE220_REG_OFST   (0x3F0)             /**< (SPW_ROUTER_TABLE220) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE221_REG_OFST   (0x3F4)             /**< (SPW_ROUTER_TABLE221) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE222_REG_OFST   (0x3F8)             /**< (SPW_ROUTER_TABLE222) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
+#define SPW_ROUTER_TABLE223_REG_OFST   (0x3FC)             /**< (SPW_ROUTER_TABLE223) SpW Router Table (Logical addresses 32 to 255, index 0 for logical address 32) Offset */
 #define SPW_LINK1_PI_RM_REG_OFST       (0x400)             /**< (SPW_LINK1_PI_RM) SpW Link 1 Pending Read Masked Interrupt Offset */
 #define SPW_LINK1_PI_RCM_REG_OFST      (0x404)             /**< (SPW_LINK1_PI_RCM) SpW Link 1 Pending Read and Clear Masked Interrupt Offset */
 #define SPW_LINK1_PI_R_REG_OFST        (0x408)             /**< (SPW_LINK1_PI_R) SpW Link 1 Pending Read Interrupt Offset */
@@ -5281,7 +5505,7 @@
 #define SPW_TCH_SWRESET_REG_OFST       (0xEBC)             /**< (SPW_TCH_SWRESET) SpW Tch Software Reset Offset */
 #define SPW_GROUP_IRQSTS1_REG_OFST     (0xF00)             /**< (SPW_GROUP_IRQSTS1) SpW Group Interrupt status 1 Offset */
 #define SPW_GROUP_IRQSTS2_REG_OFST     (0xF04)             /**< (SPW_GROUP_IRQSTS2) SpW Group Interrupt status 2 Offset */
-#define SPW_GROUP_EDACSTS_REG_OFST     (0xF08)             /**< (SPW_GROUP_EDACSTS) SpW Group Interrupt status Offset */
+#define SPW_GROUP_EDACSTS_REG_OFST     (0xF0C)             /**< (SPW_GROUP_EDACSTS) SpW Group Interrupt status Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SPW register API structure */
@@ -5421,7 +5645,8 @@ typedef struct
   __I   uint8_t                        Reserved8[0x40];
   __I   uint32_t                       SPW_GROUP_IRQSTS1;  /**< Offset: 0xF00 (R/   32) SpW Group Interrupt status 1 */
   __I   uint32_t                       SPW_GROUP_IRQSTS2;  /**< Offset: 0xF04 (R/   32) SpW Group Interrupt status 2 */
-  __I   uint32_t                       SPW_GROUP_EDACSTS;  /**< Offset: 0xF08 (R/   32) SpW Group Interrupt status */
+  __I   uint8_t                        Reserved9[0x04];
+  __I   uint32_t                       SPW_GROUP_EDACSTS;  /**< Offset: 0xF0C (R/   32) SpW Group Interrupt status */
 } spw_registers_t;
 
 

@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_flexcom_spi_local.h
+    plib_flexcom_spi_master_common.h
 
   Summary:
-   FLEXCOM SPI PLIB Common Header File.
+   FLEXCOM SPI Master PLIB Common Header File.
 
   Description:
     This file has prototype of all the interfaces which are common for all the
@@ -44,8 +44,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef PLIB_FLEXCOM_SPI_LOCAL_H  // Guards against multiple inclusion
-#define PLIB_FLEXCOM_SPI_LOCAL_H
+#ifndef PLIB_FLEXCOM_SPI_MASTER_COMMON_H  // Guards against multiple inclusion
+#define PLIB_FLEXCOM_SPI_MASTER_COMMON_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -67,7 +67,7 @@ extern "C" {
 #endif
 
 // DOM-IGNORE-END
-/****************************** ${FLEXCOM_INSTANCE_NAME} SPI Interface *********************************/
+/****************************** FLEXCOM2 SPI Interface *********************************/
 
 typedef enum
 {
@@ -91,6 +91,14 @@ typedef enum
 
 typedef enum
 {
+    FLEXCOM_SPI_CHIP_SELECT_NPCS0 = 0x0E,
+    FLEXCOM_SPI_CHIP_SELECT_NPCS1 = 0x0D,
+	FLEXCOM_SPI_CHIP_SELECT_NPCS2 = 0x0B,
+	FLEXCOM_SPI_CHIP_SELECT_NPCS3 = 0x07,
+}FLEXCOM_SPI_CHIP_SELECT;
+
+typedef enum
+{
     FLEXCOM_SPI_DATA_BITS_8 = FLEX_SPI_CSR_BITS_8_BIT_Val << FLEX_SPI_CSR_BITS_Pos,
     FLEXCOM_SPI_DATA_BITS_9 = FLEX_SPI_CSR_BITS_9_BIT_Val << FLEX_SPI_CSR_BITS_Pos,
     FLEXCOM_SPI_DATA_BITS_10 = FLEX_SPI_CSR_BITS_10_BIT_Val << FLEX_SPI_CSR_BITS_Pos,
@@ -107,7 +115,7 @@ typedef enum
 }FLEXCOM_SPI_DATA_BITS;
 
 typedef struct
-{     
+{
     uint32_t    clockFrequency;
     FLEXCOM_SPI_CLOCK_PHASE clockPhase;
     FLEXCOM_SPI_CLOCK_POLARITY clockPolarity;
@@ -125,7 +133,7 @@ typedef  void (*FLEXCOM_SPI_CALLBACK) (uintptr_t context);
 
 typedef struct
 {
-    void*                   txBuffer;    
+    void*                   txBuffer;
     void*                   rxBuffer;
     size_t                  txSize;
     size_t                  rxSize;
@@ -143,7 +151,7 @@ typedef struct
 }
 #endif
 
-#endif /* PLIB_FLEXCOM_SPI_LOCAL_H */
+#endif /* PLIB_FLEXCOM_SPI_MASTER_COMMON_H */
 
 /*******************************************************************************
  End of File
