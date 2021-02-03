@@ -110,6 +110,8 @@ bool MCAN0_StandardFilterElementSet(uint8_t filterNumber, mcan_sidfe_registers_t
 bool MCAN0_StandardFilterElementGet(uint8_t filterNumber, mcan_sidfe_registers_t *stdMsgIDFilterElement);
 bool MCAN0_ExtendedFilterElementSet(uint8_t filterNumber, mcan_xidfe_registers_t *extMsgIDFilterElement);
 bool MCAN0_ExtendedFilterElementGet(uint8_t filterNumber, mcan_xidfe_registers_t *extMsgIDFilterElement);
+void MCAN0_SleepModeEnter(void);
+void MCAN0_SleepModeExit(void);
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
     }

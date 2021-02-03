@@ -88,6 +88,7 @@ bool FLEXCOM1_USART_TransmitterIsReady( void );
 bool FLEXCOM1_USART_ReceiverIsReady( void );
 
 
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
     }

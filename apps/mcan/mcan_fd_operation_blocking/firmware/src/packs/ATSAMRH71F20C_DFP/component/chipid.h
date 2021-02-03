@@ -1,7 +1,7 @@
 /**
  * \brief Component description for CHIPID
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-08T08:12:01Z */
+/* file generated from device description version 2021-01-12T20:14:51Z */
 #ifndef _SAMRH71_CHIPID_COMPONENT_H_
 #define _SAMRH71_CHIPID_COMPONENT_H_
 
@@ -137,10 +137,8 @@
 #define CHIPID_CIDR_ARCH_Pos                  _U_(20)                                              /**< (CHIPID_CIDR) Architecture Identifier Position */
 #define CHIPID_CIDR_ARCH_Msk                  (_U_(0xFF) << CHIPID_CIDR_ARCH_Pos)                  /**< (CHIPID_CIDR) Architecture Identifier Mask */
 #define CHIPID_CIDR_ARCH(value)               (CHIPID_CIDR_ARCH_Msk & ((value) << CHIPID_CIDR_ARCH_Pos))
-#define   CHIPID_CIDR_ARCH_SAMU70SAMU71_Val   _U_(0x15)                                            /**< (CHIPID_CIDR) SAM U70, SAMU71  */
-#define   CHIPID_CIDR_ARCH_SAMV72_Val         _U_(0x16)                                            /**< (CHIPID_CIDR) SAM V72  */
-#define CHIPID_CIDR_ARCH_SAMU70SAMU71         (CHIPID_CIDR_ARCH_SAMU70SAMU71_Val << CHIPID_CIDR_ARCH_Pos) /**< (CHIPID_CIDR) SAM U70, SAMU71 Position  */
-#define CHIPID_CIDR_ARCH_SAMV72               (CHIPID_CIDR_ARCH_SAMV72_Val << CHIPID_CIDR_ARCH_Pos) /**< (CHIPID_CIDR) SAM V72 Position  */
+#define   CHIPID_CIDR_ARCH_SAMRH71_Val        _U_(0x22)                                            /**< (CHIPID_CIDR) SAMRH71  */
+#define CHIPID_CIDR_ARCH_SAMRH71              (CHIPID_CIDR_ARCH_SAMRH71_Val << CHIPID_CIDR_ARCH_Pos) /**< (CHIPID_CIDR) SAMRH71 Position  */
 #define CHIPID_CIDR_NVPTYP_Pos                _U_(28)                                              /**< (CHIPID_CIDR) Nonvolatile Program Memory Type Position */
 #define CHIPID_CIDR_NVPTYP_Msk                (_U_(0x7) << CHIPID_CIDR_NVPTYP_Pos)                 /**< (CHIPID_CIDR) Nonvolatile Program Memory Type Mask */
 #define CHIPID_CIDR_NVPTYP(value)             (CHIPID_CIDR_NVPTYP_Msk & ((value) << CHIPID_CIDR_NVPTYP_Pos))
@@ -164,12 +162,8 @@
 #define CHIPID_EXID_EXID_Pos                  _U_(0)                                               /**< (CHIPID_EXID) Chip ID Extension Position */
 #define CHIPID_EXID_EXID_Msk                  (_U_(0xFFFFFFFF) << CHIPID_EXID_EXID_Pos)            /**< (CHIPID_EXID) Chip ID Extension Mask */
 #define CHIPID_EXID_EXID(value)               (CHIPID_EXID_EXID_Msk & ((value) << CHIPID_EXID_EXID_Pos))
-#define   CHIPID_EXID_EXID_PACKAGE_TYPE_100_Val _U_(0x1)                                             /**< (CHIPID_EXID) 100-lead package  */
-#define   CHIPID_EXID_EXID_PACKAGE_TYPE_144_Val _U_(0x2)                                             /**< (CHIPID_EXID) 144-lead package  */
-#define   CHIPID_EXID_EXID_PACKAGE_TYPE_176_Val _U_(0x3)                                             /**< (CHIPID_EXID) 176-lead package  */
-#define CHIPID_EXID_EXID_PACKAGE_TYPE_100     (CHIPID_EXID_EXID_PACKAGE_TYPE_100_Val << CHIPID_EXID_EXID_Pos) /**< (CHIPID_EXID) 100-lead package Position  */
-#define CHIPID_EXID_EXID_PACKAGE_TYPE_144     (CHIPID_EXID_EXID_PACKAGE_TYPE_144_Val << CHIPID_EXID_EXID_Pos) /**< (CHIPID_EXID) 144-lead package Position  */
-#define CHIPID_EXID_EXID_PACKAGE_TYPE_176     (CHIPID_EXID_EXID_PACKAGE_TYPE_176_Val << CHIPID_EXID_EXID_Pos) /**< (CHIPID_EXID) 176-lead package Position  */
+#define   CHIPID_EXID_EXID_PACKAGE_TYPE_256_Val _U_(0x1)                                             /**< (CHIPID_EXID) 256-lead package  */
+#define CHIPID_EXID_EXID_PACKAGE_TYPE_256     (CHIPID_EXID_EXID_PACKAGE_TYPE_256_Val << CHIPID_EXID_EXID_Pos) /**< (CHIPID_EXID) 256-lead package Position  */
 #define CHIPID_EXID_Msk                       _U_(0xFFFFFFFF)                                      /**< (CHIPID_EXID) Register Mask  */
 
 

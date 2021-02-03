@@ -51,6 +51,7 @@
 
 #include "device.h"
 #include "plib_mcan0.h"
+#include "interrupts.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -272,7 +273,7 @@ bool MCAN0_MessageTransmit(uint32_t id, uint8_t length, uint8_t* data, MCAN_MODE
         fifo->MCAN_TXBE_0 |= MCAN_TXBE_0_RTR_Msk;
     }
 
-    fifo->MCAN_TXBE_1 |= ((++messageMarker << MCAN_TXBE_1_MM_Pos) & MCAN_TXBE_1_MM_Msk);
+    fifo->MCAN_TXBE_1 |= ((++messageMarker << MCAN_TXBE_1_MM_Pos) & MCAN_TXBE_1_MM_Msk) | MCAN_TXBE_1_EFC_Msk;
 
     /* request the transmit */
     MCAN0_REGS->MCAN_TXBAR = 1U << tfqpi;
@@ -869,6 +870,29 @@ bool MCAN0_ExtendedFilterElementGet(uint8_t filterNumber, mcan_xidfe_registers_t
     extMsgIDFilterElement->MCAN_XIDFE_1 = mcan0Obj.msgRAMConfig.extMsgIDFilterAddress[filterNumber - 1].MCAN_XIDFE_1;
 
     return true;
+}
+
+void MCAN0_SleepModeEnter(void)
+{
+    MCAN0_REGS->MCAN_CCCR |=  MCAN_CCCR_CSR_Msk;
+    while ((MCAN0_REGS->MCAN_CCCR & MCAN_CCCR_CSA_Msk) != MCAN_CCCR_CSA_Msk)
+    {
+        /* Wait for clock stop request to complete */
+    }
+}
+
+void MCAN0_SleepModeExit(void)
+{
+    MCAN0_REGS->MCAN_CCCR &=  ~MCAN_CCCR_CSR_Msk;
+    while ((MCAN0_REGS->MCAN_CCCR & MCAN_CCCR_CSA_Msk) == MCAN_CCCR_CSA_Msk)
+    {
+        /* Wait for no clock stop */
+    }
+    MCAN0_REGS->MCAN_CCCR &= ~MCAN_CCCR_INIT_Msk;
+    while ((MCAN0_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) == MCAN_CCCR_INIT_Msk)
+    {
+        /* Wait for initialization complete */
+    }
 }
 
 
