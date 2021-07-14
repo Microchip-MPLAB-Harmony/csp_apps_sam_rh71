@@ -205,7 +205,7 @@
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMRH71_DFP" vendor="Microchip" version="2.1.105"/>
+        <pack name="SAMRH71_DFP" vendor="Microchip" version="2.2.112"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
