@@ -74,37 +74,41 @@
 // *****************************************************************************
 // *****************************************************************************
 /* MCAN0 Message RAM Configuration Size */
-#define MCAN0_RX_FIFO0_ELEMENT_SIZE       72
-#define MCAN0_RX_FIFO0_SIZE               72
-#define MCAN0_RX_FIFO1_ELEMENT_SIZE       72
-#define MCAN0_RX_FIFO1_SIZE               72
-#define MCAN0_RX_BUFFER_ELEMENT_SIZE      72
-#define MCAN0_RX_BUFFER_SIZE              72
-#define MCAN0_TX_FIFO_BUFFER_ELEMENT_SIZE 72
-#define MCAN0_TX_FIFO_BUFFER_SIZE         72
-#define MCAN0_TX_EVENT_FIFO_SIZE          8
-#define MCAN0_STD_MSG_ID_FILTER_SIZE      8
-#define MCAN0_EXT_MSG_ID_FILTER_SIZE      16
+#define MCAN0_RX_FIFO0_ELEMENT_SIZE       72U
+#define MCAN0_RX_FIFO0_SIZE               72U
+#define MCAN0_RX_FIFO1_ELEMENT_SIZE       72U
+#define MCAN0_RX_FIFO1_SIZE               72U
+#define MCAN0_RX_BUFFER_ELEMENT_SIZE      72U
+#define MCAN0_RX_BUFFER_SIZE              72U
+#define MCAN0_TX_FIFO_BUFFER_ELEMENT_SIZE 72U
+#define MCAN0_TX_FIFO_BUFFER_SIZE         72U
+#define MCAN0_TX_EVENT_FIFO_SIZE          8U
+#define MCAN0_STD_MSG_ID_FILTER_SIZE      8U
+#define MCAN0_EXT_MSG_ID_FILTER_SIZE      16U
 
 /* MCAN0_MESSAGE_RAM_CONFIG_SIZE to be used by application or driver
    for allocating buffer from non-cached contiguous memory */
-#define MCAN0_MESSAGE_RAM_CONFIG_SIZE     320
+#define MCAN0_MESSAGE_RAM_CONFIG_SIZE     320U
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
-void MCAN0_Initialize (void);
-bool MCAN0_MessageTransmit(uint32_t id, uint8_t length, uint8_t* data, MCAN_MODE mode, MCAN_MSG_TX_ATTRIBUTE msgAttr);
-bool MCAN0_MessageReceive(uint32_t *id, uint8_t *length, uint8_t *data, uint16_t *timestamp,
-                                          MCAN_MSG_RX_ATTRIBUTE msgAttr, MCAN_MSG_RX_FRAME_ATTRIBUTE *msgFrameAttr);
-bool MCAN0_TransmitEventFIFOElementGet(uint32_t *id, uint8_t *messageMarker, uint16_t *timestamp);
+void MCAN0_Initialize(void);
+bool MCAN0_MessageTransmitFifo(uint8_t numberOfMessage, MCAN_TX_BUFFER *txBuffer);
+uint8_t MCAN0_TxFifoFreeLevelGet(void);
+bool MCAN0_TxBufferIsBusy(uint8_t bufferNumber);
+bool MCAN0_TxEventFifoRead(uint8_t numberOfTxEvent, MCAN_TX_EVENT_FIFO *txEventFifo);
+uint8_t MCAN0_TxEventFifoFillLevelGet(void);
+bool MCAN0_MessageReceive(uint8_t bufferNumber, MCAN_RX_BUFFER *rxBuffer);
+bool MCAN0_RxBufferNumberGet(uint8_t* bufferNumber);
+bool MCAN0_MessageReceiveFifo(MCAN_RX_FIFO_NUM rxFifoNum, uint8_t numberOfMessage, MCAN_RX_BUFFER *rxBuffer);
+uint8_t MCAN0_RxFifoFillLevelGet(MCAN_RX_FIFO_NUM rxFifoNum);
 MCAN_ERROR MCAN0_ErrorGet(void);
 void MCAN0_ErrorCountGet(uint8_t *txErrorCount, uint8_t *rxErrorCount);
 bool MCAN0_InterruptGet(MCAN_INTERRUPT_MASK interruptMask);
 void MCAN0_InterruptClear(MCAN_INTERRUPT_MASK interruptMask);
-bool MCAN0_TxFIFOIsFull(void);
 void MCAN0_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress);
 bool MCAN0_StandardFilterElementSet(uint8_t filterNumber, mcan_sidfe_registers_t *stdMsgIDFilterElement);
 bool MCAN0_StandardFilterElementGet(uint8_t filterNumber, mcan_sidfe_registers_t *stdMsgIDFilterElement);
