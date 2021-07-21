@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-01-12T20:14:51Z */
+/* file generated from device description version 2021-05-04T16:48:28Z */
 #ifndef _SAMRH71_HEMC_COMPONENT_H_
 #define _SAMRH71_HEMC_COMPONENT_H_
 
@@ -386,154 +386,29 @@
 #define HEMC_CTRL_Msk                         _U_(0x00000001)                                      /**< (HEMC_CTRL) Register Mask  */
 
 
-/* -------- HEMC_CRP_NCS0 : (HEMC Offset: 0x20) (R/W 32) HEMC Control Register Protection NCS 0 -------- */
-#define HEMC_CRP_NCS0_MASTERNUMBER_Pos        _U_(0)                                               /**< (HEMC_CRP_NCS0) Master Number ID Position */
-#define HEMC_CRP_NCS0_MASTERNUMBER_Msk        (_U_(0xFFFF) << HEMC_CRP_NCS0_MASTERNUMBER_Pos)      /**< (HEMC_CRP_NCS0) Master Number ID Mask */
-#define HEMC_CRP_NCS0_MASTERNUMBER(value)     (HEMC_CRP_NCS0_MASTERNUMBER_Msk & ((value) << HEMC_CRP_NCS0_MASTERNUMBER_Pos))
-#define HEMC_CRP_NCS0_SUPERUSER_Pos           _U_(16)                                              /**< (HEMC_CRP_NCS0) User or Superuser access Position */
-#define HEMC_CRP_NCS0_SUPERUSER_Msk           (_U_(0x1) << HEMC_CRP_NCS0_SUPERUSER_Pos)            /**< (HEMC_CRP_NCS0) User or Superuser access Mask */
-#define HEMC_CRP_NCS0_SUPERUSER(value)        (HEMC_CRP_NCS0_SUPERUSER_Msk & ((value) << HEMC_CRP_NCS0_SUPERUSER_Pos))
-#define HEMC_CRP_NCS0_WR_Pos                  _U_(17)                                              /**< (HEMC_CRP_NCS0) Write Access Position */
-#define HEMC_CRP_NCS0_WR_Msk                  (_U_(0x1) << HEMC_CRP_NCS0_WR_Pos)                   /**< (HEMC_CRP_NCS0) Write Access Mask */
-#define HEMC_CRP_NCS0_WR(value)               (HEMC_CRP_NCS0_WR_Msk & ((value) << HEMC_CRP_NCS0_WR_Pos))
-#define HEMC_CRP_NCS0_RD_Pos                  _U_(18)                                              /**< (HEMC_CRP_NCS0) Read Access Position */
-#define HEMC_CRP_NCS0_RD_Msk                  (_U_(0x1) << HEMC_CRP_NCS0_RD_Pos)                   /**< (HEMC_CRP_NCS0) Read Access Mask */
-#define HEMC_CRP_NCS0_RD(value)               (HEMC_CRP_NCS0_RD_Msk & ((value) << HEMC_CRP_NCS0_RD_Pos))
-#define HEMC_CRP_NCS0_SPLITBANKSIZE_Pos       _U_(19)                                              /**< (HEMC_CRP_NCS0) bank size internal separation Position */
-#define HEMC_CRP_NCS0_SPLITBANKSIZE_Msk       (_U_(0x1F) << HEMC_CRP_NCS0_SPLITBANKSIZE_Pos)       /**< (HEMC_CRP_NCS0) bank size internal separation Mask */
-#define HEMC_CRP_NCS0_SPLITBANKSIZE(value)    (HEMC_CRP_NCS0_SPLITBANKSIZE_Msk & ((value) << HEMC_CRP_NCS0_SPLITBANKSIZE_Pos))
-#define HEMC_CRP_NCS0_PROTECTZONE_Pos         _U_(24)                                              /**< (HEMC_CRP_NCS0) select area protected Position */
-#define HEMC_CRP_NCS0_PROTECTZONE_Msk         (_U_(0x1) << HEMC_CRP_NCS0_PROTECTZONE_Pos)          /**< (HEMC_CRP_NCS0) select area protected Mask */
-#define HEMC_CRP_NCS0_PROTECTZONE(value)      (HEMC_CRP_NCS0_PROTECTZONE_Msk & ((value) << HEMC_CRP_NCS0_PROTECTZONE_Pos))
-#define HEMC_CRP_NCS0_PROTECTON_Pos           _U_(25)                                              /**< (HEMC_CRP_NCS0) protection activation Position */
-#define HEMC_CRP_NCS0_PROTECTON_Msk           (_U_(0x1) << HEMC_CRP_NCS0_PROTECTON_Pos)            /**< (HEMC_CRP_NCS0) protection activation Mask */
-#define HEMC_CRP_NCS0_PROTECTON(value)        (HEMC_CRP_NCS0_PROTECTON_Msk & ((value) << HEMC_CRP_NCS0_PROTECTON_Pos))
-#define HEMC_CRP_NCS0_Msk                     _U_(0x03FFFFFF)                                      /**< (HEMC_CRP_NCS0) Register Mask  */
-
-
-/* -------- HEMC_CRP_NCS1 : (HEMC Offset: 0x24) (R/W 32) HEMC Control Register Protection NCS 1 -------- */
-#define HEMC_CRP_NCS1_MASTERNUMBER_Pos        _U_(0)                                               /**< (HEMC_CRP_NCS1) Master Number ID Position */
-#define HEMC_CRP_NCS1_MASTERNUMBER_Msk        (_U_(0xFFFF) << HEMC_CRP_NCS1_MASTERNUMBER_Pos)      /**< (HEMC_CRP_NCS1) Master Number ID Mask */
-#define HEMC_CRP_NCS1_MASTERNUMBER(value)     (HEMC_CRP_NCS1_MASTERNUMBER_Msk & ((value) << HEMC_CRP_NCS1_MASTERNUMBER_Pos))
-#define HEMC_CRP_NCS1_SUPERUSER_Pos           _U_(16)                                              /**< (HEMC_CRP_NCS1) User or Superuser access Position */
-#define HEMC_CRP_NCS1_SUPERUSER_Msk           (_U_(0x1) << HEMC_CRP_NCS1_SUPERUSER_Pos)            /**< (HEMC_CRP_NCS1) User or Superuser access Mask */
-#define HEMC_CRP_NCS1_SUPERUSER(value)        (HEMC_CRP_NCS1_SUPERUSER_Msk & ((value) << HEMC_CRP_NCS1_SUPERUSER_Pos))
-#define HEMC_CRP_NCS1_WR_Pos                  _U_(17)                                              /**< (HEMC_CRP_NCS1) Write Access Position */
-#define HEMC_CRP_NCS1_WR_Msk                  (_U_(0x1) << HEMC_CRP_NCS1_WR_Pos)                   /**< (HEMC_CRP_NCS1) Write Access Mask */
-#define HEMC_CRP_NCS1_WR(value)               (HEMC_CRP_NCS1_WR_Msk & ((value) << HEMC_CRP_NCS1_WR_Pos))
-#define HEMC_CRP_NCS1_RD_Pos                  _U_(18)                                              /**< (HEMC_CRP_NCS1) Read Access Position */
-#define HEMC_CRP_NCS1_RD_Msk                  (_U_(0x1) << HEMC_CRP_NCS1_RD_Pos)                   /**< (HEMC_CRP_NCS1) Read Access Mask */
-#define HEMC_CRP_NCS1_RD(value)               (HEMC_CRP_NCS1_RD_Msk & ((value) << HEMC_CRP_NCS1_RD_Pos))
-#define HEMC_CRP_NCS1_SPLITBANKSIZE_Pos       _U_(19)                                              /**< (HEMC_CRP_NCS1) bank size internal separation Position */
-#define HEMC_CRP_NCS1_SPLITBANKSIZE_Msk       (_U_(0x1F) << HEMC_CRP_NCS1_SPLITBANKSIZE_Pos)       /**< (HEMC_CRP_NCS1) bank size internal separation Mask */
-#define HEMC_CRP_NCS1_SPLITBANKSIZE(value)    (HEMC_CRP_NCS1_SPLITBANKSIZE_Msk & ((value) << HEMC_CRP_NCS1_SPLITBANKSIZE_Pos))
-#define HEMC_CRP_NCS1_PROTECTZONE_Pos         _U_(24)                                              /**< (HEMC_CRP_NCS1) select area protected Position */
-#define HEMC_CRP_NCS1_PROTECTZONE_Msk         (_U_(0x1) << HEMC_CRP_NCS1_PROTECTZONE_Pos)          /**< (HEMC_CRP_NCS1) select area protected Mask */
-#define HEMC_CRP_NCS1_PROTECTZONE(value)      (HEMC_CRP_NCS1_PROTECTZONE_Msk & ((value) << HEMC_CRP_NCS1_PROTECTZONE_Pos))
-#define HEMC_CRP_NCS1_PROTECTON_Pos           _U_(25)                                              /**< (HEMC_CRP_NCS1) protection activation Position */
-#define HEMC_CRP_NCS1_PROTECTON_Msk           (_U_(0x1) << HEMC_CRP_NCS1_PROTECTON_Pos)            /**< (HEMC_CRP_NCS1) protection activation Mask */
-#define HEMC_CRP_NCS1_PROTECTON(value)        (HEMC_CRP_NCS1_PROTECTON_Msk & ((value) << HEMC_CRP_NCS1_PROTECTON_Pos))
-#define HEMC_CRP_NCS1_Msk                     _U_(0x03FFFFFF)                                      /**< (HEMC_CRP_NCS1) Register Mask  */
-
-
-/* -------- HEMC_CRP_NCS2 : (HEMC Offset: 0x28) (R/W 32) HEMC Control Register Protection NCS 2 -------- */
-#define HEMC_CRP_NCS2_MASTERNUMBER_Pos        _U_(0)                                               /**< (HEMC_CRP_NCS2) Master Number ID Position */
-#define HEMC_CRP_NCS2_MASTERNUMBER_Msk        (_U_(0xFFFF) << HEMC_CRP_NCS2_MASTERNUMBER_Pos)      /**< (HEMC_CRP_NCS2) Master Number ID Mask */
-#define HEMC_CRP_NCS2_MASTERNUMBER(value)     (HEMC_CRP_NCS2_MASTERNUMBER_Msk & ((value) << HEMC_CRP_NCS2_MASTERNUMBER_Pos))
-#define HEMC_CRP_NCS2_SUPERUSER_Pos           _U_(16)                                              /**< (HEMC_CRP_NCS2) User or Superuser access Position */
-#define HEMC_CRP_NCS2_SUPERUSER_Msk           (_U_(0x1) << HEMC_CRP_NCS2_SUPERUSER_Pos)            /**< (HEMC_CRP_NCS2) User or Superuser access Mask */
-#define HEMC_CRP_NCS2_SUPERUSER(value)        (HEMC_CRP_NCS2_SUPERUSER_Msk & ((value) << HEMC_CRP_NCS2_SUPERUSER_Pos))
-#define HEMC_CRP_NCS2_WR_Pos                  _U_(17)                                              /**< (HEMC_CRP_NCS2) Write Access Position */
-#define HEMC_CRP_NCS2_WR_Msk                  (_U_(0x1) << HEMC_CRP_NCS2_WR_Pos)                   /**< (HEMC_CRP_NCS2) Write Access Mask */
-#define HEMC_CRP_NCS2_WR(value)               (HEMC_CRP_NCS2_WR_Msk & ((value) << HEMC_CRP_NCS2_WR_Pos))
-#define HEMC_CRP_NCS2_RD_Pos                  _U_(18)                                              /**< (HEMC_CRP_NCS2) Read Access Position */
-#define HEMC_CRP_NCS2_RD_Msk                  (_U_(0x1) << HEMC_CRP_NCS2_RD_Pos)                   /**< (HEMC_CRP_NCS2) Read Access Mask */
-#define HEMC_CRP_NCS2_RD(value)               (HEMC_CRP_NCS2_RD_Msk & ((value) << HEMC_CRP_NCS2_RD_Pos))
-#define HEMC_CRP_NCS2_SPLITBANKSIZE_Pos       _U_(19)                                              /**< (HEMC_CRP_NCS2) bank size internal separation Position */
-#define HEMC_CRP_NCS2_SPLITBANKSIZE_Msk       (_U_(0x1F) << HEMC_CRP_NCS2_SPLITBANKSIZE_Pos)       /**< (HEMC_CRP_NCS2) bank size internal separation Mask */
-#define HEMC_CRP_NCS2_SPLITBANKSIZE(value)    (HEMC_CRP_NCS2_SPLITBANKSIZE_Msk & ((value) << HEMC_CRP_NCS2_SPLITBANKSIZE_Pos))
-#define HEMC_CRP_NCS2_PROTECTZONE_Pos         _U_(24)                                              /**< (HEMC_CRP_NCS2) select area protected Position */
-#define HEMC_CRP_NCS2_PROTECTZONE_Msk         (_U_(0x1) << HEMC_CRP_NCS2_PROTECTZONE_Pos)          /**< (HEMC_CRP_NCS2) select area protected Mask */
-#define HEMC_CRP_NCS2_PROTECTZONE(value)      (HEMC_CRP_NCS2_PROTECTZONE_Msk & ((value) << HEMC_CRP_NCS2_PROTECTZONE_Pos))
-#define HEMC_CRP_NCS2_PROTECTON_Pos           _U_(25)                                              /**< (HEMC_CRP_NCS2) protection activation Position */
-#define HEMC_CRP_NCS2_PROTECTON_Msk           (_U_(0x1) << HEMC_CRP_NCS2_PROTECTON_Pos)            /**< (HEMC_CRP_NCS2) protection activation Mask */
-#define HEMC_CRP_NCS2_PROTECTON(value)        (HEMC_CRP_NCS2_PROTECTON_Msk & ((value) << HEMC_CRP_NCS2_PROTECTON_Pos))
-#define HEMC_CRP_NCS2_Msk                     _U_(0x03FFFFFF)                                      /**< (HEMC_CRP_NCS2) Register Mask  */
-
-
-/* -------- HEMC_CRP_NCS3 : (HEMC Offset: 0x2C) (R/W 32) HEMC Control Register Protection NCS 3 -------- */
-#define HEMC_CRP_NCS3_MASTERNUMBER_Pos        _U_(0)                                               /**< (HEMC_CRP_NCS3) Master Number ID Position */
-#define HEMC_CRP_NCS3_MASTERNUMBER_Msk        (_U_(0xFFFF) << HEMC_CRP_NCS3_MASTERNUMBER_Pos)      /**< (HEMC_CRP_NCS3) Master Number ID Mask */
-#define HEMC_CRP_NCS3_MASTERNUMBER(value)     (HEMC_CRP_NCS3_MASTERNUMBER_Msk & ((value) << HEMC_CRP_NCS3_MASTERNUMBER_Pos))
-#define HEMC_CRP_NCS3_SUPERUSER_Pos           _U_(16)                                              /**< (HEMC_CRP_NCS3) User or Superuser access Position */
-#define HEMC_CRP_NCS3_SUPERUSER_Msk           (_U_(0x1) << HEMC_CRP_NCS3_SUPERUSER_Pos)            /**< (HEMC_CRP_NCS3) User or Superuser access Mask */
-#define HEMC_CRP_NCS3_SUPERUSER(value)        (HEMC_CRP_NCS3_SUPERUSER_Msk & ((value) << HEMC_CRP_NCS3_SUPERUSER_Pos))
-#define HEMC_CRP_NCS3_WR_Pos                  _U_(17)                                              /**< (HEMC_CRP_NCS3) Write Access Position */
-#define HEMC_CRP_NCS3_WR_Msk                  (_U_(0x1) << HEMC_CRP_NCS3_WR_Pos)                   /**< (HEMC_CRP_NCS3) Write Access Mask */
-#define HEMC_CRP_NCS3_WR(value)               (HEMC_CRP_NCS3_WR_Msk & ((value) << HEMC_CRP_NCS3_WR_Pos))
-#define HEMC_CRP_NCS3_RD_Pos                  _U_(18)                                              /**< (HEMC_CRP_NCS3) Read Access Position */
-#define HEMC_CRP_NCS3_RD_Msk                  (_U_(0x1) << HEMC_CRP_NCS3_RD_Pos)                   /**< (HEMC_CRP_NCS3) Read Access Mask */
-#define HEMC_CRP_NCS3_RD(value)               (HEMC_CRP_NCS3_RD_Msk & ((value) << HEMC_CRP_NCS3_RD_Pos))
-#define HEMC_CRP_NCS3_SPLITBANKSIZE_Pos       _U_(19)                                              /**< (HEMC_CRP_NCS3) bank size internal separation Position */
-#define HEMC_CRP_NCS3_SPLITBANKSIZE_Msk       (_U_(0x1F) << HEMC_CRP_NCS3_SPLITBANKSIZE_Pos)       /**< (HEMC_CRP_NCS3) bank size internal separation Mask */
-#define HEMC_CRP_NCS3_SPLITBANKSIZE(value)    (HEMC_CRP_NCS3_SPLITBANKSIZE_Msk & ((value) << HEMC_CRP_NCS3_SPLITBANKSIZE_Pos))
-#define HEMC_CRP_NCS3_PROTECTZONE_Pos         _U_(24)                                              /**< (HEMC_CRP_NCS3) select area protected Position */
-#define HEMC_CRP_NCS3_PROTECTZONE_Msk         (_U_(0x1) << HEMC_CRP_NCS3_PROTECTZONE_Pos)          /**< (HEMC_CRP_NCS3) select area protected Mask */
-#define HEMC_CRP_NCS3_PROTECTZONE(value)      (HEMC_CRP_NCS3_PROTECTZONE_Msk & ((value) << HEMC_CRP_NCS3_PROTECTZONE_Pos))
-#define HEMC_CRP_NCS3_PROTECTON_Pos           _U_(25)                                              /**< (HEMC_CRP_NCS3) protection activation Position */
-#define HEMC_CRP_NCS3_PROTECTON_Msk           (_U_(0x1) << HEMC_CRP_NCS3_PROTECTON_Pos)            /**< (HEMC_CRP_NCS3) protection activation Mask */
-#define HEMC_CRP_NCS3_PROTECTON(value)        (HEMC_CRP_NCS3_PROTECTON_Msk & ((value) << HEMC_CRP_NCS3_PROTECTON_Pos))
-#define HEMC_CRP_NCS3_Msk                     _U_(0x03FFFFFF)                                      /**< (HEMC_CRP_NCS3) Register Mask  */
-
-
-/* -------- HEMC_CRP_NCS4 : (HEMC Offset: 0x30) (R/W 32) HEMC Control Register Protection NCS 4 -------- */
-#define HEMC_CRP_NCS4_MASTERNUMBER_Pos        _U_(0)                                               /**< (HEMC_CRP_NCS4) Master Number ID Position */
-#define HEMC_CRP_NCS4_MASTERNUMBER_Msk        (_U_(0xFFFF) << HEMC_CRP_NCS4_MASTERNUMBER_Pos)      /**< (HEMC_CRP_NCS4) Master Number ID Mask */
-#define HEMC_CRP_NCS4_MASTERNUMBER(value)     (HEMC_CRP_NCS4_MASTERNUMBER_Msk & ((value) << HEMC_CRP_NCS4_MASTERNUMBER_Pos))
-#define HEMC_CRP_NCS4_SUPERUSER_Pos           _U_(16)                                              /**< (HEMC_CRP_NCS4) User or Superuser access Position */
-#define HEMC_CRP_NCS4_SUPERUSER_Msk           (_U_(0x1) << HEMC_CRP_NCS4_SUPERUSER_Pos)            /**< (HEMC_CRP_NCS4) User or Superuser access Mask */
-#define HEMC_CRP_NCS4_SUPERUSER(value)        (HEMC_CRP_NCS4_SUPERUSER_Msk & ((value) << HEMC_CRP_NCS4_SUPERUSER_Pos))
-#define HEMC_CRP_NCS4_WR_Pos                  _U_(17)                                              /**< (HEMC_CRP_NCS4) Write Access Position */
-#define HEMC_CRP_NCS4_WR_Msk                  (_U_(0x1) << HEMC_CRP_NCS4_WR_Pos)                   /**< (HEMC_CRP_NCS4) Write Access Mask */
-#define HEMC_CRP_NCS4_WR(value)               (HEMC_CRP_NCS4_WR_Msk & ((value) << HEMC_CRP_NCS4_WR_Pos))
-#define HEMC_CRP_NCS4_RD_Pos                  _U_(18)                                              /**< (HEMC_CRP_NCS4) Read Access Position */
-#define HEMC_CRP_NCS4_RD_Msk                  (_U_(0x1) << HEMC_CRP_NCS4_RD_Pos)                   /**< (HEMC_CRP_NCS4) Read Access Mask */
-#define HEMC_CRP_NCS4_RD(value)               (HEMC_CRP_NCS4_RD_Msk & ((value) << HEMC_CRP_NCS4_RD_Pos))
-#define HEMC_CRP_NCS4_SPLITBANKSIZE_Pos       _U_(19)                                              /**< (HEMC_CRP_NCS4) bank size internal separation Position */
-#define HEMC_CRP_NCS4_SPLITBANKSIZE_Msk       (_U_(0x1F) << HEMC_CRP_NCS4_SPLITBANKSIZE_Pos)       /**< (HEMC_CRP_NCS4) bank size internal separation Mask */
-#define HEMC_CRP_NCS4_SPLITBANKSIZE(value)    (HEMC_CRP_NCS4_SPLITBANKSIZE_Msk & ((value) << HEMC_CRP_NCS4_SPLITBANKSIZE_Pos))
-#define HEMC_CRP_NCS4_PROTECTZONE_Pos         _U_(24)                                              /**< (HEMC_CRP_NCS4) select area protected Position */
-#define HEMC_CRP_NCS4_PROTECTZONE_Msk         (_U_(0x1) << HEMC_CRP_NCS4_PROTECTZONE_Pos)          /**< (HEMC_CRP_NCS4) select area protected Mask */
-#define HEMC_CRP_NCS4_PROTECTZONE(value)      (HEMC_CRP_NCS4_PROTECTZONE_Msk & ((value) << HEMC_CRP_NCS4_PROTECTZONE_Pos))
-#define HEMC_CRP_NCS4_PROTECTON_Pos           _U_(25)                                              /**< (HEMC_CRP_NCS4) protection activation Position */
-#define HEMC_CRP_NCS4_PROTECTON_Msk           (_U_(0x1) << HEMC_CRP_NCS4_PROTECTON_Pos)            /**< (HEMC_CRP_NCS4) protection activation Mask */
-#define HEMC_CRP_NCS4_PROTECTON(value)        (HEMC_CRP_NCS4_PROTECTON_Msk & ((value) << HEMC_CRP_NCS4_PROTECTON_Pos))
-#define HEMC_CRP_NCS4_Msk                     _U_(0x03FFFFFF)                                      /**< (HEMC_CRP_NCS4) Register Mask  */
-
-
-/* -------- HEMC_CRP_NCS5 : (HEMC Offset: 0x34) (R/W 32) HEMC Control Register Protection NCS 5 -------- */
-#define HEMC_CRP_NCS5_MASTERNUMBER_Pos        _U_(0)                                               /**< (HEMC_CRP_NCS5) Master Number ID Position */
-#define HEMC_CRP_NCS5_MASTERNUMBER_Msk        (_U_(0xFFFF) << HEMC_CRP_NCS5_MASTERNUMBER_Pos)      /**< (HEMC_CRP_NCS5) Master Number ID Mask */
-#define HEMC_CRP_NCS5_MASTERNUMBER(value)     (HEMC_CRP_NCS5_MASTERNUMBER_Msk & ((value) << HEMC_CRP_NCS5_MASTERNUMBER_Pos))
-#define HEMC_CRP_NCS5_SUPERUSER_Pos           _U_(16)                                              /**< (HEMC_CRP_NCS5) User or Superuser access Position */
-#define HEMC_CRP_NCS5_SUPERUSER_Msk           (_U_(0x1) << HEMC_CRP_NCS5_SUPERUSER_Pos)            /**< (HEMC_CRP_NCS5) User or Superuser access Mask */
-#define HEMC_CRP_NCS5_SUPERUSER(value)        (HEMC_CRP_NCS5_SUPERUSER_Msk & ((value) << HEMC_CRP_NCS5_SUPERUSER_Pos))
-#define HEMC_CRP_NCS5_WR_Pos                  _U_(17)                                              /**< (HEMC_CRP_NCS5) Write Access Position */
-#define HEMC_CRP_NCS5_WR_Msk                  (_U_(0x1) << HEMC_CRP_NCS5_WR_Pos)                   /**< (HEMC_CRP_NCS5) Write Access Mask */
-#define HEMC_CRP_NCS5_WR(value)               (HEMC_CRP_NCS5_WR_Msk & ((value) << HEMC_CRP_NCS5_WR_Pos))
-#define HEMC_CRP_NCS5_RD_Pos                  _U_(18)                                              /**< (HEMC_CRP_NCS5) Read Access Position */
-#define HEMC_CRP_NCS5_RD_Msk                  (_U_(0x1) << HEMC_CRP_NCS5_RD_Pos)                   /**< (HEMC_CRP_NCS5) Read Access Mask */
-#define HEMC_CRP_NCS5_RD(value)               (HEMC_CRP_NCS5_RD_Msk & ((value) << HEMC_CRP_NCS5_RD_Pos))
-#define HEMC_CRP_NCS5_SPLITBANKSIZE_Pos       _U_(19)                                              /**< (HEMC_CRP_NCS5) bank size internal separation Position */
-#define HEMC_CRP_NCS5_SPLITBANKSIZE_Msk       (_U_(0x1F) << HEMC_CRP_NCS5_SPLITBANKSIZE_Pos)       /**< (HEMC_CRP_NCS5) bank size internal separation Mask */
-#define HEMC_CRP_NCS5_SPLITBANKSIZE(value)    (HEMC_CRP_NCS5_SPLITBANKSIZE_Msk & ((value) << HEMC_CRP_NCS5_SPLITBANKSIZE_Pos))
-#define HEMC_CRP_NCS5_PROTECTZONE_Pos         _U_(24)                                              /**< (HEMC_CRP_NCS5) select area protected Position */
-#define HEMC_CRP_NCS5_PROTECTZONE_Msk         (_U_(0x1) << HEMC_CRP_NCS5_PROTECTZONE_Pos)          /**< (HEMC_CRP_NCS5) select area protected Mask */
-#define HEMC_CRP_NCS5_PROTECTZONE(value)      (HEMC_CRP_NCS5_PROTECTZONE_Msk & ((value) << HEMC_CRP_NCS5_PROTECTZONE_Pos))
-#define HEMC_CRP_NCS5_PROTECTON_Pos           _U_(25)                                              /**< (HEMC_CRP_NCS5) protection activation Position */
-#define HEMC_CRP_NCS5_PROTECTON_Msk           (_U_(0x1) << HEMC_CRP_NCS5_PROTECTON_Pos)            /**< (HEMC_CRP_NCS5) protection activation Mask */
-#define HEMC_CRP_NCS5_PROTECTON(value)        (HEMC_CRP_NCS5_PROTECTON_Msk & ((value) << HEMC_CRP_NCS5_PROTECTON_Pos))
-#define HEMC_CRP_NCS5_Msk                     _U_(0x03FFFFFF)                                      /**< (HEMC_CRP_NCS5) Register Mask  */
+/* -------- HEMC_CRP_NCS : (HEMC Offset: 0x20) (R/W 32) HEMC Control Register Protection NCS -------- */
+#define HEMC_CRP_NCS_MASTERNUMBER_Pos         _U_(0)                                               /**< (HEMC_CRP_NCS) Master Number ID Position */
+#define HEMC_CRP_NCS_MASTERNUMBER_Msk         (_U_(0xFFFF) << HEMC_CRP_NCS_MASTERNUMBER_Pos)       /**< (HEMC_CRP_NCS) Master Number ID Mask */
+#define HEMC_CRP_NCS_MASTERNUMBER(value)      (HEMC_CRP_NCS_MASTERNUMBER_Msk & ((value) << HEMC_CRP_NCS_MASTERNUMBER_Pos))
+#define HEMC_CRP_NCS_SUPERUSER_Pos            _U_(16)                                              /**< (HEMC_CRP_NCS) User or Superuser access Position */
+#define HEMC_CRP_NCS_SUPERUSER_Msk            (_U_(0x1) << HEMC_CRP_NCS_SUPERUSER_Pos)             /**< (HEMC_CRP_NCS) User or Superuser access Mask */
+#define HEMC_CRP_NCS_SUPERUSER(value)         (HEMC_CRP_NCS_SUPERUSER_Msk & ((value) << HEMC_CRP_NCS_SUPERUSER_Pos))
+#define HEMC_CRP_NCS_WR_Pos                   _U_(17)                                              /**< (HEMC_CRP_NCS) Write Access Position */
+#define HEMC_CRP_NCS_WR_Msk                   (_U_(0x1) << HEMC_CRP_NCS_WR_Pos)                    /**< (HEMC_CRP_NCS) Write Access Mask */
+#define HEMC_CRP_NCS_WR(value)                (HEMC_CRP_NCS_WR_Msk & ((value) << HEMC_CRP_NCS_WR_Pos))
+#define HEMC_CRP_NCS_RD_Pos                   _U_(18)                                              /**< (HEMC_CRP_NCS) Read Access Position */
+#define HEMC_CRP_NCS_RD_Msk                   (_U_(0x1) << HEMC_CRP_NCS_RD_Pos)                    /**< (HEMC_CRP_NCS) Read Access Mask */
+#define HEMC_CRP_NCS_RD(value)                (HEMC_CRP_NCS_RD_Msk & ((value) << HEMC_CRP_NCS_RD_Pos))
+#define HEMC_CRP_NCS_SPLITBANKSIZE_Pos        _U_(19)                                              /**< (HEMC_CRP_NCS) bank size internal separation Position */
+#define HEMC_CRP_NCS_SPLITBANKSIZE_Msk        (_U_(0x1F) << HEMC_CRP_NCS_SPLITBANKSIZE_Pos)        /**< (HEMC_CRP_NCS) bank size internal separation Mask */
+#define HEMC_CRP_NCS_SPLITBANKSIZE(value)     (HEMC_CRP_NCS_SPLITBANKSIZE_Msk & ((value) << HEMC_CRP_NCS_SPLITBANKSIZE_Pos))
+#define HEMC_CRP_NCS_PROTECTZONE_Pos          _U_(24)                                              /**< (HEMC_CRP_NCS) select area protected Position */
+#define HEMC_CRP_NCS_PROTECTZONE_Msk          (_U_(0x1) << HEMC_CRP_NCS_PROTECTZONE_Pos)           /**< (HEMC_CRP_NCS) select area protected Mask */
+#define HEMC_CRP_NCS_PROTECTZONE(value)       (HEMC_CRP_NCS_PROTECTZONE_Msk & ((value) << HEMC_CRP_NCS_PROTECTZONE_Pos))
+#define HEMC_CRP_NCS_PROTECTON_Pos            _U_(25)                                              /**< (HEMC_CRP_NCS) protection activation Position */
+#define HEMC_CRP_NCS_PROTECTON_Msk            (_U_(0x1) << HEMC_CRP_NCS_PROTECTON_Pos)             /**< (HEMC_CRP_NCS) protection activation Mask */
+#define HEMC_CRP_NCS_PROTECTON(value)         (HEMC_CRP_NCS_PROTECTON_Msk & ((value) << HEMC_CRP_NCS_PROTECTON_Pos))
+#define HEMC_CRP_NCS_Msk                      _U_(0x03FFFFFF)                                      /**< (HEMC_CRP_NCS) Register Mask  */
 
 
 /* -------- HEMC_IER : (HEMC Offset: 0x38) ( /W 32) HEMC Interrupt Enable Register -------- */
@@ -776,12 +651,13 @@
 #define HEMC_CR_NCS4_REG_OFST          (0x10)              /**< (HEMC_CR_NCS4) HEMC Control Register NCS 4 Offset */
 #define HEMC_CR_NCS5_REG_OFST          (0x14)              /**< (HEMC_CR_NCS5) HEMC Control Register NCS 5 Offset */
 #define HEMC_CTRL_REG_OFST             (0x18)              /**< (HEMC_CTRL) HEMC Polarity Control register Offset */
-#define HEMC_CRP_NCS0_REG_OFST         (0x20)              /**< (HEMC_CRP_NCS0) HEMC Control Register Protection NCS 0 Offset */
-#define HEMC_CRP_NCS1_REG_OFST         (0x24)              /**< (HEMC_CRP_NCS1) HEMC Control Register Protection NCS 1 Offset */
-#define HEMC_CRP_NCS2_REG_OFST         (0x28)              /**< (HEMC_CRP_NCS2) HEMC Control Register Protection NCS 2 Offset */
-#define HEMC_CRP_NCS3_REG_OFST         (0x2C)              /**< (HEMC_CRP_NCS3) HEMC Control Register Protection NCS 3 Offset */
-#define HEMC_CRP_NCS4_REG_OFST         (0x30)              /**< (HEMC_CRP_NCS4) HEMC Control Register Protection NCS 4 Offset */
-#define HEMC_CRP_NCS5_REG_OFST         (0x34)              /**< (HEMC_CRP_NCS5) HEMC Control Register Protection NCS 5 Offset */
+#define HEMC_CRP_NCS_REG_OFST          (0x20)              /**< (HEMC_CRP_NCS) HEMC Control Register Protection NCS Offset */
+#define HEMC_CRP_NCS0_REG_OFST         (0x20)              /**< (HEMC_CRP_NCS0) HEMC Control Register Protection NCS Offset */
+#define HEMC_CRP_NCS1_REG_OFST         (0x24)              /**< (HEMC_CRP_NCS1) HEMC Control Register Protection NCS Offset */
+#define HEMC_CRP_NCS2_REG_OFST         (0x28)              /**< (HEMC_CRP_NCS2) HEMC Control Register Protection NCS Offset */
+#define HEMC_CRP_NCS3_REG_OFST         (0x2C)              /**< (HEMC_CRP_NCS3) HEMC Control Register Protection NCS Offset */
+#define HEMC_CRP_NCS4_REG_OFST         (0x30)              /**< (HEMC_CRP_NCS4) HEMC Control Register Protection NCS Offset */
+#define HEMC_CRP_NCS5_REG_OFST         (0x34)              /**< (HEMC_CRP_NCS5) HEMC Control Register Protection NCS Offset */
 #define HEMC_IER_REG_OFST              (0x38)              /**< (HEMC_IER) HEMC Interrupt Enable Register Offset */
 #define HEMC_IDR_REG_OFST              (0x3C)              /**< (HEMC_IDR) HEMC Interrupt Disable Register Offset */
 #define HEMC_IMR_REG_OFST              (0x40)              /**< (HEMC_IMR) HEMC Interrupt Mask Register Offset */
@@ -811,12 +687,7 @@ typedef struct
   __IO  uint32_t                       HEMC_CR_NCS5;       /**< Offset: 0x14 (R/W  32) HEMC Control Register NCS 5 */
   __IO  uint32_t                       HEMC_CTRL;          /**< Offset: 0x18 (R/W  32) HEMC Polarity Control register */
   __I   uint8_t                        Reserved1[0x04];
-  __IO  uint32_t                       HEMC_CRP_NCS0;      /**< Offset: 0x20 (R/W  32) HEMC Control Register Protection NCS 0 */
-  __IO  uint32_t                       HEMC_CRP_NCS1;      /**< Offset: 0x24 (R/W  32) HEMC Control Register Protection NCS 1 */
-  __IO  uint32_t                       HEMC_CRP_NCS2;      /**< Offset: 0x28 (R/W  32) HEMC Control Register Protection NCS 2 */
-  __IO  uint32_t                       HEMC_CRP_NCS3;      /**< Offset: 0x2C (R/W  32) HEMC Control Register Protection NCS 3 */
-  __IO  uint32_t                       HEMC_CRP_NCS4;      /**< Offset: 0x30 (R/W  32) HEMC Control Register Protection NCS 4 */
-  __IO  uint32_t                       HEMC_CRP_NCS5;      /**< Offset: 0x34 (R/W  32) HEMC Control Register Protection NCS 5 */
+  __IO  uint32_t                       HEMC_CRP_NCS[6];    /**< Offset: 0x20 (R/W  32) HEMC Control Register Protection NCS */
   __O   uint32_t                       HEMC_IER;           /**< Offset: 0x38 ( /W  32) HEMC Interrupt Enable Register */
   __O   uint32_t                       HEMC_IDR;           /**< Offset: 0x3C ( /W  32) HEMC Interrupt Disable Register */
   __I   uint32_t                       HEMC_IMR;           /**< Offset: 0x40 (R/   32) HEMC Interrupt Mask Register */
