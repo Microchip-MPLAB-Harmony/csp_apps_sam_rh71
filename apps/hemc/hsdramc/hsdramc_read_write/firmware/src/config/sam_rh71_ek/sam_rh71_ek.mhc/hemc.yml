@@ -49,7 +49,7 @@ children:
       - type: String
         attributes: {id: text}
         children:
-        - {type: Value, value: '**** HEMC is running at 100000000Hz ****'}
+        - {type: Value, value: '**** HEMC is running at 100000000 Hz ****'}
   - type: KeyValueSet
     attributes: {id: HSDRAMC_CR__NB}
     children:
