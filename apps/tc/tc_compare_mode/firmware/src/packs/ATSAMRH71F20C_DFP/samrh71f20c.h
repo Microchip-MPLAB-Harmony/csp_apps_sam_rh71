@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-01-12T20:14:51Z */
+/* file generated from device description version 2021-05-04T16:48:28Z */
 #ifndef _SAMRH71F20C_H_
 #define _SAMRH71F20C_H_
 
@@ -358,21 +358,21 @@ void GMAC_Q5_Handler               ( void );
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /** \brief Configuration of the CORTEX-M7 Processor and Core Peripherals */
-#define __CM7_REV                 0x0101 /**< CM7 Core Revision                                                         */
-#define __NVIC_PRIO_BITS               3 /**< Number of Bits used for Priority Levels                                   */
-#define __Vendor_SysTickConfig         0 /**< Set to 1 if different SysTick Config is used                              */
-#define __MPU_PRESENT                  1 /**< MPU present or not                                                        */
-#define __VTOR_PRESENT                 1 /**< Vector Table Offset Register present or not                               */
-#define __FPU_PRESENT                  1 /**< FPU present or not                                                        */
-#define __FPU_DP                       1 /**< Double Precision FPU                                                      */
-#define __ICACHE_PRESENT               1 /**< Instruction Cache present                                                 */
-#define __DCACHE_PRESENT               1 /**< Data Cache present                                                        */
-#define __ITCM_PRESENT                 1 /**< Instruction TCM present                                                   */
-#define __DTCM_PRESENT                 1 /**< Data TCM present                                                          */
-#define __DEBUG_LVL                    1
-#define __TRACE_LVL                    1
-#define __ARCH_ARM                     1
-#define __ARCH_ARM_CORTEX_M            1
+#define __CM7_REV                     0x0101 /**< CM7 Core Revision                                                         */
+#define __NVIC_PRIO_BITS                   3 /**< Number of Bits used for Priority Levels                                   */
+#define __Vendor_SysTickConfig             0 /**< Set to 1 if different SysTick Config is used                              */
+#define __MPU_PRESENT                      1 /**< MPU present or not                                                        */
+#define __VTOR_PRESENT                     1 /**< Vector Table Offset Register present or not                               */
+#define __FPU_PRESENT                      1 /**< FPU present or not                                                        */
+#define __FPU_DP                           1 /**< Double Precision FPU                                                      */
+#define __ICACHE_PRESENT                   1 /**< Instruction Cache present                                                 */
+#define __DCACHE_PRESENT                   1 /**< Data Cache present                                                        */
+#define __ITCM_PRESENT                     1 /**< Instruction TCM present                                                   */
+#define __DTCM_PRESENT                     1 /**< Data TCM present                                                          */
+#define __DEBUG_LVL                        1
+#define __TRACE_LVL                        1
+#define __ARCH_ARM                         1
+#define __ARCH_ARM_CORTEX_M                1
 
 /*
  * \brief CMSIS includes
@@ -392,6 +392,7 @@ void GMAC_Q5_Handler               ( void );
 #include "component/chipid.h"
 #include "component/flexcom.h"
 #include "component/flexramecc.h"
+#include "component/fuses.h"
 #include "component/gmac.h"
 #include "component/hefc.h"
 #include "component/hemc.h"
@@ -436,6 +437,7 @@ void GMAC_Q5_Handler               ( void );
 #include "instance/flexcom8.h"
 #include "instance/flexcom9.h"
 #include "instance/flexramecc.h"
+#include "instance/fuses.h"
 #include "instance/gmac.h"
 #include "instance/hefc.h"
 #include "instance/hemc.h"
@@ -584,6 +586,7 @@ void GMAC_Q5_Handler               ( void );
 #define TRNG_REGS                        ((trng_registers_t*)0x40090000)               /**< \brief TRNG Registers Address       */
 #define WDT_REGS                         ((wdt_registers_t*)0x40100250)                /**< \brief WDT Registers Address        */
 #define XDMAC_REGS                       ((xdmac_registers_t*)0x40098000)              /**< \brief XDMAC Registers Address      */
+#define GPNVMBITS_REGS                   ((fuses_gpnvmbits_registers_t*)0x00000000)    /**< \brief FUSES Registers Address      */
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 /** @}  end of Peripheral Base Address Definitions */
 
@@ -638,6 +641,7 @@ void GMAC_Q5_Handler               ( void );
 #define TRNG_BASE_ADDRESS                _UL_(0x40090000)                              /* TRNG Base Address */
 #define WDT_BASE_ADDRESS                 _UL_(0x40100250)                              /* WDT Base Address */
 #define XDMAC_BASE_ADDRESS               _UL_(0x40098000)                              /* XDMAC Base Address */
+#define GPNVMBITS_BASE_ADDRESS           _UL_(0x00000000)                              /* FUSES Base Address */
 /** @}  end of Peripheral Base Address Definitions */
 
 /** \addtogroup SAMRH71F20C_pio Peripheral Pio Definitions
