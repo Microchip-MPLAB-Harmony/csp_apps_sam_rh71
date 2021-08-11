@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-01-12T20:14:51Z */
+/* file generated from device description version 2021-05-04T16:48:28Z */
 #ifndef _SAMRH71_PIO_INSTANCE_
 #define _SAMRH71_PIO_INSTANCE_
 
