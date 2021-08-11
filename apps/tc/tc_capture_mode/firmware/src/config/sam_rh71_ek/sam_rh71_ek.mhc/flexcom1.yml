@@ -376,6 +376,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: flexcom1, value: 'true'}
+  - type: String
+    attributes: {id: USART_DATA_BITS}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom1, value: DRV_USART_DATA_8_BIT}
   - type: Boolean
     attributes: {id: USART_INTERRUPT_MODE}
     children:

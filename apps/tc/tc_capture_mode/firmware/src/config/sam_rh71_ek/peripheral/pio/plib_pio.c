@@ -57,8 +57,8 @@
 void PIO_Initialize ( void )
 {
  /* Port A Peripheral function B configuration */
-	PIOA_REGS->PIO_MSKR = 0x12;
-	PIOA_REGS->PIO_CFGR = 0x2;
+	PIOA_REGS->PIO_MSKR = 0x12U;
+	PIOA_REGS->PIO_CFGR = 0x2U;
 	
 
 
@@ -66,10 +66,9 @@ void PIO_Initialize ( void )
 
 
  /* Port F Peripheral function A configuration */
-	PIOF_REGS->PIO_MSKR = 0x60000000;
-	PIOF_REGS->PIO_CFGR = 0x1;
+	PIOF_REGS->PIO_MSKR = 0x60000000U;
+	PIOF_REGS->PIO_CFGR = 0x1U;
 	
-
 
 
 
@@ -105,7 +104,7 @@ void PIO_Initialize ( void )
 */
 uint32_t PIO_PortRead(PIO_PORT port)
 {
-    return ((pio_group_registers_t*)port)->PIO_PDSR;
+    return PIO_REGS->PIO_GROUP[port].PIO_PDSR;
 }
 
 // *****************************************************************************
@@ -120,8 +119,8 @@ uint32_t PIO_PortRead(PIO_PORT port)
 */
 void PIO_PortWrite(PIO_PORT port, uint32_t mask, uint32_t value)
 {
-    ((pio_group_registers_t*)port)->PIO_MSKR = mask;
-    ((pio_group_registers_t*)port)->PIO_ODSR = value;
+    PIO_REGS->PIO_GROUP[port].PIO_MSKR = mask;
+    PIO_REGS->PIO_GROUP[port].PIO_ODSR = value;
 }
 
 // *****************************************************************************
@@ -136,7 +135,7 @@ void PIO_PortWrite(PIO_PORT port, uint32_t mask, uint32_t value)
 */
 uint32_t PIO_PortLatchRead(PIO_PORT port)
 {
-    return ((pio_group_registers_t*)port)->PIO_ODSR;
+    return PIO_REGS->PIO_GROUP[port].PIO_ODSR;
 }
 
 // *****************************************************************************
@@ -151,7 +150,7 @@ uint32_t PIO_PortLatchRead(PIO_PORT port)
 */
 void PIO_PortSet(PIO_PORT port, uint32_t mask)
 {
-    ((pio_group_registers_t*)port)->PIO_SODR = mask;
+    PIO_REGS->PIO_GROUP[port].PIO_SODR = mask;
 }
 
 // *****************************************************************************
@@ -166,7 +165,7 @@ void PIO_PortSet(PIO_PORT port, uint32_t mask)
 */
 void PIO_PortClear(PIO_PORT port, uint32_t mask)
 {
-    ((pio_group_registers_t*)port)->PIO_CODR = mask;
+    PIO_REGS->PIO_GROUP[port].PIO_CODR = mask;
 }
 
 // *****************************************************************************
@@ -182,8 +181,8 @@ void PIO_PortClear(PIO_PORT port, uint32_t mask)
 void PIO_PortToggle(PIO_PORT port, uint32_t mask)
 {
     /* Write into Clr and Set registers */
-    ((pio_group_registers_t*)port)->PIO_MSKR = mask;
-    ((pio_group_registers_t*)port)->PIO_ODSR ^= mask;
+    PIO_REGS->PIO_GROUP[port].PIO_MSKR = mask;
+    PIO_REGS->PIO_GROUP[port].PIO_ODSR ^= mask;
 }
 
 // *****************************************************************************
@@ -198,8 +197,8 @@ void PIO_PortToggle(PIO_PORT port, uint32_t mask)
 */
 void PIO_PortInputEnable(PIO_PORT port, uint32_t mask)
 {
-    ((pio_group_registers_t*)port)->PIO_MSKR = mask;
-    ((pio_group_registers_t*)port)->PIO_CFGR &= ~(1 << PIO_CFGR_DIR_Pos);	
+    PIO_REGS->PIO_GROUP[port].PIO_MSKR = mask;
+    PIO_REGS->PIO_GROUP[port].PIO_CFGR &= ~PIO_CFGR_DIR_Msk;	
 }
 
 // *****************************************************************************
@@ -214,8 +213,8 @@ void PIO_PortInputEnable(PIO_PORT port, uint32_t mask)
 */
 void PIO_PortOutputEnable(PIO_PORT port, uint32_t mask)
 {
-    ((pio_group_registers_t*)port)->PIO_MSKR = mask;
-    ((pio_group_registers_t*)port)->PIO_CFGR |= (1 << PIO_CFGR_DIR_Pos);
+    PIO_REGS->PIO_GROUP[port].PIO_MSKR = mask;
+    PIO_REGS->PIO_GROUP[port].PIO_CFGR |= PIO_CFGR_DIR_Msk;
 }
 
 
