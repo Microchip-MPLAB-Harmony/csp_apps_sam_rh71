@@ -21,11 +21,7 @@
  */
 
 /* file generated from device description version 2021-05-04T16:48:28Z */
-#ifndef _SAMRH71_MATRIX0_INSTANCE_
-#define _SAMRH71_MATRIX0_INSTANCE_
+#ifndef _SAMRH71_FUSES_INSTANCE_
+#define _SAMRH71_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for MATRIX0 peripheral ========== */
-#define MATRIX0_INSTANCE_ID                      _UL_(6)    
-
-#endif /* _SAMRH71_MATRIX0_INSTANCE_ */
+#endif /* _SAMRH71_FUSES_INSTANCE_ */
