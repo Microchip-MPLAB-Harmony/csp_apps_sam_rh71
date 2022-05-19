@@ -56,8 +56,8 @@ void MPU_Initialize(void)
     /*** Configure MPU Regions  ***/
 
     /* Region 0 Name: region_nocache, Base Address: 0x21010000, Size: 1KB  */
-    MPU->RBAR = MPU_REGION(0, 0x21010000);
-    MPU->RASR = MPU_REGION_SIZE(9) | MPU_RASR_AP(MPU_RASR_AP_READWRITE_Val) | MPU_ATTR_NORMAL \
+    MPU->RBAR = MPU_REGION(0U, 0x21010000U);
+    MPU->RASR = MPU_REGION_SIZE(9U) | MPU_RASR_AP(MPU_RASR_AP_READWRITE_Val) | MPU_ATTR_NORMAL \
                 | MPU_ATTR_ENABLE  ;
 
 
