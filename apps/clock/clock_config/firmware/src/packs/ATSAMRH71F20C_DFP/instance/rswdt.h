@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMRH71F20C
+/*
+ * Instance header file for ATSAMRH71F20C
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,12 +20,12 @@
  *
  */
 
-/* file generated from device description version 2021-05-04T16:48:28Z */
+/* file generated from device description version 2022-01-06T10:24:17Z */
 #ifndef _SAMRH71_RSWDT_INSTANCE_
 #define _SAMRH71_RSWDT_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for RSWDT peripheral ========== */
-#define RSWDT_INSTANCE_ID                        _UL_(47)   
+#define RSWDT_INSTANCE_ID                        (47)       
 
 #endif /* _SAMRH71_RSWDT_INSTANCE_ */
