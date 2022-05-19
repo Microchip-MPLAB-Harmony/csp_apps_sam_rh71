@@ -356,4 +356,3 @@ void __attribute__((noreturn)) UsageFault_Handler_C(uint32_t * hardfault_args, u
 /*******************************************************************************
  End of File
  */
-
