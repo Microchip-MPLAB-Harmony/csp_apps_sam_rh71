@@ -229,6 +229,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: flexcom1, value: '59'}
+  - type: Integer
+    attributes: {id: FLEXCOM_TWI_TIMEOUT_COUNT_VAL}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom1, value: '20000'}
   - type: Boolean
     attributes: {id: FLEXCOM_USART_FIFO_ENABLE}
     children:
@@ -355,6 +362,13 @@ children:
         attributes: {id: visible}
         children:
         - {type: Value, value: 'true'}
+  - type: Integer
+    attributes: {id: FP_VALUE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom1, value: '1'}
   - type: String
     attributes: {id: RECEIVE_DATA_REGISTER}
     children:

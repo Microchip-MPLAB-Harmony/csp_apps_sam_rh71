@@ -114,7 +114,7 @@ void TC0_CH0_ComparePeriodSet (uint32_t period)
 /* Read the period value */
 uint32_t TC0_CH0_ComparePeriodGet (void)
 {
-    return TC0_REGS->TC_CHANNEL[0].TC_RC;
+    return (uint32_t)TC0_REGS->TC_CHANNEL[0].TC_RC;
 }
 
 /* Set the compare A value */
@@ -175,13 +175,13 @@ uint32_t TC0_CH1_CaptureFrequencyGet( void )
 /* Read last captured value of Capture A */
 uint32_t TC0_CH1_CaptureAGet (void)
 {
-    return TC0_REGS->TC_CHANNEL[1].TC_RA;
+    return (uint32_t)TC0_REGS->TC_CHANNEL[1].TC_RA;
 }
 
 /* Read last captured value of Capture B */
 uint32_t TC0_CH1_CaptureBGet (void)
 {
-    return TC0_REGS->TC_CHANNEL[1].TC_RB;
+    return (uint32_t)TC0_REGS->TC_CHANNEL[1].TC_RB;
 }
 
 TC_CAPTURE_STATUS TC0_CH1_CaptureStatusGet(void)
