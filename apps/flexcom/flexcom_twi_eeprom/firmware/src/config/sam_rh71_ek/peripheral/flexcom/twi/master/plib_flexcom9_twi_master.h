@@ -398,6 +398,34 @@ FLEXCOM_TWI_ERROR FLEXCOM9_TWI_ErrorGet(void);
 
 bool FLEXCOM9_TWI_TransferSetup(FLEXCOM_TWI_TRANSFER_SETUP* setup, uint32_t srcClkFreq );
 
+// *****************************************************************************
+/* Function:
+    void FLEXCOM9_TWI_TransferAbort( void )
+
+   Summary:
+    Aborts the ongoing TWI transfer.
+
+   Precondition:
+    FLEXCOM9_Initialize must have been called for the associated TWI instance.
+
+   Parameters:
+    None
+
+   Returns:
+    None
+
+   Example:
+    <code>
+
+    FLEXCOM9_TWI_TransferAbort();
+
+    </code>
+
+   Remarks:
+    None
+*/
+void FLEXCOM9_TWI_TransferAbort( void );
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
