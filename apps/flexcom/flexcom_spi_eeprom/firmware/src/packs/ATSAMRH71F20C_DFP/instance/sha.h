@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMRH71F20C
+/*
+ * Instance header file for ATSAMRH71F20C
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2021-05-04T16:48:28Z */
+/* file generated from device description version 2022-01-06T10:24:17Z */
 #ifndef _SAMRH71_SHA_INSTANCE_
 #define _SAMRH71_SHA_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SHA peripheral ========== */
-#define SHA_DMAC_ID_TX                           _UL_(28)   
-#define SHA_INSTANCE_ID                          _UL_(44)   
-#define SHA_CLOCK_ID                             _UL_(44)   
+#define SHA_DMAC_ID_TX                           (28)       
+#define SHA_INSTANCE_ID                          (44)       
+#define SHA_CLOCK_ID                             (44)       
 
 #endif /* _SAMRH71_SHA_INSTANCE_ */
