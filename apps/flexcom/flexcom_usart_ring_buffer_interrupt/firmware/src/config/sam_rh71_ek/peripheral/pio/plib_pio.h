@@ -61,60 +61,60 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#define PIOA_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[0])))
-#define PIOB_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[1])))
-#define PIOC_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[2])))
-#define PIOD_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[3])))
-#define PIOE_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[4])))
+/*******************Base address and group index of PIO groups ****************/
+/*PIOA base address */
+#define PIOA_REGS ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[0])))
 
-#define PIOF_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[5])))
-
-#define PIOG_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[6])))
-
-
-
-
-
-
-// *****************************************************************************
-/* PIO Port
-
-  Summary:
-    Identifies the available PIO Ports.
-
-  Description:
-    This enumeration identifies the available PIO Ports.
-
-  Remarks:
-    The caller should not rely on the specific numbers assigned to any of
-    these values as they may change from one processor to the next.
-
-    Not all ports are available on all devices.  Refer to the specific
-    device data sheet to determine which ports are supported.
-*/
-
-/* Port A Pins */
+/*PIOA index */
 #define PIO_PORT_A 0U
 
-/* Port B Pins */
+/*PIOB base address */
+#define PIOB_REGS ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[1])))
+
+/*PIOB index */
 #define PIO_PORT_B 1U
 
-    /* Port C Pins */
+/*PIOC base address */
+#define PIOC_REGS ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[2])))
+
+/*PIOC index */
 #define PIO_PORT_C 2U
 
-/* Port D Pins */
+/*PIOD base address */
+#define PIOD_REGS ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[3])))
+
+/*PIOD index */
 #define PIO_PORT_D 3U
 
-/* Port E Pins */
+/*PIOE base address */
+#define PIOE_REGS ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[4])))
+
+/*PIOE index */
 #define PIO_PORT_E 4U
 
-/* Port F Pins */
+/*PIOF base address */
+#define PIOF_REGS ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[5])))
+
+/*PIOF index */
 #define PIO_PORT_F 5U
 
-/* Port G Pins */
+/*PIOG base address */
+#define PIOG_REGS ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[6])))
+
+/*PIOG index */
 #define PIO_PORT_G 6U
 
+/*PIO max index */
+#define PIO_PORT_MAX    7U
+
+// *****************************************************************************
+/* PIO Ports
+
+  Summary:
+    Datatype for PIO ports
+*/
 typedef uint32_t PIO_PORT;
+
 
 // *****************************************************************************
 /* PIO Port Pins
@@ -133,208 +133,207 @@ typedef uint32_t PIO_PORT;
     device data sheet to determine which pins are supported.
 */
 
-typedef enum
-{
-    PIO_PIN_PA0 = 0,
-    PIO_PIN_PA1 = 1,
-    PIO_PIN_PA2 = 2,
-    PIO_PIN_PA3 = 3,
-    PIO_PIN_PA4 = 4,
-    PIO_PIN_PA5 = 5,
-    PIO_PIN_PA6 = 6,
-    PIO_PIN_PA7 = 7,
-    PIO_PIN_PA8 = 8,
-    PIO_PIN_PA9 = 9,
-    PIO_PIN_PA10 = 10,
-    PIO_PIN_PA11 = 11,
-    PIO_PIN_PA12 = 12,
-    PIO_PIN_PA13 = 13,
-    PIO_PIN_PA16 = 16,
-    PIO_PIN_PA17 = 17,
-    PIO_PIN_PA19 = 19,
-    PIO_PIN_PA20 = 20,
-    PIO_PIN_PA21 = 21,
-    PIO_PIN_PA22 = 22,
-    PIO_PIN_PA23 = 23,
-    PIO_PIN_PA24 = 24,
-    PIO_PIN_PA25 = 25,
-    PIO_PIN_PA26 = 26,
-    PIO_PIN_PA27 = 27,
-    PIO_PIN_PA28 = 28,
-    PIO_PIN_PB0 = 32,
-    PIO_PIN_PB1 = 33,
-    PIO_PIN_PB2 = 34,
-    PIO_PIN_PB3 = 35,
-    PIO_PIN_PB4 = 36,
-    PIO_PIN_PB5 = 37,
-    PIO_PIN_PB6 = 38,
-    PIO_PIN_PB7 = 39,
-    PIO_PIN_PB8 = 40,
-    PIO_PIN_PB9 = 41,
-    PIO_PIN_PB10 = 42,
-    PIO_PIN_PB11 = 43,
-    PIO_PIN_PB12 = 44,
-    PIO_PIN_PB13 = 45,
-    PIO_PIN_PB14 = 46,
-    PIO_PIN_PB15 = 47,
-    PIO_PIN_PB16 = 48,
-    PIO_PIN_PB17 = 49,
-    PIO_PIN_PB18 = 50,
-    PIO_PIN_PB19 = 51,
-    PIO_PIN_PB20 = 52,
-    PIO_PIN_PB21 = 53,
-    PIO_PIN_PB22 = 54,
-    PIO_PIN_PB23 = 55,
-    PIO_PIN_PB24 = 56,
-    PIO_PIN_PB25 = 57,
-    PIO_PIN_PB26 = 58,
-    PIO_PIN_PB27 = 59,
-    PIO_PIN_PB28 = 60,
-    PIO_PIN_PB29 = 61,
-    PIO_PIN_PC0 = 64,
-    PIO_PIN_PC1 = 65,
-    PIO_PIN_PC2 = 66,
-    PIO_PIN_PC3 = 67,
-    PIO_PIN_PC4 = 68,
-    PIO_PIN_PC5 = 69,
-    PIO_PIN_PC6 = 70,
-    PIO_PIN_PC7 = 71,
-    PIO_PIN_PC8 = 72,
-    PIO_PIN_PC9 = 73,
-    PIO_PIN_PC10 = 74,
-    PIO_PIN_PC11 = 75,
-    PIO_PIN_PC12 = 76,
-    PIO_PIN_PC13 = 77,
-    PIO_PIN_PC14 = 78,
-    PIO_PIN_PC15 = 79,
-    PIO_PIN_PC16 = 80,
-    PIO_PIN_PC17 = 81,
-    PIO_PIN_PC18 = 82,
-    PIO_PIN_PC19 = 83,
-    PIO_PIN_PC20 = 84,
-    PIO_PIN_PC21 = 85,
-    PIO_PIN_PC22 = 86,
-    PIO_PIN_PC23 = 87,
-    PIO_PIN_PC24 = 88,
-    PIO_PIN_PC25 = 89,
-    PIO_PIN_PC26 = 90,
-    PIO_PIN_PC27 = 91,
-    PIO_PIN_PC28 = 92,
-    PIO_PIN_PC29 = 93,
-    PIO_PIN_PC30 = 94,
-    PIO_PIN_PC31 = 95,
-    PIO_PIN_PD0 = 96,
-    PIO_PIN_PD1 = 97,
-    PIO_PIN_PD2 = 98,
-    PIO_PIN_PD3 = 99,
-    PIO_PIN_PD4 = 100,
-    PIO_PIN_PD5 = 101,
-    PIO_PIN_PD6 = 102,
-    PIO_PIN_PD7 = 103,
-    PIO_PIN_PD8 = 104,
-    PIO_PIN_PD9 = 105,
-    PIO_PIN_PD10 = 106,
-    PIO_PIN_PD11 = 107,
-    PIO_PIN_PD12 = 108,
-    PIO_PIN_PD13 = 109,
-    PIO_PIN_PD14 = 110,
-    PIO_PIN_PD15 = 111,
-    PIO_PIN_PD16 = 112,
-    PIO_PIN_PD17 = 113,
-    PIO_PIN_PD18 = 114,
-    PIO_PIN_PD19 = 115,
-    PIO_PIN_PD20 = 116,
-    PIO_PIN_PD21 = 117,
-    PIO_PIN_PD22 = 118,
-    PIO_PIN_PD23 = 119,
-    PIO_PIN_PD24 = 120,
-    PIO_PIN_PD25 = 121,
-    PIO_PIN_PD26 = 122,
-    PIO_PIN_PD27 = 123,
-    PIO_PIN_PD28 = 124,
-    PIO_PIN_PD29 = 125,
-    PIO_PIN_PD30 = 126,
-    PIO_PIN_PD31 = 127,
-    PIO_PIN_PE0 = 128,
-    PIO_PIN_PE1 = 129,
-    PIO_PIN_PE2 = 130,
-    PIO_PIN_PE3 = 131,
-    PIO_PIN_PE4 = 132,
-    PIO_PIN_PE5 = 133,
-    PIO_PIN_PE6 = 134,
-    PIO_PIN_PE7 = 135,
-    PIO_PIN_PE8 = 136,
-    PIO_PIN_PE9 = 137,
-    PIO_PIN_PE10 = 138,
-    PIO_PIN_PE11 = 139,
-    PIO_PIN_PE12 = 140,
-    PIO_PIN_PF0 = 160,
-    PIO_PIN_PF1 = 161,
-    PIO_PIN_PF2 = 162,
-    PIO_PIN_PF3 = 163,
-    PIO_PIN_PF4 = 164,
-    PIO_PIN_PF5 = 165,
-    PIO_PIN_PF6 = 166,
-    PIO_PIN_PF7 = 167,
-    PIO_PIN_PF8 = 168,
-    PIO_PIN_PF9 = 169,
-    PIO_PIN_PF10 = 170,
-    PIO_PIN_PF11 = 171,
-    PIO_PIN_PF12 = 172,
-    PIO_PIN_PF13 = 173,
-    PIO_PIN_PF14 = 174,
-    PIO_PIN_PF15 = 175,
-    PIO_PIN_PF16 = 176,
-    PIO_PIN_PF17 = 177,
-    PIO_PIN_PF18 = 178,
-    PIO_PIN_PF19 = 179,
-    PIO_PIN_PF20 = 180,
-    PIO_PIN_PF21 = 181,
-    PIO_PIN_PF22 = 182,
-    PIO_PIN_PF23 = 183,
-    PIO_PIN_PF24 = 184,
-    PIO_PIN_PF25 = 185,
-    PIO_PIN_PF26 = 186,
-    PIO_PIN_PF27 = 187,
-    PIO_PIN_PF28 = 188,
-    PIO_PIN_PF29 = 189,
-    PIO_PIN_PF30 = 190,
-    PIO_PIN_PG0 = 192,
-    PIO_PIN_PG1 = 193,
-    PIO_PIN_PG2 = 194,
-    PIO_PIN_PG3 = 195,
-    PIO_PIN_PG4 = 196,
-    PIO_PIN_PG5 = 197,
-    PIO_PIN_PG6 = 198,
-    PIO_PIN_PG7 = 199,
-    PIO_PIN_PG8 = 200,
-    PIO_PIN_PG9 = 201,
-    PIO_PIN_PG10 = 202,
-    PIO_PIN_PG11 = 203,
-    PIO_PIN_PG12 = 204,
-    PIO_PIN_PG13 = 205,
-    PIO_PIN_PG14 = 206,
-    PIO_PIN_PG15 = 207,
-    PIO_PIN_PG16 = 208,
-    PIO_PIN_PG17 = 209,
-    PIO_PIN_PG18 = 210,
-    PIO_PIN_PG19 = 211,
-    PIO_PIN_PG20 = 212,
-    PIO_PIN_PG21 = 213,
-    PIO_PIN_PG22 = 214,
-    PIO_PIN_PG23 = 215,
-    PIO_PIN_PG24 = 216,
-    PIO_PIN_PG25 = 217,
-    PIO_PIN_PG26 = 218,
-    PIO_PIN_PG27 = 219,
-    PIO_PIN_PG30 = 222,
-    PIO_PIN_PG31 = 223,
 
-    /* This element should not be used in any of the PIO APIs.
-       It will be used by other modules or application to denote that none of the PIO Pin is used */
-    PIO_PIN_NONE = -1
+#define    PIO_PIN_PA0    (0U)
+#define    PIO_PIN_PA1    (1U)
+#define    PIO_PIN_PA2    (2U)
+#define    PIO_PIN_PA3    (3U)
+#define    PIO_PIN_PA4    (4U)
+#define    PIO_PIN_PA5    (5U)
+#define    PIO_PIN_PA6    (6U)
+#define    PIO_PIN_PA7    (7U)
+#define    PIO_PIN_PA8    (8U)
+#define    PIO_PIN_PA9    (9U)
+#define    PIO_PIN_PA10    (10U)
+#define    PIO_PIN_PA11    (11U)
+#define    PIO_PIN_PA12    (12U)
+#define    PIO_PIN_PA13    (13U)
+#define    PIO_PIN_PA16    (16U)
+#define    PIO_PIN_PA17    (17U)
+#define    PIO_PIN_PA19    (19U)
+#define    PIO_PIN_PA20    (20U)
+#define    PIO_PIN_PA21    (21U)
+#define    PIO_PIN_PA22    (22U)
+#define    PIO_PIN_PA23    (23U)
+#define    PIO_PIN_PA24    (24U)
+#define    PIO_PIN_PA25    (25U)
+#define    PIO_PIN_PA26    (26U)
+#define    PIO_PIN_PA27    (27U)
+#define    PIO_PIN_PA28    (28U)
+#define    PIO_PIN_PB0   (32U)
+#define    PIO_PIN_PB1   (33U)
+#define    PIO_PIN_PB2   (34U)
+#define    PIO_PIN_PB3   (35U)
+#define    PIO_PIN_PB4   (36U)
+#define    PIO_PIN_PB5   (37U)
+#define    PIO_PIN_PB6   (38U)
+#define    PIO_PIN_PB7   (39U)
+#define    PIO_PIN_PB8   (40U)
+#define    PIO_PIN_PB9   (41U)
+#define    PIO_PIN_PB10   (42U)
+#define    PIO_PIN_PB11   (43U)
+#define    PIO_PIN_PB12   (44U)
+#define    PIO_PIN_PB13   (45U)
+#define    PIO_PIN_PB14   (46U)
+#define    PIO_PIN_PB15   (47U)
+#define    PIO_PIN_PB16   (48U)
+#define    PIO_PIN_PB17   (49U)
+#define    PIO_PIN_PB18   (50U)
+#define    PIO_PIN_PB19   (51U)
+#define    PIO_PIN_PB20   (52U)
+#define    PIO_PIN_PB21   (53U)
+#define    PIO_PIN_PB22   (54U)
+#define    PIO_PIN_PB23   (55U)
+#define    PIO_PIN_PB24   (56U)
+#define    PIO_PIN_PB25   (57U)
+#define    PIO_PIN_PB26   (58U)
+#define    PIO_PIN_PB27   (59U)
+#define    PIO_PIN_PB28   (60U)
+#define    PIO_PIN_PB29   (61U)
+#define    PIO_PIN_PC0   (64U)
+#define    PIO_PIN_PC1   (65U)
+#define    PIO_PIN_PC2   (66U)
+#define    PIO_PIN_PC3   (67U)
+#define    PIO_PIN_PC4   (68U)
+#define    PIO_PIN_PC5   (69U)
+#define    PIO_PIN_PC6   (70U)
+#define    PIO_PIN_PC7   (71U)
+#define    PIO_PIN_PC8   (72U)
+#define    PIO_PIN_PC9   (73U)
+#define    PIO_PIN_PC10   (74U)
+#define    PIO_PIN_PC11   (75U)
+#define    PIO_PIN_PC12   (76U)
+#define    PIO_PIN_PC13   (77U)
+#define    PIO_PIN_PC14   (78U)
+#define    PIO_PIN_PC15   (79U)
+#define    PIO_PIN_PC16   (80U)
+#define    PIO_PIN_PC17   (81U)
+#define    PIO_PIN_PC18   (82U)
+#define    PIO_PIN_PC19   (83U)
+#define    PIO_PIN_PC20   (84U)
+#define    PIO_PIN_PC21   (85U)
+#define    PIO_PIN_PC22   (86U)
+#define    PIO_PIN_PC23   (87U)
+#define    PIO_PIN_PC24   (88U)
+#define    PIO_PIN_PC25   (89U)
+#define    PIO_PIN_PC26   (90U)
+#define    PIO_PIN_PC27   (91U)
+#define    PIO_PIN_PC28   (92U)
+#define    PIO_PIN_PC29   (93U)
+#define    PIO_PIN_PC30   (94U)
+#define    PIO_PIN_PC31   (95U)
+#define    PIO_PIN_PD0   (96U)
+#define    PIO_PIN_PD1   (97U)
+#define    PIO_PIN_PD2   (98U)
+#define    PIO_PIN_PD3   (99U)
+#define    PIO_PIN_PD4   (100U)
+#define    PIO_PIN_PD5   (101U)
+#define    PIO_PIN_PD6   (102U)
+#define    PIO_PIN_PD7   (103U)
+#define    PIO_PIN_PD8   (104U)
+#define    PIO_PIN_PD9   (105U)
+#define    PIO_PIN_PD10   (106U)
+#define    PIO_PIN_PD11   (107U)
+#define    PIO_PIN_PD12   (108U)
+#define    PIO_PIN_PD13   (109U)
+#define    PIO_PIN_PD14   (110U)
+#define    PIO_PIN_PD15   (111U)
+#define    PIO_PIN_PD16   (112U)
+#define    PIO_PIN_PD17   (113U)
+#define    PIO_PIN_PD18   (114U)
+#define    PIO_PIN_PD19   (115U)
+#define    PIO_PIN_PD20   (116U)
+#define    PIO_PIN_PD21   (117U)
+#define    PIO_PIN_PD22   (118U)
+#define    PIO_PIN_PD23   (119U)
+#define    PIO_PIN_PD24   (120U)
+#define    PIO_PIN_PD25   (121U)
+#define    PIO_PIN_PD26   (122U)
+#define    PIO_PIN_PD27   (123U)
+#define    PIO_PIN_PD28   (124U)
+#define    PIO_PIN_PD29   (125U)
+#define    PIO_PIN_PD30   (126U)
+#define    PIO_PIN_PD31   (127U)
+#define    PIO_PIN_PE0    (128U)
+#define    PIO_PIN_PE1    (129U)
+#define    PIO_PIN_PE2    (130U)
+#define    PIO_PIN_PE3    (131U)
+#define    PIO_PIN_PE4    (132U)
+#define    PIO_PIN_PE5    (133U)
+#define    PIO_PIN_PE6    (134U)
+#define    PIO_PIN_PE7    (135U)
+#define    PIO_PIN_PE8    (136U)
+#define    PIO_PIN_PE9    (137U)
+#define    PIO_PIN_PE10    (138U)
+#define    PIO_PIN_PE11    (139U)
+#define    PIO_PIN_PE12    (140U)
+#define    PIO_PIN_PF0    (160U)
+#define    PIO_PIN_PF1    (161U)
+#define    PIO_PIN_PF2    (162U)
+#define    PIO_PIN_PF3    (163U)
+#define    PIO_PIN_PF4    (164U)
+#define    PIO_PIN_PF5    (165U)
+#define    PIO_PIN_PF6    (166U)
+#define    PIO_PIN_PF7    (167U)
+#define    PIO_PIN_PF8    (168U)
+#define    PIO_PIN_PF9    (169U)
+#define    PIO_PIN_PF10    (170U)
+#define    PIO_PIN_PF11    (171U)
+#define    PIO_PIN_PF12    (172U)
+#define    PIO_PIN_PF13    (173U)
+#define    PIO_PIN_PF14    (174U)
+#define    PIO_PIN_PF15    (175U)
+#define    PIO_PIN_PF16    (176U)
+#define    PIO_PIN_PF17    (177U)
+#define    PIO_PIN_PF18    (178U)
+#define    PIO_PIN_PF19    (179U)
+#define    PIO_PIN_PF20    (180U)
+#define    PIO_PIN_PF21    (181U)
+#define    PIO_PIN_PF22    (182U)
+#define    PIO_PIN_PF23    (183U)
+#define    PIO_PIN_PF24    (184U)
+#define    PIO_PIN_PF25    (185U)
+#define    PIO_PIN_PF26    (186U)
+#define    PIO_PIN_PF27    (187U)
+#define    PIO_PIN_PF28    (188U)
+#define    PIO_PIN_PF29    (189U)
+#define    PIO_PIN_PF30    (190U)
+#define     PIO_PIN_PG0   (192U)
+#define     PIO_PIN_PG1   (193U)
+#define     PIO_PIN_PG2   (194U)
+#define     PIO_PIN_PG3   (195U)
+#define     PIO_PIN_PG4   (196U)
+#define     PIO_PIN_PG5   (197U)
+#define     PIO_PIN_PG6   (198U)
+#define     PIO_PIN_PG7   (199U)
+#define     PIO_PIN_PG8   (200U)
+#define     PIO_PIN_PG9   (201U)
+#define     PIO_PIN_PG10   (202U)
+#define     PIO_PIN_PG11   (203U)
+#define     PIO_PIN_PG12   (204U)
+#define     PIO_PIN_PG13   (205U)
+#define     PIO_PIN_PG14   (206U)
+#define     PIO_PIN_PG15   (207U)
+#define     PIO_PIN_PG16   (208U)
+#define     PIO_PIN_PG17   (209U)
+#define     PIO_PIN_PG18   (210U)
+#define     PIO_PIN_PG19   (211U)
+#define     PIO_PIN_PG20   (212U)
+#define     PIO_PIN_PG21   (213U)
+#define     PIO_PIN_PG22   (214U)
+#define     PIO_PIN_PG23   (215U)
+#define     PIO_PIN_PG24   (216U)
+#define     PIO_PIN_PG25   (217U)
+#define     PIO_PIN_PG26   (218U)
+#define     PIO_PIN_PG27   (219U)
+#define     PIO_PIN_PG30   (222U)
+#define     PIO_PIN_PG31   (223U)
 
-} PIO_PIN;
+/* This element should not be used in any of the PIO APIs.
+   It will be used by other modules or application to denote that none of the PIO Pin is used */
+#define     PIO_PIN_NONE        (-1)
+
+typedef uint8_t PIO_PIN;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -600,7 +599,10 @@ void PIO_PortClear(PIO_PORT port, uint32_t mask);
   Example:
     <code>
 
-    // Toggles PC5 and PC7 pins
+<<<<<<< HEAD
+=======
+     Toggles PC5 and PC7 pins
+>>>>>>> d3342b368 ([PIO] pio_11264 MISRAC 2012 required rule violation fix)
     PIO_PortToggle(PIO_PORT_C, 0x00A0);
 
     </code>
@@ -722,7 +724,7 @@ void PIO_PortOutputEnable(PIO_PORT port, uint32_t mask);
 static inline void PIO_PinWrite(PIO_PIN pin, bool value)
 {
     uint32_t port = (uint32_t)pin >> 5U;
-    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);   
+    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);
     PIO_PortWrite(port, mask, value ? mask : 0U);
 }
 
@@ -764,7 +766,7 @@ static inline void PIO_PinWrite(PIO_PIN pin, bool value)
 static inline bool PIO_PinRead(PIO_PIN pin)
 {
     uint32_t port = (uint32_t)pin >> 5U;
-    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);   
+    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);
     return (((PIO_PortRead(port) & mask) != 0U) ? true : false);
 }
 
@@ -804,7 +806,7 @@ static inline bool PIO_PinRead(PIO_PIN pin)
 static inline bool PIO_PinLatchRead(PIO_PIN pin)
 {
     uint32_t port = (uint32_t)pin >> 5U;
-    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);   
+    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);
     return (((PIO_PortLatchRead(port) & mask) != 0U) ? true : false);
 }
 
@@ -840,7 +842,7 @@ static inline bool PIO_PinLatchRead(PIO_PIN pin)
 static inline void PIO_PinToggle(PIO_PIN pin)
 {
     uint32_t port = (uint32_t)pin >> 5U;
-    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);   
+    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);
     PIO_PortToggle(port, mask);
 }
 
@@ -876,7 +878,7 @@ static inline void PIO_PinToggle(PIO_PIN pin)
 static inline void PIO_PinSet(PIO_PIN pin)
 {
     uint32_t port = (uint32_t)pin >> 5U;
-    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);   
+    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);
     PIO_PortSet(port, mask);
 }
 
@@ -912,7 +914,7 @@ static inline void PIO_PinSet(PIO_PIN pin)
 static inline void PIO_PinClear(PIO_PIN pin)
 {
     uint32_t port = (uint32_t)pin >> 5U;
-    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);   
+    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);
     PIO_PortClear(port, mask);
 }
 
@@ -946,9 +948,9 @@ static inline void PIO_PinClear(PIO_PIN pin)
     None.
 */
 static inline void PIO_PinInputEnable(PIO_PIN pin)
-{   
+{
     uint32_t port = (uint32_t)pin >> 5U;
-    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);   
+    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);
     PIO_PortInputEnable(port, mask);
 }
 
@@ -984,7 +986,7 @@ static inline void PIO_PinInputEnable(PIO_PIN pin)
 static inline void PIO_PinOutputEnable(PIO_PIN pin)
 {
     uint32_t port = (uint32_t)pin >> 5U;
-    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);   
+    uint32_t mask = 1UL << ((uint32_t)pin & 0x1FU);
     PIO_PortOutputEnable(port, mask);
 }
 

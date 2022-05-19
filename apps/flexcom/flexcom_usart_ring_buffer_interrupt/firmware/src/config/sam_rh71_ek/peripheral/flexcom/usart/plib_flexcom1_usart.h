@@ -85,6 +85,8 @@ size_t FLEXCOM1_USART_WriteFreeBufferCountGet(void);
 
 size_t FLEXCOM1_USART_WriteBufferSizeGet(void);
 
+bool FLEXCOM1_USART_TransmitComplete(void);
+
 bool FLEXCOM1_USART_WriteNotificationEnable(bool isEnabled, bool isPersistent);
 
 void FLEXCOM1_USART_WriteThresholdSet(uint32_t nBytesThreshold);
