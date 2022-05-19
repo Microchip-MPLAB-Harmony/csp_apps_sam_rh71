@@ -45,15 +45,15 @@ It allows user to Program, Erase and lock the on-chip FLASH memory.
 #include "plib_hefc.h"
 #include "interrupts.h"
 
-static uint32_t status = 0;
+static uint32_t hefcStatus = 0;
 
 
 void HEFC_Initialize(void)
 {
 }
 bool HEFC_Read( uint32_t *data, uint32_t length, uint32_t address )
-{
-    memcpy((void *)data, (void *)address, length);
+{   uint32_t *pAddress = (uint32_t *)address;
+    (void)memcpy(data, pAddress, length);
     return true;
 }
 
@@ -62,11 +62,11 @@ bool HEFC_SectorErase( uint32_t address )
     uint16_t page_number;
 
     /*Calculate the Page number to be passed for FARG register*/
-    page_number = (address - IFLASH_ADDR) / IFLASH_PAGE_SIZE;
+    page_number = (uint16_t)((address - IFLASH_ADDR) / IFLASH_PAGE_SIZE);
     /* Issue the FLASH erase operation*/
-    HEFC_REGS->HEFC_FCR = (HEFC_FCR_FCMD_EPA| HEFC_FCR_FARG((page_number << 2)|0x2)| HEFC_FCR_FKEY_PASSWD);
+    HEFC_REGS->HEFC_FCR = (HEFC_FCR_FCMD_EPA| HEFC_FCR_FARG(((uint32_t)page_number << 2U)|0x2U)| HEFC_FCR_FKEY_PASSWD);
 
-    status = 0;
+    hefcStatus = 0;
 
 
     return true;
@@ -77,20 +77,21 @@ bool HEFC_PageWrite( uint32_t *data, uint32_t address )
     uint16_t page_number;
 
     /*Calculate the Page number to be passed for FARG register*/
-    page_number = (address - IFLASH_ADDR) / IFLASH_PAGE_SIZE;
+    page_number = (uint16_t)((address - IFLASH_ADDR) / IFLASH_PAGE_SIZE);
 
-    for (int i = 0; i < IFLASH_PAGE_SIZE; i += 4)
+    for (uint32_t  i = 0U; i < IFLASH_PAGE_SIZE; i += 4U)
     {
-    *((uint32_t *)( IFLASH_ADDR + ( page_number * IFLASH_PAGE_SIZE ) + i )) =    *(( data++ ));
+    *((uint32_t *)( IFLASH_ADDR + ( page_number * IFLASH_PAGE_SIZE ) + i )) =    *data;
+    data++;
     }
 
     __DSB();
     __ISB();
 
     /* Issue the FLASH write operation*/
-    HEFC_REGS->HEFC_FCR = (HEFC_FCR_FCMD_WP | HEFC_FCR_FARG(page_number)| HEFC_FCR_FKEY_PASSWD);
+    HEFC_REGS->HEFC_FCR = (HEFC_FCR_FCMD_WP | HEFC_FCR_FARG((uint32_t)page_number)| HEFC_FCR_FKEY_PASSWD);
 
-    status = 0;
+    hefcStatus = 0;
 
 
     return true;
@@ -102,10 +103,10 @@ void HEFC_RegionLock(uint32_t address)
     uint16_t page_number;
 
     /*Calculate the Page number to be passed for FARG register*/
-    page_number = (address - IFLASH_ADDR) / IFLASH_PAGE_SIZE;
-    HEFC_REGS->HEFC_FCR = (HEFC_FCR_FCMD_SLB | HEFC_FCR_FARG(page_number)| HEFC_FCR_FKEY_PASSWD);
+    page_number = (uint16_t)((address - IFLASH_ADDR) / IFLASH_PAGE_SIZE);
+    HEFC_REGS->HEFC_FCR = (HEFC_FCR_FCMD_SLB | HEFC_FCR_FARG((uint32_t)page_number)| HEFC_FCR_FKEY_PASSWD);
 
-    status = 0;
+    hefcStatus = 0;
 
 }
 
@@ -114,23 +115,23 @@ void HEFC_RegionUnlock(uint32_t address)
     uint16_t page_number;
 
     /*Calculate the Page number to be passed for FARG register*/
-    page_number = (address - IFLASH_ADDR) / IFLASH_PAGE_SIZE;
-    HEFC_REGS->HEFC_FCR = (HEFC_FCR_FCMD_CLB | HEFC_FCR_FARG(page_number)| HEFC_FCR_FKEY_PASSWD);
+    page_number = (uint16_t)((address - IFLASH_ADDR) / IFLASH_PAGE_SIZE);
+    HEFC_REGS->HEFC_FCR = (HEFC_FCR_FCMD_CLB | HEFC_FCR_FARG((uint32_t)page_number)| HEFC_FCR_FKEY_PASSWD);
 
-    status = 0;
+    hefcStatus = 0;
 
 }
 
 bool HEFC_IsBusy(void)
 {
-    status |= HEFC_REGS->HEFC_FSR;
-    return (bool)(!(status & HEFC_FSR_FRDY_Msk));
+    hefcStatus |= HEFC_REGS->HEFC_FSR;
+    return (bool)((hefcStatus & HEFC_FSR_FRDY_Msk) == 0U);
 }
 
 HEFC_ERROR HEFC_ErrorGet( void )
 {
-    status |= HEFC_REGS->HEFC_FSR;
-    return status;
+    hefcStatus |= HEFC_REGS->HEFC_FSR;
+    return (HEFC_ERROR)hefcStatus;
 }
 
 
