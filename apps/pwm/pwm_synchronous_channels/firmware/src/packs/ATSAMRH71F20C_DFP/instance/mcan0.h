@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMRH71F20C
+/*
+ * Instance header file for ATSAMRH71F20C
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2021-05-04T16:48:28Z */
+/* file generated from device description version 2022-01-06T10:24:17Z */
 #ifndef _SAMRH71_MCAN0_INSTANCE_
 #define _SAMRH71_MCAN0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for MCAN0 peripheral ========== */
-#define MCAN0_INSTANCE_ID                        _UL_(36)   
-#define MCAN0_CLOCK_ID                           _UL_(36)   
-#define MCAN0_ID_MCAN0_INT0                      _UL_(36)   
-#define MCAN0_ID_MCAN0_INT1                      _UL_(37)   
+#define MCAN0_INSTANCE_ID                        (36)       
+#define MCAN0_CLOCK_ID                           (36)       
+#define MCAN0_ID_MCAN0_INT0                      (36)       
+#define MCAN0_ID_MCAN0_INT1                      (37)       
 
 #endif /* _SAMRH71_MCAN0_INSTANCE_ */
