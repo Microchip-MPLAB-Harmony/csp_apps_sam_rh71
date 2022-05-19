@@ -1,7 +1,7 @@
-/**
- * \brief Component description for SFR
+/*
+ * Component description for SFR
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-05-04T16:48:28Z */
+/* file generated from device description version 2022-01-06T10:24:17Z */
 #ifndef _SAMRH71_SFR_COMPONENT_H_
 #define _SAMRH71_SFR_COMPONENT_H_
 
@@ -29,35 +29,35 @@
 /* ************************************************************************** */
 
 /* -------- SFR_CAN0 : (SFR Offset: 0xA0) (R/W 32) CAN0 MSB Base Address -------- */
-#define SFR_CAN0_EXT_MEM_ADDR_Pos             _U_(16)                                              /**< (SFR_CAN0) MSB Base Address Position */
-#define SFR_CAN0_EXT_MEM_ADDR_Msk             (_U_(0xFFFF) << SFR_CAN0_EXT_MEM_ADDR_Pos)           /**< (SFR_CAN0) MSB Base Address Mask */
-#define SFR_CAN0_EXT_MEM_ADDR(value)          (SFR_CAN0_EXT_MEM_ADDR_Msk & ((value) << SFR_CAN0_EXT_MEM_ADDR_Pos))
-#define SFR_CAN0_Msk                          _U_(0xFFFF0000)                                      /**< (SFR_CAN0) Register Mask  */
+#define SFR_CAN0_EXT_MEM_ADDR_Pos             _UINT32_(16)                                         /* (SFR_CAN0) MSB Base Address Position */
+#define SFR_CAN0_EXT_MEM_ADDR_Msk             (_UINT32_(0xFFFF) << SFR_CAN0_EXT_MEM_ADDR_Pos)      /* (SFR_CAN0) MSB Base Address Mask */
+#define SFR_CAN0_EXT_MEM_ADDR(value)          (SFR_CAN0_EXT_MEM_ADDR_Msk & (_UINT32_(value) << SFR_CAN0_EXT_MEM_ADDR_Pos)) /* Assigment of value for EXT_MEM_ADDR in the SFR_CAN0 register */
+#define SFR_CAN0_Msk                          _UINT32_(0xFFFF0000)                                 /* (SFR_CAN0) Register Mask  */
 
 
 /* -------- SFR_CAN1 : (SFR Offset: 0xA4) (R/W 32) CAN1 MSB Base Address -------- */
-#define SFR_CAN1_EXT_MEM_ADDR_Pos             _U_(16)                                              /**< (SFR_CAN1) MSB Base Address Position */
-#define SFR_CAN1_EXT_MEM_ADDR_Msk             (_U_(0xFFFF) << SFR_CAN1_EXT_MEM_ADDR_Pos)           /**< (SFR_CAN1) MSB Base Address Mask */
-#define SFR_CAN1_EXT_MEM_ADDR(value)          (SFR_CAN1_EXT_MEM_ADDR_Msk & ((value) << SFR_CAN1_EXT_MEM_ADDR_Pos))
-#define SFR_CAN1_Msk                          _U_(0xFFFF0000)                                      /**< (SFR_CAN1) Register Mask  */
+#define SFR_CAN1_EXT_MEM_ADDR_Pos             _UINT32_(16)                                         /* (SFR_CAN1) MSB Base Address Position */
+#define SFR_CAN1_EXT_MEM_ADDR_Msk             (_UINT32_(0xFFFF) << SFR_CAN1_EXT_MEM_ADDR_Pos)      /* (SFR_CAN1) MSB Base Address Mask */
+#define SFR_CAN1_EXT_MEM_ADDR(value)          (SFR_CAN1_EXT_MEM_ADDR_Msk & (_UINT32_(value) << SFR_CAN1_EXT_MEM_ADDR_Pos)) /* Assigment of value for EXT_MEM_ADDR in the SFR_CAN1 register */
+#define SFR_CAN1_Msk                          _UINT32_(0xFFFF0000)                                 /* (SFR_CAN1) Register Mask  */
 
 
 /* -------- SFR_WPMR : (SFR Offset: 0xE4) (R/W 32) Write Protection Mode Register -------- */
-#define SFR_WPMR_WPEN_Pos                     _U_(0)                                               /**< (SFR_WPMR) Write Protection Enable Position */
-#define SFR_WPMR_WPEN_Msk                     (_U_(0x1) << SFR_WPMR_WPEN_Pos)                      /**< (SFR_WPMR) Write Protection Enable Mask */
-#define SFR_WPMR_WPEN(value)                  (SFR_WPMR_WPEN_Msk & ((value) << SFR_WPMR_WPEN_Pos))
-#define SFR_WPMR_WPKEY_Pos                    _U_(8)                                               /**< (SFR_WPMR) Write Protection Key Position */
-#define SFR_WPMR_WPKEY_Msk                    (_U_(0xFFFFFF) << SFR_WPMR_WPKEY_Pos)                /**< (SFR_WPMR) Write Protection Key Mask */
-#define SFR_WPMR_WPKEY(value)                 (SFR_WPMR_WPKEY_Msk & ((value) << SFR_WPMR_WPKEY_Pos))
-#define   SFR_WPMR_WPKEY_PASSWD_Val           _U_(0x534652)                                        /**< (SFR_WPMR) Writing any other value in this field aborts the write operation.Always reads as 0.  */
-#define SFR_WPMR_WPKEY_PASSWD                 (SFR_WPMR_WPKEY_PASSWD_Val << SFR_WPMR_WPKEY_Pos)    /**< (SFR_WPMR) Writing any other value in this field aborts the write operation.Always reads as 0. Position  */
-#define SFR_WPMR_Msk                          _U_(0xFFFFFF01)                                      /**< (SFR_WPMR) Register Mask  */
+#define SFR_WPMR_WPEN_Pos                     _UINT32_(0)                                          /* (SFR_WPMR) Write Protection Enable Position */
+#define SFR_WPMR_WPEN_Msk                     (_UINT32_(0x1) << SFR_WPMR_WPEN_Pos)                 /* (SFR_WPMR) Write Protection Enable Mask */
+#define SFR_WPMR_WPEN(value)                  (SFR_WPMR_WPEN_Msk & (_UINT32_(value) << SFR_WPMR_WPEN_Pos)) /* Assigment of value for WPEN in the SFR_WPMR register */
+#define SFR_WPMR_WPKEY_Pos                    _UINT32_(8)                                          /* (SFR_WPMR) Write Protection Key Position */
+#define SFR_WPMR_WPKEY_Msk                    (_UINT32_(0xFFFFFF) << SFR_WPMR_WPKEY_Pos)           /* (SFR_WPMR) Write Protection Key Mask */
+#define SFR_WPMR_WPKEY(value)                 (SFR_WPMR_WPKEY_Msk & (_UINT32_(value) << SFR_WPMR_WPKEY_Pos)) /* Assigment of value for WPKEY in the SFR_WPMR register */
+#define   SFR_WPMR_WPKEY_PASSWD_Val           _UINT32_(0x534652)                                   /* (SFR_WPMR) Writing any other value in this field aborts the write operation.Always reads as 0.  */
+#define SFR_WPMR_WPKEY_PASSWD                 (SFR_WPMR_WPKEY_PASSWD_Val << SFR_WPMR_WPKEY_Pos)    /* (SFR_WPMR) Writing any other value in this field aborts the write operation.Always reads as 0. Position  */
+#define SFR_WPMR_Msk                          _UINT32_(0xFFFFFF01)                                 /* (SFR_WPMR) Register Mask  */
 
 
 /** \brief SFR register offsets definitions */
-#define SFR_CAN0_REG_OFST              (0xA0)              /**< (SFR_CAN0) CAN0 MSB Base Address Offset */
-#define SFR_CAN1_REG_OFST              (0xA4)              /**< (SFR_CAN1) CAN1 MSB Base Address Offset */
-#define SFR_WPMR_REG_OFST              (0xE4)              /**< (SFR_WPMR) Write Protection Mode Register Offset */
+#define SFR_CAN0_REG_OFST              _UINT32_(0xA0)      /* (SFR_CAN0) CAN0 MSB Base Address Offset */
+#define SFR_CAN1_REG_OFST              _UINT32_(0xA4)      /* (SFR_CAN1) CAN1 MSB Base Address Offset */
+#define SFR_WPMR_REG_OFST              _UINT32_(0xE4)      /* (SFR_WPMR) Write Protection Mode Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SFR register API structure */
