@@ -151,18 +151,18 @@ void HSMC_Initialize( void )
 void HEMC_Initialize( void )
 {
     /* Read NCS0 Pin configuration for HECC */
-    uint8_t eccEnableDefault = ( (HEMC_REGS->HEMC_HECC_CR0 & HEMC_HECC_CR0_ENABLE_Msk) >> HEMC_HECC_CR0_ENABLE_Pos);
-    uint8_t eccAlgoDefault = ( (HEMC_REGS->HEMC_HECC_CR0 & HEMC_HECC_CR0_ECC12_ENABLE_Msk) >> HEMC_HECC_CR0_ECC12_ENABLE_Pos);
+    uint8_t eccEnableDefault =(uint8_t)( (HEMC_REGS->HEMC_HECC_CR0 & HEMC_HECC_CR0_ENABLE_Msk) >> HEMC_HECC_CR0_ENABLE_Pos);
+    uint8_t eccAlgoDefault = (uint8_t)( (HEMC_REGS->HEMC_HECC_CR0 & HEMC_HECC_CR0_ECC12_ENABLE_Msk) >> HEMC_HECC_CR0_ECC12_ENABLE_Pos);
 
     /* Enable NCS0 configuration modification through registers */
-    HEMC_REGS->HEMC_CR_NCS0 |= HEMC_CR_NCS0_WRITE_ECC_CONF(1);
+    HEMC_REGS->HEMC_CR_NCS0 |= HEMC_CR_NCS0_WRITE_ECC_CONF(1U);
 
-    HEMC_REGS->HEMC_CR_NCS0 = HEMC_CR_NCS0_TYPE(0) |
-                              HEMC_CR_NCS0_ADDBASE(0x3ffff) |
-                              HEMC_CR_NCS0_BANKSIZE(0x1F) |
-                              HEMC_CR_NCS0_WRITE_ECC_CONF(1) |
-                              HEMC_CR_NCS0_ECC_ENABLE(eccEnableDefault) |
-                              HEMC_CR_NCS0_ECC12_ENABLE(eccAlgoDefault);
+    HEMC_REGS->HEMC_CR_NCS0 = HEMC_CR_NCS0_TYPE(0U) |
+                              HEMC_CR_NCS0_ADDBASE(0x3ffffU) |
+                              HEMC_CR_NCS0_BANKSIZE(0x1FU) |
+                              HEMC_CR_NCS0_WRITE_ECC_CONF(1U) |
+                              HEMC_CR_NCS0_ECC_ENABLE((uint32_t)eccEnableDefault) |
+                              HEMC_CR_NCS0_ECC12_ENABLE((uint32_t)eccAlgoDefault);
 
     HEMC_REGS->HEMC_CR_NCS4 = HEMC_CR_NCS4_TYPE(1) |
                               HEMC_CR_NCS4_ADDBASE(0x1000) |

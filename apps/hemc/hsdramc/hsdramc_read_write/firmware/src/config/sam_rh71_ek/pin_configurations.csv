@@ -1,0 +1,195 @@
+"Pin Number","Pin ID","Custom Name","Function","Direction","Latch","Open Drain","PIO Interrupt","Pull Up","Pull Down","Glitch/Debounce Filter",Drive Strength
+3,PF29,,FLEXCOM1_IO1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+4,PF30,,FLEXCOM1_IO0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+9,PA0,,Available,In,,,,,,,
+10,PA1,,Available,In,,,,,,,
+11,PA2,,Available,In,,,,,,,
+12,PA3,,Available,In,,,,,,,
+13,PA4,,Available,In,,,,,,,
+14,PA5,,Available,In,,,,,,,
+15,PA6,,Available,In,,,,,,,
+16,PA7,,Available,In,,,,,,,
+17,PA8,,Available,In,,,,,,,
+18,PA9,,Available,In,,,,,,,
+19,PA10,,Available,In,,,,,,,
+20,PA11,,Available,In,,,,,,,
+21,PA12,,Available,In,,,,,,,
+22,PA13,,Available,In,,,,,,,
+26,PA16,,Available,In,,,,,,,
+27,PA17,,Available,In,,,,,,,
+29,PA19,,Available,In,,,,,,,
+30,PA20,,Available,In,,,,,,,
+31,PA21,,Available,In,,,,,,,
+34,PA22,,Available,In,,,,,,,
+35,PA23,,Available,In,,,,,,,
+36,PA24,,Available,In,,,,,,,
+37,PA25,,Available,In,,,,,,,
+38,PA26,,Available,In,,,,,,,
+39,PA27,,Available,In,,,,,,,
+40,PA28,,Available,In,,,,,,,
+59,PB0,,Available,In,,,,,,,
+60,PB1,,Available,In,,,,,,,
+61,PB2,,Available,In,,,,,,,
+62,PB3,,Available,In,,,,,,,
+67,PB4,,Available,In,,,,,,,
+68,PB5,,Available,In,,,,,,,
+69,PB6,,Available,In,,,,,,,
+70,PB7,,Available,In,,,,,,,
+71,PB8,,Available,In,,,,,,,
+72,PB9,,Available,In,,,,,,,
+73,PB10,,Available,In,,,,,,,
+74,PB11,,Available,In,,,,,,,
+75,PB12,,Available,In,,,,,,,
+76,PB13,,Available,In,,,,,,,
+77,PB14,,Available,In,,,,,,,
+78,PB15,,Available,In,,,,,,,
+79,PB16,,Available,In,,,,,,,
+86,PB17,,Available,In,,,,,,,
+87,PB18,,Available,In,,,,,,,
+88,PB19,,Available,In,,,,,,,
+89,PB20,,Available,In,,,,,,,
+90,PB21,,Available,In,,,,,,,
+91,PB22,,Available,In,,,,,,,
+92,PB23,,Available,In,,,,,,,
+93,PB24,,Available,In,,,,,,,
+94,PB25,,Available,In,,,,,,,
+95,PB26,,Available,In,,,,,,,
+98,PB27,,Available,In,,,,,,,
+99,PB28,,Available,In,,,,,,,
+100,PB29,,Available,In,,,,,,,
+101,PC0,,Available,In,,,,,,,
+102,PC1,,Available,In,,,,,,,
+103,PC2,,Available,In,,,,,,,
+104,PC3,,Available,In,,,,,,,
+105,PC4,,Available,In,,,,,,,
+106,PC5,,Available,In,,,,,,,
+107,PC6,,Available,In,,,,,,,
+108,PC7,,Available,In,,,,,,,
+109,PC8,,Available,In,,,,,,,
+110,PC9,,Available,In,,,,,,,
+111,PC10,,Available,In,,,,,,,
+112,PC11,,Available,In,,,,,,,
+113,PC12,,Available,In,,,,,,,
+114,PC13,,Available,In,,,,,,,
+115,PC14,,Available,In,,,,,,,
+116,PC15,,Available,In,,,,,,,
+117,PC16,,Available,In,,,,,,,
+118,PC17,,Available,In,,,,,,,
+119,PC18,,Available,In,,,,,,,
+120,PC19,,Available,In,,,,,,,
+121,PC20,,Available,In,,,,,,,
+122,PC21,,Available,In,,,,,,,
+123,PC22,,Available,In,,,,,,,
+124,PC23,,Available,In,,,,,,,
+125,PC24,,Available,In,,,,,,,
+126,PC25,,Available,In,,,,,,,
+131,PC26,,Available,In,,,,,,,
+132,PC27,,Available,In,,,,,,,
+133,PC28,,Available,In,,,,,,,
+134,PC29,,Available,In,,,,,,,
+135,PC30,,Available,In,,,,,,,
+136,PC31,,Available,In,,,,,,,
+137,PE12,,Available,In,,,,,,,
+138,PE11,,Available,In,,,,,,,
+139,PE10,,Available,In,,,,,,,
+140,PE9,,Available,In,,,,,,,
+141,PE8,,Available,In,,,,,,,
+142,PE7,,HEMC_CB7,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+143,PE6,,HEMC_CB6,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+144,PE5,,HEMC_CB5,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+145,PE4,,HEMC_CB4,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+146,PE3,,HEMC_CB3,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+147,PE2,,HEMC_CB2,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+148,PE1,,HEMC_CB1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+149,PE0,,HEMC_CB0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+150,PF0,,HEMC_RAS,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+151,PF1,,HEMC_SDA10,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+152,PF2,,HEMC_SDCK,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x2
+153,PF3,,HEMC_SDCKE,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+154,PF4,,HEMC_SDNBS0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+155,PF5,,HEMC_SDNBS1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+156,PF6,,HEMC_SDNBS2,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+157,PF7,,HEMC_SDNBS3,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+158,PF8,,HEMC_SDNBS4,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+159,PF9,,HEMC_SDWE,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+162,PF10,,HEMC_CAS,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+163,PD0,,HEMC_D0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+164,PD1,,HEMC_D1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+165,PD2,,HEMC_D2,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+166,PD3,,HEMC_D3,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+167,PD4,,HEMC_D4,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+168,PD5,,HEMC_D5,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+169,PD6,,HEMC_D6,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+170,PD7,,HEMC_D7,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+171,PD8,,HEMC_D8,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+172,PD9,,HEMC_D9,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+173,PD10,,HEMC_D10,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+174,PD11,,HEMC_D11,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+175,PD12,,HEMC_D12,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+176,PD13,,HEMC_D13,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+177,PD14,,HEMC_D14,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+178,PD15,,HEMC_D15,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+179,PD16,,HEMC_D16,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+180,PD17,,HEMC_D17,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+181,PD18,,HEMC_D18,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+182,PD19,,HEMC_D19,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+183,PD20,,HEMC_D20,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+184,PD21,,HEMC_D21,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+185,PD22,,HEMC_D22,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+186,PD23,,HEMC_D23,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+187,PD24,,HEMC_D24,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+188,PD25,,HEMC_D25,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+189,PD26,,HEMC_D26,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+190,PD27,,HEMC_D27,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+195,PD28,,HEMC_D28,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+196,PD29,,HEMC_D29,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+197,PD30,,HEMC_D30,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+198,PD31,,HEMC_D31,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+199,PG0,,HEMC_A0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+200,PG1,,HEMC_A1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+201,PG2,,HEMC_A2,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+202,PG3,,HEMC_A3,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+203,PG4,,HEMC_A4,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+204,PG5,,HEMC_A5,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+205,PG6,,HEMC_A6,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+206,PG7,,HEMC_A7,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+207,PG8,,HEMC_A8,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+208,PG9,,HEMC_A9,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+209,PG10,,HEMC_A10,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+210,PG11,,HEMC_A11,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+211,PG12,,HEMC_A12,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+212,PG13,,HEMC_A13,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+213,PG14,,HEMC_A14,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+214,PG15,,HEMC_A15/BA0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+215,PG16,,HEMC_A16/BA1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+216,PG17,,HEMC_A17,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+217,PG18,,HEMC_A18,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+218,PG19,,HEMC_A19,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+219,PG20,,HEMC_A20,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+220,PG21,,HEMC_A21,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+221,PG22,,HEMC_A22,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+222,PG23,,HEMC_A23,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x1
+223,PG24,,Available,In,,,,,,,
+226,PG25,,Available,In,,,,,,,
+227,PG26,,Available,In,,,,,,,
+228,PG27,,Available,In,,,,,,,
+231,PG30,,Available,In,,,,,,,
+232,PG31,,Available,In,,,,,,,
+233,PF11,,Available,In,,,,,,,
+234,PF12,,Available,In,,,,,,,
+235,PF13,,Available,In,,,,,,,
+236,PF14,,Available,In,,,,,,,
+237,PF15,,HEMC_NCS4,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+238,PF16,,Available,In,,,,,,,
+239,PF17,,Available,In,,,,,,,
+240,PF18,,Available,In,,,,,,,
+241,PF19,,Available,In,,,,,,,
+242,PF20,,Available,In,,,,,,,
+243,PF21,,Available,In,,,,,,,
+244,PF22,,Available,In,,,,,,,
+245,PF23,,Available,In,,,,,,,
+246,PF24,,Available,In,,,,,,,
+247,PF25,,Available,In,,,,,,,
+252,PF26,,Available,In,,,,,,,
+253,PF27,,Available,In,,,,,,,
+254,PF28,,Available,In,,,,,,,
