@@ -115,12 +115,8 @@ MEMORY
   ram_nocache (RWX) : ORIGIN = 0x21010000, LENGTH = 0x00001000
   config_D0000000 : ORIGIN = 0xD0000000, LENGTH = 0x4
   config_D0000004 : ORIGIN = 0xD0000004, LENGTH = 0x4
-  config_D0000000 : ORIGIN = 0xD0000000, LENGTH = 0x4
-  config_D0000004 : ORIGIN = 0xD0000004, LENGTH = 0x4
   config_D0000008 : ORIGIN = 0xD0000008, LENGTH = 0x4
   config_D000000C : ORIGIN = 0xD000000C, LENGTH = 0x4
-  config_D0000004 : ORIGIN = 0xD0000004, LENGTH = 0x4
-
 }
 
 /*************************************************************************
@@ -260,19 +256,9 @@ SECTIONS
     {
     . = ALIGN(4);
     _s_ram_nocache = .;
-    *(.ram_nocache)
+    *(.ram_nocache .ram_nocache.*)
     . = ALIGN(4);
     _e_ram_nocache = .;
-    } > ram_nocache
-
-    .ram_nocache_data : AT (_etext)
-    {
-    . = ALIGN(4);
-    _s_ram_nocache_vma = .;
-    _s_ram_nocache_lma = LOADADDR(.ram_nocache_data);
-    *(.ram_nocache_data)
-    . = ALIGN(4);
-    _e_ram_nocache_vma = .;
     } > ram_nocache
 
     /*
