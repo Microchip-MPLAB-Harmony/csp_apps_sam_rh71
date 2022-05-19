@@ -295,6 +295,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '50000000'}
+  - type: Boolean
+    attributes: {id: PIO_MULTI_INSTANCE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
   - type: String
     attributes: {id: PORT_B_CFGR_Value19}
     children:
