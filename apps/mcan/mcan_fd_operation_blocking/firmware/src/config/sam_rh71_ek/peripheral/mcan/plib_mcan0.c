@@ -146,7 +146,10 @@ void MCAN0_Initialize(void)
     MCAN0_REGS->MCAN_XIDAM = MCAN_XIDAM_Msk;
 
     /* Set the operation mode */
-    MCAN0_REGS->MCAN_CCCR = MCAN_CCCR_INIT_DISABLED | MCAN_CCCR_FDOE_ENABLED | MCAN_CCCR_BRSE_ENABLED;
+    MCAN0_REGS->MCAN_CCCR |= MCAN_CCCR_FDOE_ENABLED | MCAN_CCCR_BRSE_ENABLED;
+
+
+    MCAN0_REGS->MCAN_CCCR &= ~MCAN_CCCR_INIT_Msk;
     while ((MCAN0_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) == MCAN_CCCR_INIT_Msk)
     {
         /* Wait for initialization complete */
@@ -564,8 +567,7 @@ MCAN_ERROR MCAN0_ErrorGet(void)
 
     if ((MCAN0_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) == MCAN_CCCR_INIT_Msk)
     {
-        MCAN0_REGS->MCAN_CCCR |= MCAN_CCCR_CCE_Msk;
-        MCAN0_REGS->MCAN_CCCR = MCAN_CCCR_INIT_DISABLED | MCAN_CCCR_FDOE_ENABLED | MCAN_CCCR_BRSE_ENABLED;
+        MCAN0_REGS->MCAN_CCCR &= ~MCAN_CCCR_INIT_Msk;
         while ((MCAN0_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) == MCAN_CCCR_INIT_Msk)
         {
             /* Wait for initialization complete */
@@ -667,7 +669,7 @@ void MCAN0_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress)
     memset((void*)msgRAMConfigBaseAddress, 0x00, MCAN0_MESSAGE_RAM_CONFIG_SIZE);
 
     /* Set MCAN CCCR Init for Message RAM Configuration */
-    MCAN0_REGS->MCAN_CCCR = MCAN_CCCR_INIT_ENABLED;
+    MCAN0_REGS->MCAN_CCCR |= MCAN_CCCR_INIT_ENABLED;
     while ((MCAN0_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) != MCAN_CCCR_INIT_Msk)
     {
         /* Wait for configuration complete */
@@ -730,7 +732,7 @@ void MCAN0_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress)
     (void)offset;
 
     /* Complete Message RAM Configuration by clearing MCAN CCCR Init */
-    MCAN0_REGS->MCAN_CCCR = MCAN_CCCR_INIT_DISABLED | MCAN_CCCR_FDOE_ENABLED | MCAN_CCCR_BRSE_ENABLED;
+    MCAN0_REGS->MCAN_CCCR &= ~MCAN_CCCR_INIT_Msk;
     while ((MCAN0_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) == MCAN_CCCR_INIT_Msk)
     {
         /* Wait for configuration complete */
