@@ -64,7 +64,7 @@ uint8_t __attribute__ ((aligned(32)))dstBuffer1[TRANSFER_SIZE] = {};
 uint8_t __attribute__ ((aligned(32)))dstBuffer2[TRANSFER_SIZE] = {};
 
 volatile bool completeStatus = false;
-volatile bool errorStatus = false;
+volatile bool error_status = false;
 volatile uint8_t transfersDone = 0;
 volatile uint32_t timeStamp=0;
 
@@ -84,7 +84,7 @@ void APP_Callback(XDMAC_TRANSFER_EVENT status, uintptr_t context)
     }
     else
     {
-        errorStatus = true;
+        error_status = true;
     }
 }
 
@@ -178,10 +178,10 @@ int main ( void )
                 printf("\n\r Number of Transfer Cycles with Burst Size 16 --> %lu", transferCyclesBurstSize16);
             }
         }
-        else if(errorStatus == true)
+        else if(error_status == true)
         {
             /* Error occurred during the transfers */
-            errorStatus = false;
+            error_status = false;
             printf("\n\r XDMAC Memory Transfer Error !!!");
         }
         else

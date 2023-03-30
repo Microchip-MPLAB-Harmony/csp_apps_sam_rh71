@@ -76,7 +76,7 @@ char __attribute__  ((space(data), section (".ram_nocache"))) echoBuffer[READ_SI
 
 /* Application Status Data */
 char failureMessage[] = "\r\n**** Data transfer error ****\r\n";
-bool errorStatus = false;
+bool error_status = false;
 bool writeStatus = false;
 bool readStatus = false;
 
@@ -95,7 +95,7 @@ void XDMAC_Callback(XDMAC_TRANSFER_EVENT status, uintptr_t context)
     }
     else
     {
-        errorStatus = true;
+        error_status = true;
     }
 }
 
@@ -125,11 +125,11 @@ it echo back ****\r\n**** LED toggles on each time buffer is echoed ****\r\n");
 
     while ( true )
     {
-        if(errorStatus == true)
+        if(error_status == true)
         {
             /* Send error message to console.
              * Using USART directly to since DMA is in error condition */
-            errorStatus = false;
+            error_status = false;
             FLEXCOM1_USART_Write(failureMessage, sizeof(failureMessage));
         }
         else if(readStatus == true)

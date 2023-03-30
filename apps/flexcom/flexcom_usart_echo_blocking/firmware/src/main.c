@@ -62,7 +62,7 @@ char newline[] = "\r\n";
 char errorMessage[] = "\r\n**** FLEXCOM USART error has occurred ****\r\n";
 char receiveBuffer[RX_BUFFER_SIZE];
 uint8_t rxCounter = 0;
-char data = 0;
+char uart_data = 0;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -94,16 +94,16 @@ int main ( void )
         {
             if(FLEXCOM1_USART_ErrorGet() == FLEXCOM_USART_ERROR_NONE)
             {
-                FLEXCOM1_USART_Read(&data, 1);
+                FLEXCOM1_USART_Read(&uart_data, 1);
 
-                if((data == '\n') || (data == '\r'))
+                if((uart_data == '\n') || (uart_data == '\r'))
                 {
                     echoBuffer();
                     LED_Toggle();
                 }
                 else
                 {
-                    receiveBuffer[rxCounter++] = data;
+                    receiveBuffer[rxCounter++] = uart_data;
                     if(rxCounter == RX_BUFFER_SIZE)
                       echoBuffer();
                 }

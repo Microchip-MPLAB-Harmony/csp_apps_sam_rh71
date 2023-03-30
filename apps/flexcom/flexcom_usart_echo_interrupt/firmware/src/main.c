@@ -63,7 +63,7 @@ char receiveBuffer[RX_BUFFER_SIZE];
 char echoBuffer[2*RX_BUFFER_SIZE];
 char messageError[] = "**** FLEXCOM USART error occurred ****\r\n";
 
-bool errorStatus = false;
+bool error_status = false;
 bool writeStatus = false;
 bool readStatus = false;
 
@@ -77,7 +77,7 @@ void APP_ReadCallback(uintptr_t context)
     if(FLEXCOM1_USART_ErrorGet() != FLEXCOM_USART_ERROR_NONE)
     {
         /* ErrorGet clears errors, set error flag to notify console */
-        errorStatus = true;
+        error_status = true;
     }
     else
     {
@@ -104,10 +104,10 @@ int main ( void )
 
     while ( true )
     {
-        if(errorStatus == true)
+        if(error_status == true)
         {
             /* Send error message to console */
-            errorStatus = false;
+            error_status = false;
             FLEXCOM1_USART_Write(&messageError, sizeof(messageError));
         }
         else if(readStatus == true)

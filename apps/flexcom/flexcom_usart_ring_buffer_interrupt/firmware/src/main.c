@@ -60,7 +60,7 @@
 
 uint8_t txBuffer[50];
 uint8_t rxBuffer[10];
-volatile uint32_t nBytesRead = 0;
+volatile uint32_t numBytesRead = 0;
 volatile bool txThresholdEventReceived = false;
 volatile bool rxThresholdEventReceived = false;
 
@@ -79,7 +79,7 @@ void usartReadEventHandler(FLEXCOM_USART_EVENT event, uintptr_t context )
         /* Receiver should atleast have the thershold number of bytes in the ring buffer */
         nBytesAvailable = FLEXCOM1_USART_ReadCountGet();
         
-        nBytesRead += FLEXCOM1_USART_Read((uint8_t*)&rxBuffer[nBytesRead], nBytesAvailable);                          
+        numBytesRead += FLEXCOM1_USART_Read((uint8_t*)&rxBuffer[numBytesRead], nBytesAvailable);                          
     }
 }
 
@@ -160,14 +160,14 @@ int main ( void )
     while(1)
     {
         /* Wait until at-least 10 characters are entered by the user */
-        while (nBytesRead < 10);    
+        while (numBytesRead < 10);    
     
         /* Echo the received data */
-        FLEXCOM1_USART_Write((uint8_t*)rxBuffer, nBytesRead);
+        FLEXCOM1_USART_Write((uint8_t*)rxBuffer, numBytesRead);
         
         FLEXCOM1_USART_Write((uint8_t*)"\r\n>", 3);
 
-        nBytesRead = 0;
+        numBytesRead = 0;
     }
 
     /* Execution should not come here during normal operation */
