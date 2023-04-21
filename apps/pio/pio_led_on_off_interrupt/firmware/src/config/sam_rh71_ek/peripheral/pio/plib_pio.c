@@ -45,10 +45,10 @@
 #include "interrupts.h"
 
 /* Array to store callback objects of each configured interrupt */
-static PIO_PIN_CALLBACK_OBJ portPinCbObj[1];
+volatile static PIO_PIN_CALLBACK_OBJ portPinCbObj[1];
 
 /* Array to store number of interrupts in each PORT Channel + previous interrupt count */
-static uint8_t portNumCb[7 + 1] = { 0, 0, 0, 1, 1, 1, 1, 1, };
+volatile static uint8_t portNumCb[7 + 1] = { 0, 0, 0, 1, 1, 1, 1, 1, };
 
 
 
@@ -66,29 +66,29 @@ void PIO_Initialize ( void )
 {
 
  /* Port B Peripheral function GPIO configuration */
-	PIOB_REGS->PIO_MSKR = 0x80000U;
-	PIOB_REGS->PIO_CFGR = 0x0U;
+   PIOB_REGS->PIO_MSKR = 0x80000U;
+   PIOB_REGS->PIO_CFGR = 0x0U;
 
  /* Port B Pin 19 configuration */
-	PIOB_REGS->PIO_MSKR = 0x80000U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x100U;
+   PIOB_REGS->PIO_MSKR = 0x80000U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x100U;
 
  /* Port B Latch configuration */
-	PIOB_REGS->PIO_CODR = 0x80000U;
+   PIOB_REGS->PIO_CODR = 0x80000U;
 
  /* Port C Peripheral function GPIO configuration */
-	PIOC_REGS->PIO_MSKR = 0x20000000U;
-	PIOC_REGS->PIO_CFGR = 0x0U;
+   PIOC_REGS->PIO_MSKR = 0x20000000U;
+   PIOC_REGS->PIO_CFGR = 0x0U;
 
  /* Port C Pin 29 configuration */
-	PIOC_REGS->PIO_MSKR = 0x20000000U;
-	PIOC_REGS->PIO_CFGR = (PIOC_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x3000200U;
+   PIOC_REGS->PIO_MSKR = 0x20000000U;
+   PIOC_REGS->PIO_CFGR = (PIOC_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x3000200U;
 
  /* Port C Latch configuration */
-	PIOC_REGS->PIO_CODR = 0x20000000U;
+   PIOC_REGS->PIO_CODR = 0x20000000U;
 
     /* Clear the ISR register */
-	(uint32_t)PIOC_REGS->PIO_ISR;
+   (uint32_t)PIOC_REGS->PIO_ISR;
 
 
 
@@ -97,7 +97,7 @@ void PIO_Initialize ( void )
     /* Initialize Interrupt Pin data structures */
     portPinCbObj[0 + 0].pin = PIO_PIN_PC29;
     
-    for(i=0U; i<1U; i++)
+    for(i = 0U; i < 1U; i++)
     {
         portPinCbObj[i].callback = NULL;
     }
@@ -342,21 +342,26 @@ bool PIO_PinInterruptCallbackRegister(
   Remarks:
     User should not call this function.
 */
-void PIOC_InterruptHandler(void)
+void __attribute__((used)) PIOC_InterruptHandler(void)
 {
-    uint32_t status = 0U;
+    uint32_t status;
     uint8_t j;
+    /* Additional local variable to prevent MISRA C violations (Rule 13.x) */
+    PIO_PIN pin;
+    uintptr_t context;
 
-    status  = PIOC_REGS->PIO_ISR;
+    status = PIOC_REGS->PIO_ISR;
     status &= PIOC_REGS->PIO_IMR;
 
-	for( j = 0U; j < 1U; j++ )
-	{
-		if(((status & (1UL << (portPinCbObj[j].pin & 0x1FU))) != 0U) && (portPinCbObj[j].callback != NULL))
-		{
-			portPinCbObj[j].callback ( portPinCbObj[j].pin, portPinCbObj[j].context );
-		}
-	}
+    for( j = 0U; j < 1U; j++ )
+    {
+        pin = portPinCbObj[j].pin;
+        context = portPinCbObj[j].context;
+        if((portPinCbObj[j].callback != NULL) && ((status & (1UL << (pin & 0x1FU))) != 0U))
+        {
+            portPinCbObj[j].callback ( portPinCbObj[j].pin, context);
+        }
+    }
 }
 
 /*******************************************************************************
