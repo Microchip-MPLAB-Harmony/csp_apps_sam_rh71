@@ -1,4 +1,4 @@
-"Pin Number","Pin ID","Custom Name","Function","Direction","Latch","Open Drain","PIO Interrupt","Pull Up","Pull Down","Glitch/Debounce Filter",Drive Strength
+Pin Number,Pin ID,Custom Name,Function,Direction,Latch,Open Drain,PIO Interrupt,Pull Up,Pull Down,Glitch/Debounce Filter,Drive Strength
 3,PF29,,FLEXCOM1_IO1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 4,PF30,,FLEXCOM1_IO0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 9,PA0,,Available,In,,,,,,,
