@@ -73,6 +73,8 @@
 // Section: Data Types
 // *****************************************************************************
 // *****************************************************************************
+#define MCAN0_CLOCK_FREQUENCY    50000000U
+
 /* MCAN0 Message RAM Configuration Size */
 #define MCAN0_RX_FIFO0_ELEMENT_SIZE       72U
 #define MCAN0_RX_FIFO0_SIZE               72U
@@ -116,6 +118,9 @@ bool MCAN0_ExtendedFilterElementSet(uint8_t filterNumber, mcan_xidfe_registers_t
 bool MCAN0_ExtendedFilterElementGet(uint8_t filterNumber, mcan_xidfe_registers_t *extMsgIDFilterElement);
 void MCAN0_SleepModeEnter(void);
 void MCAN0_SleepModeExit(void);
+bool MCAN0_BitTimingCalculationGet(MCAN_BIT_TIMING_SETUP *setup, MCAN_BIT_TIMING *bitTiming);
+bool MCAN0_BitTimingSet(MCAN_BIT_TIMING *bitTiming);
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
     }
