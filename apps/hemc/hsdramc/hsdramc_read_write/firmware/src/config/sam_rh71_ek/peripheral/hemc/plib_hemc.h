@@ -34,8 +34,10 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-#ifndef _PLIB_HEMC_H
-#define _PLIB_HEMC_H
+#ifndef PLIB_HEMC_H
+#define PLIB_HEMC_H
+
+#include <stdbool.h>
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -78,16 +80,16 @@ typedef enum
     This data type identifies the HEMC HECC status
 */
 
-#define    HEMC_HECC_STATUS_MEM_FIX  HEMC_HECC_SR_MEM_FIX_Msk,
-#define    HEMC_HECC_STATUS_CPT_FIX_MASK   HEMC_HECC_SR_CPT_FIX_Msk,
-#define    HEMC_HECC_STATUS_OVER_FIX   HEMC_HECC_SR_OVER_FIX_Msk,
-#define    HEMC_HECC_STATUS_MEM_NOFIX   HEMC_HECC_SR_MEM_NOFIX_Msk,
-#define    HEMC_HECC_STATUS_CPT_NOFIX_MASK   HEMC_HECC_SR_CPT_NOFIX_Msk,
-#define    HEMC_HECC_STATUS_OVER_NOFIX   HEMC_HECC_SR_OVER_NOFIX_Msk,
-#define    HEMC_HECC_STATUS_HES_MASK   HEMC_HECC_SR_HES_Msk,
-#define    HEMC_HECC_STATUS_TYPE   HEMC_HECC_SR_TYPE_Msk,
+#define    HEMC_HECC_STATUS_MEM_FIX  HEMC_HECC_SR_MEM_FIX_Msk
+#define    HEMC_HECC_STATUS_CPT_FIX_MASK   HEMC_HECC_SR_CPT_FIX_Msk
+#define    HEMC_HECC_STATUS_OVER_FIX   HEMC_HECC_SR_OVER_FIX_Msk
+#define    HEMC_HECC_STATUS_MEM_NOFIX   HEMC_HECC_SR_MEM_NOFIX_Msk
+#define    HEMC_HECC_STATUS_CPT_NOFIX_MASK   HEMC_HECC_SR_CPT_NOFIX_Msk
+#define    HEMC_HECC_STATUS_OVER_NOFIX   HEMC_HECC_SR_OVER_NOFIX_Msk
+#define    HEMC_HECC_STATUS_HES_MASK   HEMC_HECC_SR_HES_Msk
+#define    HEMC_HECC_STATUS_TYPE   HEMC_HECC_SR_TYPE_Msk
 /* Force the compiler to reserve 32-bit memory for enum */
-#define    HEMC_HECC_STATUS_INVALID   0xFFFFFFFF
+#define    HEMC_HECC_STATUS_INVALID   0xFFFFFFFFU
 
 typedef uint32_t HEMC_HECC_STATUS;
 
@@ -139,7 +141,13 @@ typedef struct
 // Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
+void HSDRAMC_Initialize( void );
+
 void HEMC_Initialize( void );
+
+bool HEMC_DisableECC(uint8_t chipSelect);
+
+bool HEMC_EnableECC(uint8_t chipSelect);
 
 HEMC_HECC_STATUS HEMC_HeccGetStatus(void);
 
@@ -149,6 +157,135 @@ void HEMC_HeccResetCounters(void);
 
 
 
+// *****************************************************************************
+/* Function:
+    void HEMC_Write8(uint32_t dataAddress, uint8_t data)
+
+   Summary:
+    Writes 8 bit data at given address.
+
+   Precondition:
+    None.
+
+   Parameters:
+    dataAddress - Address were data is written.
+    data - data written.
+
+   Returns:
+    None
+*/
+static inline void HEMC_Write8(uint32_t dataAddress, uint8_t data)
+{
+    *((volatile uint8_t *)dataAddress) = data;
+}
+
+// *****************************************************************************
+/* Function:
+    void HEMC_Write16(uint32_t dataAddress, uint16_t data)
+
+   Summary:
+    Writes 16 bit data at given address.
+
+   Precondition:
+    None.
+
+   Parameters:
+    dataAddress - Address were data is written.
+    data - data written.
+
+   Returns:
+    None
+*/
+static inline void HEMC_Write16(uint32_t dataAddress, uint16_t data)
+{
+    *((volatile uint16_t *)dataAddress) = data;
+}
+
+// *****************************************************************************
+/* Function:
+    void HEMC_Write32(uint32_t dataAddress, uint32_t data)
+
+   Summary:
+    Writes 32 bit data at given address.
+
+   Precondition:
+    None.
+
+   Parameters:
+    dataAddress - Address were data is written.
+    data - data written.
+
+   Returns:
+    None
+*/
+static inline void HEMC_Write32(uint32_t dataAddress, uint32_t data)
+{
+    *((volatile uint32_t *)dataAddress) = data;
+}
+
+// *****************************************************************************
+/* Function:
+    void HEMC_Read8(uint32_t dataAddress)
+
+   Summary:
+    Read 8 bit data at given address.
+
+   Precondition:
+    None.
+
+   Parameters:
+    dataAddress - Address were data is written.
+
+   Returns:
+    Read data.
+*/
+static inline uint8_t HEMC_Read8(uint32_t dataAddress)
+{
+    return *((volatile uint8_t *)dataAddress);
+}
+
+// *****************************************************************************
+/* Function:
+    void HEMC_Read16(uint32_t dataAddress)
+
+   Summary:
+    Read 16 bit data at given address.
+
+   Precondition:
+    None.
+
+   Parameters:
+    dataAddress - Address were data is written.
+
+   Returns:
+    Read data.
+*/
+static inline uint16_t HEMC_Read16(uint32_t dataAddress)
+{
+    return *((volatile uint16_t *)dataAddress);
+}
+
+// *****************************************************************************
+/* Function:
+    void HEMC_Read32(uint32_t dataAddress)
+
+   Summary:
+    Read 32 bit data at given address.
+
+   Precondition:
+    None.
+
+   Parameters:
+    dataAddress - Address were data is written.
+
+   Returns:
+    Read data.
+*/
+static inline uint32_t HEMC_Read32(uint32_t dataAddress)
+{
+    return *((volatile uint32_t *)dataAddress);
+}
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -157,7 +294,7 @@ void HEMC_HeccResetCounters(void);
 #endif
 // DOM-IGNORE-END
 
-#endif // _PLIB_HEMC_H
+#endif // PLIB_HEMC_H
 /*******************************************************************************
  End of File
 */

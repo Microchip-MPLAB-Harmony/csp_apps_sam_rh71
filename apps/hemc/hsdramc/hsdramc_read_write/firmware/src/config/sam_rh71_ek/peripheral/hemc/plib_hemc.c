@@ -53,16 +53,18 @@
 // *****************************************************************************
 // *****************************************************************************
 
-void SW_DelayUs(uint32_t delay)
+static void SW_DelayUs(uint32_t delay)
 {
     uint32_t i, count;
 
     /* delay * (CPU_FREQ/1000000) / 6 */
-    count = delay *  (100000000/1000000)/6;
+    count = delay *  (100000000U/1000000U)/6U;
 
     /* 6 CPU cycles per iteration */
     for (i = 0; i < count; i++)
+    {
         __NOP();
+    }
 }
 
 
@@ -111,7 +113,7 @@ void HSDRAMC_Initialize( void )
     HSDRAMC_REGS->HSDRAMC_MR = HSDRAMC_MR_MODE_AUTO_REFRESH;
     HSDRAMC_REGS->HSDRAMC_MR;
     __DMB();
-    for (i = 0; i < 8; i++)
+    for (i = 0; i < 8U; i++)
     {
         *pSdramBaseAddress = i;
     }
@@ -139,15 +141,13 @@ void HSDRAMC_Initialize( void )
 
 }
 
-void HSMC_Initialize( void )
-{
 
 
 
 
 
 
-}
+
 void HEMC_Initialize( void )
 {
     /* Read NCS0 Pin configuration for HECC */
@@ -168,12 +168,174 @@ void HEMC_Initialize( void )
                               HEMC_CR_NCS4_ADDBASE(0x1000) |
                               HEMC_CR_NCS4_BANKSIZE(0xC);
     HSDRAMC_Initialize();
-    HSMC_Initialize();
 
 
 
 
 } /* HEMC_Initialize */
+
+// *****************************************************************************
+/* Function:
+    void HEMC_DisableECC(uint8_t chipSelect);
+
+   Summary:
+    Disable the ECC for the given chip select.
+
+   Precondition:
+    None.
+
+   Parameters:
+    chipSelect - The chip select for which ECC is disabled.
+
+   Returns:
+    True if ECC was disable for this chip select, False otherwise.
+*/
+bool HEMC_DisableECC(uint8_t chipSelect)
+{
+    bool ret = false;
+    volatile uint32_t* pHemcCrNcsReg = NULL;
+    uint32_t hemcCrEnableMask = 0;
+    bool DisEccCheck = true;
+
+    switch (chipSelect)
+    {
+        case 0:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS0);
+            hemcCrEnableMask = HEMC_CR_NCS0_ECC_ENABLE_Msk;
+            break;
+        }
+        case 1:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS1);
+            hemcCrEnableMask = HEMC_CR_NCS1_ECC_ENABLE_Msk;
+            break;
+        }
+        case 2:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS2);
+            hemcCrEnableMask = HEMC_CR_NCS2_ECC_ENABLE_Msk;
+            break;
+        }
+        case 3:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS3);
+            hemcCrEnableMask = HEMC_CR_NCS3_ECC_ENABLE_Msk;
+            break;
+        }
+        case 4:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS4);
+            hemcCrEnableMask = HEMC_CR_NCS4_ECC_ENABLE_Msk;
+            break;
+        }
+        case 5:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS5);
+            hemcCrEnableMask = HEMC_CR_NCS5_ECC_ENABLE_Msk;
+            break;
+        }
+        default:
+            DisEccCheck = false;
+            break;
+    }
+
+    if( DisEccCheck == false)
+    {
+        return DisEccCheck;
+    }
+    if ( (*pHemcCrNcsReg & hemcCrEnableMask) == hemcCrEnableMask)
+    {
+        *pHemcCrNcsReg &= ~(hemcCrEnableMask);
+        while((*pHemcCrNcsReg & hemcCrEnableMask) == hemcCrEnableMask)
+        {
+            /* Nothing to do */
+        }
+        ret = true;
+    }
+
+    return ret;
+}
+
+// *****************************************************************************
+/* Function:
+    void HEMC_EnableECC(uint8_t chipSelect);
+
+   Summary:
+    Enable the ECC for the given chip select.
+
+   Precondition:
+    None.
+
+   Parameters:
+    None.
+
+   Returns:
+    True if ECC was enable for this chip select, False otherwise.
+*/
+bool HEMC_EnableECC(uint8_t chipSelect)
+{
+    bool ret = false, EnEccCheck = true;
+    volatile uint32_t* pHemcCrNcsReg = NULL;
+    uint32_t hemcCrEnableMask = 0;
+
+    switch (chipSelect)
+    {
+        case 0:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS0);
+            hemcCrEnableMask = HEMC_CR_NCS0_ECC_ENABLE_Msk;
+            break;
+        }
+        case 1:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS1);
+            hemcCrEnableMask = HEMC_CR_NCS1_ECC_ENABLE_Msk;
+            break;
+        }
+        case 2:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS2);
+            hemcCrEnableMask = HEMC_CR_NCS2_ECC_ENABLE_Msk;
+            break;
+        }
+        case 3:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS3);
+            hemcCrEnableMask = HEMC_CR_NCS3_ECC_ENABLE_Msk;
+            break;
+        }
+        case 4:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS4);
+            hemcCrEnableMask = HEMC_CR_NCS4_ECC_ENABLE_Msk;
+            break;
+        }
+        case 5:
+        {
+            pHemcCrNcsReg = &(HEMC_REGS->HEMC_CR_NCS5);
+            hemcCrEnableMask = HEMC_CR_NCS5_ECC_ENABLE_Msk;
+            break;
+        }
+        default:
+             EnEccCheck = false;
+             break;
+    }
+
+    if( EnEccCheck == false)
+    {
+        return EnEccCheck;
+    }
+
+    *pHemcCrNcsReg |= hemcCrEnableMask;
+    while((*pHemcCrNcsReg & hemcCrEnableMask) != hemcCrEnableMask)
+    {
+        /* Nothing to do */
+    }
+    ret = true;
+
+    return ret;
+}
 
 // *****************************************************************************
 /* Function:
