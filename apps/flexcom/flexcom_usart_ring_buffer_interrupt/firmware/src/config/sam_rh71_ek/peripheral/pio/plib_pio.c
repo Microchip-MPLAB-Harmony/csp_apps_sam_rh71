@@ -64,8 +64,8 @@ void PIO_Initialize ( void )
 
 
  /* Port F Peripheral function A configuration */
-	PIOF_REGS->PIO_MSKR = 0x60000000U;
-	PIOF_REGS->PIO_CFGR = 0x1U;
+   PIOF_REGS->PIO_MSKR = 0x60000000U;
+   PIOF_REGS->PIO_CFGR = 0x1U;
 
 
 
