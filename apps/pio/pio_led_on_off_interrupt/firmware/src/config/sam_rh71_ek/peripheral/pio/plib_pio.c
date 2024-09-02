@@ -82,7 +82,7 @@ void PIO_Initialize ( void )
 
  /* Port C Pin 29 configuration */
    PIOC_REGS->PIO_MSKR = 0x20000000U;
-   PIOC_REGS->PIO_CFGR = (PIOC_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x3000200U;
+   PIOC_REGS->PIO_CFGR = (PIOC_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x2000200U;
 
  /* Port C Latch configuration */
    PIOC_REGS->PIO_CODR = 0x20000000U;

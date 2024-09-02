@@ -86,7 +86,7 @@ Pin Number,Pin ID,Custom Name,Function,Direction,Latch,Open Drain,PIO Interrupt,
 131,PC26,,Available,In,,,,,,,
 132,PC27,,Available,In,,,,,,,
 133,PC28,,Available,In,,,,,,,
-134,PC29,SWITCH,GPIO,In,n/a,No,Low Level,Yes,No,Disabled,0x0
+134,PC29,SWITCH,GPIO,In,n/a,No,Both Edge,Yes,No,Disabled,0x0
 135,PC30,,Available,In,,,,,,,
 136,PC31,,Available,In,,,,,,,
 137,PE12,,Available,In,,,,,,,
