@@ -80,20 +80,50 @@ void MPU_Initialize(void)
     MPU->RASR = MPU_REGION_SIZE(27U) | MPU_RASR_AP(MPU_RASR_AP_READWRITE_Val) | MPU_ATTR_STRONGLY_ORDERED \
                 | MPU_ATTR_ENABLE  ;
 
-    /* Region 5 Name: QSPI, Base Address: 0x18000000, Size: 256MB  */
+    /* Region 5 Name: QSPI, Base Address: 0x18000000, Size: 128MB  */
     MPU->RBAR = MPU_REGION(5U, 0x18000000U);
-    MPU->RASR = MPU_REGION_SIZE(27U) | MPU_RASR_AP(MPU_RASR_AP_READWRITE_Val) | MPU_ATTR_STRONGLY_ORDERED \
+    MPU->RASR = MPU_REGION_SIZE(26U) | MPU_RASR_AP(MPU_RASR_AP_READWRITE_Val) | MPU_ATTR_STRONGLY_ORDERED \
                 | MPU_ATTR_ENABLE  ;
 
+    /* Disable Region 6*/
+    MPU->RBAR = MPU_RBAR_REGION(6U) | MPU_RBAR_VALID_Msk;
+    MPU->RASR &= ~MPU_ATTR_ENABLE;
 
+    /* Disable Region 7*/
+    MPU->RBAR = MPU_RBAR_REGION(7U) | MPU_RBAR_VALID_Msk;
+    MPU->RASR &= ~MPU_ATTR_ENABLE;
 
+    /* Disable Region 8*/
+    MPU->RBAR = MPU_RBAR_REGION(8U) | MPU_RBAR_VALID_Msk;
+    MPU->RASR &= ~MPU_ATTR_ENABLE;
 
+    /* Disable Region 9*/
+    MPU->RBAR = MPU_RBAR_REGION(9U) | MPU_RBAR_VALID_Msk;
+    MPU->RASR &= ~MPU_ATTR_ENABLE;
 
+    /* Disable Region 10*/
+    MPU->RBAR = MPU_RBAR_REGION(10U) | MPU_RBAR_VALID_Msk;
+    MPU->RASR &= ~MPU_ATTR_ENABLE;
 
+    /* Disable Region 11*/
+    MPU->RBAR = MPU_RBAR_REGION(11U) | MPU_RBAR_VALID_Msk;
+    MPU->RASR &= ~MPU_ATTR_ENABLE;
 
+    /* Disable Region 12*/
+    MPU->RBAR = MPU_RBAR_REGION(12U) | MPU_RBAR_VALID_Msk;
+    MPU->RASR &= ~MPU_ATTR_ENABLE;
 
+    /* Disable Region 13*/
+    MPU->RBAR = MPU_RBAR_REGION(13U) | MPU_RBAR_VALID_Msk;
+    MPU->RASR &= ~MPU_ATTR_ENABLE;
 
+    /* Disable Region 14*/
+    MPU->RBAR = MPU_RBAR_REGION(14U) | MPU_RBAR_VALID_Msk;
+    MPU->RASR &= ~MPU_ATTR_ENABLE;
 
+    /* Disable Region 15*/
+    MPU->RBAR = MPU_RBAR_REGION(15U) | MPU_RBAR_VALID_Msk;
+    MPU->RASR &= ~MPU_ATTR_ENABLE;
 
     /* Enable Memory Management Fault */
     SCB->SHCSR |= (SCB_SHCSR_MEMFAULTENA_Msk);
