@@ -132,8 +132,8 @@ void XDMAC_Initialize( void )
                                             XDMAC_CC_SWREQ_HWR_CONNECTED |
                                             XDMAC_CC_DAM_FIXED_AM |
                                             XDMAC_CC_SAM_INCREMENTED_AM |
-                                            XDMAC_CC_SIF_AHB_IF0 |
-                                            XDMAC_CC_DIF_AHB_IF1 |
+                                            XDMAC_CC_SIF_AHB_IF1 |
+                                            XDMAC_CC_DIF_AHB_IF0 |
                                             XDMAC_CC_DWIDTH_BYTE |
                                             XDMAC_CC_CSIZE_CHK_1 |\
                                             XDMAC_CC_MBSIZE_SINGLE);
@@ -148,8 +148,8 @@ void XDMAC_Initialize( void )
                                             XDMAC_CC_SWREQ_HWR_CONNECTED |
                                             XDMAC_CC_DAM_INCREMENTED_AM |
                                             XDMAC_CC_SAM_FIXED_AM |
-                                            XDMAC_CC_SIF_AHB_IF1 |
-                                            XDMAC_CC_DIF_AHB_IF0 |
+                                            XDMAC_CC_SIF_AHB_IF0 |
+                                            XDMAC_CC_DIF_AHB_IF1 |
                                             XDMAC_CC_DWIDTH_BYTE |
                                             XDMAC_CC_CSIZE_CHK_1 |\
                                             XDMAC_CC_MBSIZE_SINGLE);
