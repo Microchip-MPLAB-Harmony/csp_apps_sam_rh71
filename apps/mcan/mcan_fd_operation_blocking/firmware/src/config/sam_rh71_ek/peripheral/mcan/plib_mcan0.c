@@ -723,6 +723,7 @@ void MCAN0_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress)
         (SFR_REGS->SFR_CAN0 & ~SFR_CAN0_EXT_MEM_ADDR_Msk) |
          SFR_CAN0_EXT_MEM_ADDR(((uint32_t)msgRAMConfigBaseAddr >> 16));
 
+
     /* Reference offset variable once to remove warning about the variable not being used after increment */
     (void)offset;
 

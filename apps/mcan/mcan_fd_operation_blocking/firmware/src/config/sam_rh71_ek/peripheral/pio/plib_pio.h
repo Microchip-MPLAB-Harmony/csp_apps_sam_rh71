@@ -109,21 +109,21 @@
 
 
 /*** Macros for STANDBY pin ***/
-#define STANDBY_Set()               (PIOC_REGS->PIO_SODR = (1<<7))
-#define STANDBY_Clear()             (PIOC_REGS->PIO_CODR = (1<<7))
+#define STANDBY_Set()               (PIOC_REGS->PIO_SODR = ((uint32_t)1U<<7U))
+#define STANDBY_Clear()             (PIOC_REGS->PIO_CODR = ((uint32_t)1U<<7U))
 #define STANDBY_Toggle()            do {\
-                                            PIOC_REGS->PIO_MSKR = (1<<7); \
-                                            PIOC_REGS->PIO_ODSR ^= (1<<7);\
+                                            PIOC_REGS->PIO_MSKR = ((uint32_t)1U<<7U); \
+                                            PIOC_REGS->PIO_ODSR ^= ((uint32_t)1U<<7U);\
                                         } while (0)
 #define STANDBY_OutputEnable()      do {\
-                                            PIOC_REGS->PIO_MSKR = (1<<7); \
-                                            PIOC_REGS->PIO_CFGR |=(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOC_REGS->PIO_MSKR = ((uint32_t)1U<<7U); \
+                                            PIOC_REGS->PIO_CFGR |=((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         }while(0)
 #define STANDBY_InputEnable()       do { \
-                                            PIOC_REGS->PIO_MSKR = (1<<7); \
-                                            PIOC_REGS->PIO_CFGR &= ~(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOC_REGS->PIO_MSKR = ((uint32_t)1U<<7U); \
+                                            PIOC_REGS->PIO_CFGR &= ~((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         } while (0)
-#define STANDBY_Get()               ((PIOC_REGS->PIO_PDSR >> 7) & 0x1)
+#define STANDBY_Get()               ((PIOC_REGS->PIO_PDSR >> 7U) & 0x1U)
 #define STANDBY_PIN                  PIO_PIN_PC7
 // *****************************************************************************
 /* PIO Ports
