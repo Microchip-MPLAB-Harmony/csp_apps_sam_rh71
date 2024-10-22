@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC32 Compiler -  ATSAMRH71F20C linker script
  * 
- * Copyright (c) 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -99,6 +99,7 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
 #endif
 
 
+
 /*************************************************************************
  * Memory-Region Definitions
  * The MEMORY command describes the location and size of blocks of memory
@@ -110,10 +111,6 @@ MEMORY
   ram (WX!R) : ORIGIN = RAM_ORIGIN, LENGTH = RAM_LENGTH
  itcm (WX) : ORIGIN = ITCM_ORIGIN, LENGTH = __XC32_ITCM_LENGTH
 dtcm (WX!R) : ORIGIN = DTCM_ORIGIN, LENGTH = __XC32_DTCM_LENGTH
-  config_D0000000 : ORIGIN = 0xD0000000, LENGTH = 0x4
-  config_D0000008 : ORIGIN = 0xD0000008, LENGTH = 0x4
-  config_D0000004 : ORIGIN = 0xD0000004, LENGTH = 0x4
-  config_D000000C : ORIGIN = 0xD000000C, LENGTH = 0x4
 
 }
 /*************************************************************************
@@ -124,6 +121,9 @@ dtcm (WX!R) : ORIGIN = DTCM_ORIGIN, LENGTH = __XC32_DTCM_LENGTH
  * 
  * CODE_REGION defaults to 'rom', if rom is present (non-zero length),
  * and 'ram' otherwise.
+ * N.B. The BFA will still allocate code to any MEMORY named 'rom' regardless
+ * of CODE_REGION's value. If you wish to use rom for something else please
+ * rename the MEMORY entry.
  * DATA_REGION defaults to 'ram', which must be present.
  * VECTOR_REGION defaults to CODE_REGION, unless 'boot_rom' is present.
  */
@@ -149,18 +149,6 @@ __ram_end = ORIGIN(ram) + LENGTH(ram);
  *************************************************************************/
 SECTIONS
 {
-    .config_D0000000 : {
-      KEEP(*(.config_D0000000))
-    } > config_D0000000
-    .config_D0000008 : {
-      KEEP(*(.config_D0000008))
-    } > config_D0000008
-    .config_D0000004 : {
-      KEEP(*(.config_D0000004))
-    } > config_D0000004
-    .config_D000000C : {
-      KEEP(*(.config_D000000C))
-    } > config_D000000C
 
     /*
      * The linker moves the .vectors section into itcm when itcm is
