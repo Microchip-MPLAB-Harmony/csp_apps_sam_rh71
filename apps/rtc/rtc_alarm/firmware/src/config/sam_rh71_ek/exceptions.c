@@ -57,7 +57,6 @@
 
 typedef void(*advanced_handler_t)(uint32_t * fault_args, unsigned int lr_value);
 
-
 static inline void call_advanced_exception_handler(advanced_handler_t pHandler)
 {
     asm volatile (
@@ -377,6 +376,11 @@ static void __attribute__((noreturn)) ProcessUsageFaultException(uint32_t * faul
 // Section: Exception Handling Routine
 // *****************************************************************************
 // *****************************************************************************
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 8.6 might be violated here if the users provide a strong
+   implementations to these weak handler functions. Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1
+*/
+
 
 /* Brief default interrupt handlers for core IRQs.*/
 void __attribute__((noreturn, weak)) NonMaskableInt_Handler(void)
@@ -414,6 +418,8 @@ void __attribute__((used)) UsageFault_Handler(void)
     call_advanced_exception_handler(ProcessUsageFaultException);
 }
  
+/* MISRAC 2012 deviation block end for rule 8.6 */
+
 /*******************************************************************************
  End of File
  */
