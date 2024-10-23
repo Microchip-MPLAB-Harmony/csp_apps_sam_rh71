@@ -189,12 +189,12 @@
         <targetPluginBoard/>
         <platformTool>j32</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.21</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMRH71_DFP" vendor="Microchip" version="2.5.142"/>
+        <pack name="SAMRH71_DFP" vendor="Microchip" version="2.6.253"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

@@ -109,39 +109,39 @@
 
 
 /*** Macros for LED pin ***/
-#define LED_Set()               (PIOB_REGS->PIO_SODR = (1<<19))
-#define LED_Clear()             (PIOB_REGS->PIO_CODR = (1<<19))
+#define LED_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<19U))
+#define LED_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<19U))
 #define LED_Toggle()            do {\
-                                            PIOB_REGS->PIO_MSKR = (1<<19); \
-                                            PIOB_REGS->PIO_ODSR ^= (1<<19);\
+                                            PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<19U); \
+                                            PIOB_REGS->PIO_ODSR ^= ((uint32_t)1U<<19U);\
                                         } while (0)
 #define LED_OutputEnable()      do {\
-                                            PIOB_REGS->PIO_MSKR = (1<<19); \
-                                            PIOB_REGS->PIO_CFGR |=(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<19U); \
+                                            PIOB_REGS->PIO_CFGR |=((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         }while(0)
 #define LED_InputEnable()       do { \
-                                            PIOB_REGS->PIO_MSKR = (1<<19); \
-                                            PIOB_REGS->PIO_CFGR &= ~(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<19U); \
+                                            PIOB_REGS->PIO_CFGR &= ~((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         } while (0)
-#define LED_Get()               ((PIOB_REGS->PIO_PDSR >> 19) & 0x1)
+#define LED_Get()               ((PIOB_REGS->PIO_PDSR >> 19U) & 0x1U)
 #define LED_PIN                  PIO_PIN_PB19
 
 /*** Macros for SWITCH pin ***/
-#define SWITCH_Set()               (PIOC_REGS->PIO_SODR = (1<<29))
-#define SWITCH_Clear()             (PIOC_REGS->PIO_CODR = (1<<29))
+#define SWITCH_Set()               (PIOC_REGS->PIO_SODR = ((uint32_t)1U<<29U))
+#define SWITCH_Clear()             (PIOC_REGS->PIO_CODR = ((uint32_t)1U<<29U))
 #define SWITCH_Toggle()            do {\
-                                            PIOC_REGS->PIO_MSKR = (1<<29); \
-                                            PIOC_REGS->PIO_ODSR ^= (1<<29);\
+                                            PIOC_REGS->PIO_MSKR = ((uint32_t)1U<<29U); \
+                                            PIOC_REGS->PIO_ODSR ^= ((uint32_t)1U<<29U);\
                                         } while (0)
 #define SWITCH_OutputEnable()      do {\
-                                            PIOC_REGS->PIO_MSKR = (1<<29); \
-                                            PIOC_REGS->PIO_CFGR |=(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOC_REGS->PIO_MSKR = ((uint32_t)1U<<29U); \
+                                            PIOC_REGS->PIO_CFGR |=((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         }while(0)
 #define SWITCH_InputEnable()       do { \
-                                            PIOC_REGS->PIO_MSKR = (1<<29); \
-                                            PIOC_REGS->PIO_CFGR &= ~(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOC_REGS->PIO_MSKR = ((uint32_t)1U<<29U); \
+                                            PIOC_REGS->PIO_CFGR &= ~((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         } while (0)
-#define SWITCH_Get()               ((PIOC_REGS->PIO_PDSR >> 29) & 0x1)
+#define SWITCH_Get()               ((PIOC_REGS->PIO_PDSR >> 29U) & 0x1U)
 #define SWITCH_PIN                  PIO_PIN_PC29
 // *****************************************************************************
 /* PIO Ports
