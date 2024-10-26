@@ -1,10 +1,4 @@
-﻿---
-title: Harmony 3 peripheral library application examples for SAM RH71 family
-nav_order: 1
-has_children: true
-has_toc: false
----
-[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
+[![MCHP](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)](https://www.microchip.com)
 
 # Harmony 3 peripheral library application examples for SAM RH71 family
 
@@ -19,53 +13,29 @@ MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded
 This repository contains the MPLAB® Harmony 3 peripheral library application examples for SAM RH71 family
 
 - [Release Notes](release_notes.md)
-- [MPLAB® Harmony License](mplab_harmony_license.md)
+- [Microchip SLA](Microchip_SLA001.md)
 
 To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_rh71) and then click **Clone** button to clone this repository or download as zip file.
-This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
+This content can also be downloaded using MCC content manager available as part of the MPLAB® X IDE.
 
 ## Contents Summary
 
 | Folder     | Description                             |
-| ---        | ---                                     |
+|:----------:|:---------------------------------------:|
 | apps       | Contains peripheral library example applications |
-| docs       | Contains documentation in html format for offline viewing (to be used only after cloning this repository onto a local machine). Use [github pages](https://microchip-mplab-harmony.github.io/csp_apps_sam_rh71/) of this repository for viewing it online. |
 
 ## Code Examples
 
-The following applications are provided to demonstrate the typical or interesting usage models of one or more peripheral libraries.
+Click [here](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=CSP_APPS_SAM_RH71_INTRODUCTION&redirect=true) to view the online documentation of code examples hosted in this repository.
 
-| Name | Description |
-| ---- | ----------- |
-| [Cache maintenance](apps/cache/cache_maintenance/readme.md) | This example shows cache maintenance operation by cleaning and invalidating the cache for the DMA buffers located in the cacheable SRAM region |
-| [Clock configuration](apps/clock/clock_config/readme.md) | This example application shows how to configure the clock system to run the device at maximum frequency. It also outputs a prescaled clock signal on a GPIO pin for measurement and verification |
-| [FLEXCOM SPI EEPROM read write](apps/flexcom/flexcom_spi_eeprom/readme.md) | This example application shows how to use the flexcom module in SPI mode |
-| [FLEXCOM TWI (I2C) EEPROM](apps/flexcom/flexcom_twi_eeprom/readme.md) | This example application shows how to use the flexcom module in TWI mode |
-| [FLEXCOM USART blocking](apps/flexcom/flexcom_usart_echo_blocking/readme.md) | This example application shows how to use the flexcom module in USART mode |
-| [FLEXCOM USART interrupt](apps/flexcom/flexcom_usart_echo_interrupt/readme.md) | This example application shows how to use the flexcom module in USART mode |
-| [FLEXCOM USART ring buffer](apps/flexcom/flexcom_usart_ring_buffer_interrupt/readme.md) | This example application demonstrates how to use the FLEXCOM peripheral in USART ring buffer mode |
-| [HEFC flash read write](apps/hefc/flash_read_write/readme.md) | This example application demonstrates how to use the HEFC to erase and program the internal Flash memory |
-| [HSDRAMC read write](apps/hemc/hsdramc/hsdramc_read_write/readme.md) | This example application demonstrates how to configure the HSDRAM interface to write and read from the SDRAM memory |
-| [MCAN FD blocking](apps/mcan/mcan_fd_operation_blocking/readme.md) | This example shows how to use the MCAN module to transmit and receive CAN FD messages in polling mode |
-| [MCAN FD interrupt](apps/mcan/mcan_fd_operation_interrupt_timestamp/readme.md) | This example shows how to use the MCAN module to transmit and receive CAN FD messages in interrupt mode |
-| [MCAN blocking](apps/mcan/mcan_normal_operation_blocking/readme.md) | This example shows how to use the MCAN module to transmit and receive CAN messages in polling mode |
-| [MPU cache coherency](apps/mpu/mpu_coherent_region/readme.md) | This example shows how to maintain cache coherency by allocating DMA buffers in non-cacheable SRAM region defined by MPU |
-| [PIO interrupt](apps/pio/pio_led_on_off_interrupt/readme.md) | This example shows how to generate GPIO interrupt on switch press and release, and indicate the switch status using the LED |
-| [PIO polling](apps/pio/pio_led_on_off_polling/readme.md) | This example shows how to poll the switch input, and indicate the switch status using the LED |
-| [PWM Generation](apps/pwm/pwm_synchronous_channels/readme.md) | This example shows how to use the PWM peripheral to generate 3-phase PWM signals with dead time |
-| [RTC alarm interrupt](apps/rtc/rtc_alarm/readme.md) | This example shows how to use the RTC to configure the time and generate the alarm |
-| [RTT periodic interrupt](apps/rtt/rtt_periodic_timeout/readme.md) | This example shows how to use the RTT to generate periodic interrupts |
-| [Systick periodic interrupt](apps/systick/systick_periodic_timeout/readme.md) | This example shows how to use the SysTick to generate periodic interrupts |
-| [TC capture mode](apps/tc/tc_capture_mode/readme.md) | This example shows how to use the TC module in capture mode to measure duty cycle and frequency of an external input |
-| [TC compare mode](apps/tc/tc_compare_mode/readme.md) | This example shows how to use the TC module in compare mode to generate an active low, active high, and toggle output on compare match |
-| [TC timer mode](apps/tc/tc_timer_mode/readme.md) | This example shows how to use the TC module in timer mode to generate periodic interrupt |
-| [TCM cache coherency](apps/tcm/data_tcm/readme.md) | This example shows how to  maintain cache coherency by allocating the DMA buffers in the Tightly Coupled Memory (TCM), which are not cacheable |
-| [TRNG random number](apps/trng/random_number/readme.md) | This example shows how to use the TRNG Peripheral library to generate and read a random number |
-| [XDMAC memory transfer](apps/xdmac/xdmac_memory_transfer/readme.md) | This example shows how to use the XDMAC peripheral to do a memory to memory transfer and illustrates the usage of burst size to reduce the transfer time |
+To view the documentation offline, follow these steps:
+ - Download the publication as a zip file from [here](https://onlinedocs.microchip.com/download/GUID-FC78D852-5A4E-4F00-AA1B-DD502F90D51B?type=webhelp).
+ - Extract the zip file into a folder.
+ - Navigate to the folder and open **index.html** in a web browser of your choice.
 
 ____
 
-[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_rh71/blob/master/mplab_harmony_license.md)
+[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_rh71/blob/master/Microchip_SLA001.md)
 [![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/csp_apps_sam_rh71.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_rh71/releases/latest)
 [![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/csp_apps_sam_rh71.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_rh71/releases/latest)
 [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/csp_apps_sam_rh71.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_rh71/graphs/commit-activity)
@@ -73,6 +43,8 @@ ____
 
 ____
 
+[![Developer Help](https://img.shields.io/badge/Youtube-Developer%20Help-red.svg)](https://www.youtube.com/MicrochipDeveloperHelp)
+[![Developer Help](https://img.shields.io/badge/XWiki-Developer%20Help-torquiose.svg)](https://developerhelp.microchip.com/xwiki/bin/view/software-tools/harmony/)
 [![Follow us on Youtube](https://img.shields.io/badge/Youtube-Follow%20us%20on%20Youtube-red.svg)](https://www.youtube.com/user/MicrochipTechnology)
 [![Follow us on LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20us%20on%20LinkedIn-blue.svg)](https://www.linkedin.com/company/microchip-technology)
 [![Follow us on Facebook](https://img.shields.io/badge/Facebook-Follow%20us%20on%20Facebook-blue.svg)](https://www.facebook.com/microchiptechnology/)
