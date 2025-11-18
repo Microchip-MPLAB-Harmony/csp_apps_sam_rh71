@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: mpu_coherent_region_sam_rh71_ek
-creation_date: 2025-09-17T05:09:45.580+00:00[UTC]
-operating_system: Windows 10
+creation_date: 2025-11-18T10:20:46.283+00:00[UTC]
+operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: ATSAMRH71F20C

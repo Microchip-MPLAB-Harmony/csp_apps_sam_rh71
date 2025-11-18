@@ -166,7 +166,6 @@
         <itemPath>mcan_fd_operation_interrupt_timestamp_sam_rh71_ek_sam_rh71_ek/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_rh71_ek/harmony-manifest-success.yml</itemPath>
       <itemPath>../src/config/sam_rh71_ek/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -235,7 +234,7 @@
       </toolsSet>
       <packs>
         <pack name="SAMRH71_DFP" vendor="Microchip" version="2.6.253"/>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
